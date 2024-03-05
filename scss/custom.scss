@@ -1,0 +1,28 @@
+//overriding classes here...
+
+@import 'variables';
+@import '../bootstrap-5.3.3/scss/bootstrap';
+
+
+.btn.btn-primary {
+    background-color: $btn-color;
+    border: none;
+
+    &:hover {
+        background-color: darken($btn-color, 10%);
+    }
+
+    &:active { // button press
+        background-color: darken($btn-color, 30%) !important; // without important, wont work unless specificity added to .btn.btn-primary (+ .centered-button)
+    }
+}
+
+.gradient-heading {
+    font-size: 100px;
+    // color: #61dd96; background-image: -webkit-linear-gradient(135deg, #61dd96 80%, #7e7cd6 30%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+    color: #61dd96; background-image: -webkit-linear-gradient(135deg, #61dd96 70%, #7e7cd6 90%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;    
+    padding-bottom: 10px;
+}
+
+          
+        
