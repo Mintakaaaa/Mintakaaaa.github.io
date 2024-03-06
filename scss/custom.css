@@ -11980,15 +11980,14 @@ body {
   background-color: #18301b !important;
 }
 
-.heading {
+.center-heading {
   font-size: 100px;
-  margin-top: 200px;
+  margin-top: 300px;
   padding-bottom: 10px;
 }
 
 .gradient-heading {
   font-size: 100px;
-  margin-top: 200px;
   color: #61dd96;
   background-image: -webkit-linear-gradient(135deg, #61dd96 40%, #7e7cd6);
   background-clip: text;
@@ -12015,4 +12014,23 @@ body {
 }
 .animated-letter {
   display: inline-block;
+}
+
+@keyframes textBiggerSmallerAnim {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.animated-text {
+  display: inline-block; /* Ensure the animation does not affect other elements */
+  animation: textBiggerSmallerAnim 1s ease-in-out; /* Apply the animation */
 }/*# sourceMappingURL=custom.css.map */
