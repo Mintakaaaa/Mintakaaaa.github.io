@@ -6,6 +6,7 @@
 
 body {
     height: 2000px;
+    overflow-x: hidden;
 }
 
 .btn.btn-primary {
@@ -107,3 +108,32 @@ body {
     }
 }
   
+
+.bg-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    animation: expand 2s forwards, always-rotate 60s linear infinite;
+}
+
+
+#top-left-bg-svg {
+    top: 0px;
+    left: -800px;
+}
+
+#top-right-bg-svg {
+    position: absolute;
+    top: -300px;
+    right: -800px;
+}
+
+@keyframes always-rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }  
+}
+
+@keyframes expand {
+    to { width: 100%; height: 100%; }
+}
