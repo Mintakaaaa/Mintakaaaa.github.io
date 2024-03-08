@@ -56,13 +56,54 @@ body {
 }
 
 @keyframes textBiggerSmallerAnim {
-    0% { transform: scale(1); } 
-    30% { transform: scale(1.05); }
-    60% { transform: scale(0.95); }
-    100% { transform: scale(1);  }
+    0% { transform: scale(1) rotate(0deg); } 
+    20% { transform: scale(1.05) rotate(-2deg); }
+    40% { transform: scale(0.95) rotate(2deg); }
+    60% { transform: scale(1.05) rotate(2deg); }
+    80% { transform: scale(0.95) rotate(-2deg); }
+    100% { transform: scale(1) rotate(0deg); }
 }
 
 .animated-text {
     display: inline-block; /* Ensure the animation does not affect other elements */
     animation: textBiggerSmallerAnim 1s ease-in-out; /* Apply the animation */
 }
+
+
+/* Define the styles for the heading */
+.gradual-underline {
+    position: relative;
+    display: inline-block;
+}
+  
+  /* Create the underline effect */
+.gradual-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 6px;
+    background-color: #000; /* Change this to your desired color */
+    bottom: 0;
+    left: 0;
+    animation: underlineAppear 2s ease forwards; /* Animation for gradual appearance */
+}
+  
+  /* Animation for gradual appearance */
+@keyframes underlineAppear {
+    0% {
+        width: 0;
+    }
+    40% {
+        width: 100%; /* Start with full width */
+        left: 0; /* Start from left */
+    }
+    60% {
+        width: 100%; /* Start with full width */
+        left: 0; /* Start from left */
+    }
+    100% {
+        width: 0; /* Gradually retract to width 0 */
+        left: 100%; /* Move to right */
+    }
+}
+  

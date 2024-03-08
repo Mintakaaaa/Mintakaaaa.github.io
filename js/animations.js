@@ -1,17 +1,7 @@
-// window.addEventListener('scroll', function() {
-//     const scrollPosition = window.scrollY;
-//     const heading = document.getElementById('scroll-gradient');
-//     const stop1 = 40 - (scrollPosition * 0.4); // Adjust the scroll speed here
-//     // const stop2 = 90 - (scrollPosition * 0.05); // Adjust the scroll speed here
-//     let gradient = `-webkit-linear-gradient(135deg, #61dd96 ${stop1}%, #7e7cd6)`;
-//     heading.style.backgroundImage = gradient;
-// });
 
 document.addEventListener("DOMContentLoaded", function() {
     const heading = document.getElementById('anim-heading');
-    const text = heading.innerText;
-    const letters = Array.from(text); // Convert text to an array of characters
-    heading.innerHTML = ''; // Clear the original text
+    const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"]
 
     setTimeout(() => {
         addAnimationToLetters(heading, letters, function() {
@@ -19,9 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
             wrapPortfolioSpans(heading);
         });
     }, 500);
-
 });
 
+/**
+ * Adds an animation to each letter in the given heading element.
+ * @param {HTMLElement} heading The element to add the animation to
+ * @param {string[]} letters The letters to animate
+ * @param {Function} [callback] A function to call when the animation is complete
+ */
 function addAnimationToLetters(heading, letters, callback) {
     const delay = 250;
     let index = 0;
@@ -52,6 +47,10 @@ function addAnimationToLetters(heading, letters, callback) {
     });
 }
 
+/**
+ * Wraps the given heading element's "portfolio" spans in a gradient heading.
+ * @param {HTMLElement} heading The element to wrap the spans in
+ */
 function wrapPortfolioSpans(heading) {
     let spanned = false;
     console.log("yipee");
@@ -73,6 +72,7 @@ function wrapPortfolioSpans(heading) {
     }
     heading.appendChild(wrapper);
     wrapper.classList.add('animated-text');
+    // wrapper.classList.add('gradual-underline'); // adds underline class to gradient heading
 
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
