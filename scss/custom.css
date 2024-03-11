@@ -12083,6 +12083,9 @@ body {
   width: 0;
   height: 0;
   z-index: -1;
+}
+
+.rotating-svg {
   animation: expand 2s forwards, always-rotate 60s linear infinite;
 }
 

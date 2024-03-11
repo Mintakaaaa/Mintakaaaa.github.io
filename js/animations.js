@@ -1,22 +1,20 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    const heading = document.getElementById('anim-heading');
-    const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"]
-
-    setTimeout(() => {
-        addAnimationToLetters(heading, letters, function() {
-            // Animation finished, wrap "portfolio" spans
-            wrapPortfolioSpans(heading);
-        });
-    }, 500);
+    setTimeout(function() {
+        const bg_svgs = document.querySelectorAll('.bg-svg'); // get all bg-svgs
+        for (let i = 0; i < bg_svgs.length; i++) { bg_svgs[i].classList.add('rotating-svg'); } // make them rotate
+    
+        const heading = document.getElementById('anim-heading');
+        const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"]
+    
+        setTimeout(() => {
+            addAnimationToLetters(heading, letters, function() {
+                // Animation finished, wrap "portfolio" spans
+                wrapPortfolioSpans(heading);
+            });
+        }, 1000);
+    }, 1000);
 });
 
-/**
- * Adds an animation to each letter in the given heading element.
- * @param {HTMLElement} heading The element to add the animation to
- * @param {string[]} letters The letters to animate
- * @param {Function} [callback] A function to call when the animation is complete
- */
 function addAnimationToLetters(heading, letters, callback) {
     const delay = 250;
     let index = 0;
@@ -47,10 +45,7 @@ function addAnimationToLetters(heading, letters, callback) {
     });
 }
 
-/**
- * Wraps the given heading element's "portfolio" spans in a gradient heading.
- * @param {HTMLElement} heading The element to wrap the spans in
- */
+
 function wrapPortfolioSpans(heading) {
     let spanned = false;
     console.log("yipee");

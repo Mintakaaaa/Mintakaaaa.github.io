@@ -114,9 +114,11 @@ body {
     width: 0;
     height: 0;
     z-index: -1;
-    animation: expand 2s forwards, always-rotate 60s linear infinite;
 }
 
+.rotating-svg {
+    animation: expand 2s forwards, always-rotate 60s linear infinite;
+}
 
 #top-left-bg-svg {
     top: 0px;
