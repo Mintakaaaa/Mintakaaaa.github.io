@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('progress-container').style.display = 'block'; // show progress bar
+
+    setTimeout(function() { // update the progress bar width after a delay (simulating loading time)
+        document.getElementById('progress-bar').style.width = '100%';
+        
+        setTimeout(function() { // hide the progress bar after a brief delay
+        document.getElementById('progress-container').classList.add('move-up');
+        }, 1000);
+    }, 1000);
+
     setTimeout(function() {
         const bg_svgs = document.querySelectorAll('.bg-svg'); // get all bg-svgs
         for (let i = 0; i < bg_svgs.length; i++) { bg_svgs[i].classList.add('rotating-svg'); } // make them rotate
