@@ -11965,9 +11965,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
+body, html {
   height: 2000px;
   overflow-x: hidden;
+  transition: overflow 1s;
 }
 
 .btn.btn-primary {
@@ -12023,11 +12024,10 @@ body {
   }
 }
 .animated-text {
-  display: inline-block; /* Ensure the animation does not affect other elements */
-  animation: textBiggerSmallerAnim 1s ease-in-out; /* Apply the animation */
+  display: inline-block;
+  animation: textBiggerSmallerAnim 1s ease-in-out;
 }
 
-/* Define the styles for the heading */
 .gradual-underline {
   position: relative;
   display: inline-block;
@@ -12123,4 +12123,29 @@ body {
 }
 .move-up {
   animation: moveUp 0.5s ease-out forwards;
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set height to 100% of viewport height for vertical centering */
+}
+
+body, html {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  transform: translateX(30px);
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7e7cd6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
 }/*# sourceMappingURL=custom.css.map */

@@ -3,38 +3,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Endless Blob Background</title>
+<title>Testing</title>
 					
   <style>
-    .rotate {  
-      animation-name: ani-rotate;
-      animation-duration: 60s;
-      animation-timing-function: linear;
-      animation-delay: 0s;
-      animation-iteration-count: infinite;
-      animation-direction: normal;
-      animation-fill-mode: none;
+
+    .boxes {
+      --size: 32px;
+      --duration: 800ms;
+      height: calc(var(--size) * 2);
+      width: calc(var(--size) * 3);
+      position: relative;
+      transform-style: preserve-3d;
+      transform-origin: 50% 50%;
+      /* margin-top: calc(var(--size) * 1.5 * -1); */
+      transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
     }
-  
-    @keyframes ani-rotate {
-      0%{ transform: rotate(0); }
-      100%{ transform: rotate(360deg); }  
+
+    .boxes .box {
+      width: var(--size);
+      height: var(--size);
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform-style: preserve-3d;
     }
+
+    .boxes .box:nth-child(1) {
+      transform: translate(100%, 0);
+      -webkit-animation: box1 var(--duration) linear infinite;
+      animation: box1 var(--duration) linear infinite;
+    }
+
+    .boxes .box:nth-child(2) {
+      transform: translate(0, 100%);
+      -webkit-animation: box2 var(--duration) linear infinite;
+      animation: box2 var(--duration) linear infinite;
+    }
+
+    .boxes .box:nth-child(3) {
+      transform: translate(100%, 100%);
+      -webkit-animation: box3 var(--duration) linear infinite;
+      animation: box3 var(--duration) linear infinite;
+    }
+
+    .boxes .box:nth-child(4) {
+      transform: translate(200%, 0);
+      -webkit-animation: box4 var(--duration) linear infinite;
+      animation: box4 var(--duration) linear infinite;
+    }
+
+    .boxes .box > div {
+      --background: #5C8DF6;
+      --top: auto;
+      --right: auto;
+      --bottom: auto;
+      --left: auto;
+      --translateZ: calc(var(--size) / 2);
+      --rotateY: 0deg;
+      --rotateX: 0deg;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--background);
+      top: var(--top);
+      right: var(--right);
+      bottom: var(--bottom);
+      left: var(--left);
+      transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+    }
+
+    .boxes .box > div:nth-child(1) {
+      --top: 0;
+      --left: 0;
+    }
+
+    .boxes .box > div:nth-child(2) {
+      --background: #145af2;
+      --right: 0;
+      --rotateY: 90deg;
+    }
+
+    .boxes .box > div:nth-child(3) {
+      --background: #447cf5;
+      --rotateX: -90deg;
+    }
+
+    .boxes .box > div:nth-child(4) {
+      --background: #DBE3F4;
+      --top: 0;
+      --left: 0;
+      --translateZ: calc(var(--size) * 3 * -1);
+    }
+
+
+
+    .master {
+      --size: 100px;
+      height: calc(var(--size));
+      width: calc(var(--size));
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(45deg) rotateZ(45deg) rotateY(0deg) translateX(750%) translateY(-200%);
+
+    }
+
+    .master .shape {
+      width: var(--size);
+      height: var(--size);
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+
+    .master .shape > div {
+      --background: #5C8DF6;
+      --translateZ: calc(var(--size) / 2);
+      --rotateY: 0deg;
+      --rotateX: 0deg;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--background);
+      transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+    }
+
+    .master .shape > div:nth-child(2) {
+      --background: #145af2;
+      --rotateY: 90deg;
+    }
+
+    .master .shape > div:nth-child(3) {
+      --background: #447cf5;
+      --rotateX: -90deg;
+    }
+
+    .textC {
+      --size: 32px;
+      height: calc(var(--size) * 2); 
+      width: calc(var(--size) * 3);
+      position: relative;
+      left: 10px;
+    }
+    /* @-webkit-keyframes box1 {
+      0%, 50% {
+        transform: translate(100%, 0);
+      }
+
+      100% {
+        transform: translate(200%, 0);
+      }
+    }
+
+    @keyframes box1 {
+      0%, 50% {
+        transform: translate(100%, 0);
+      }
+
+      100% {
+        transform: translate(200%, 0);
+      }
+    }
+
+    @-webkit-keyframes box2 {
+      0% {
+        transform: translate(0, 100%);
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(100%, 0);
+      }
+    }
+
+    @keyframes box2 {
+      0% {
+        transform: translate(0, 100%);
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(100%, 0);
+      }
+    }
+
+    @-webkit-keyframes box3 {
+      0%, 50% {
+        transform: translate(100%, 100%);
+      }
+
+      100% {
+        transform: translate(0, 100%);
+      }
+    }
+
+    @keyframes box3 {
+      0%, 50% {
+        transform: translate(100%, 100%);
+      }
+
+      100% {
+        transform: translate(0, 100%);
+      }
+    }
+
+    @-webkit-keyframes box4 {
+      0% {
+        transform: translate(200%, 0);
+      }
+
+      50% {
+        transform: translate(200%, 100%);
+      }
+
+      100% {
+        transform: translate(100%, 100%);
+      }
+    }
+
+    @keyframes box4 {
+      0% {
+        transform: translate(200%, 0);
+      }
+
+      50% {
+        transform: translate(200%, 100%);
+      }
+
+      100% {
+        transform: translate(100%, 100%);
+      }
+    } */
   </style>
 
 
+<!-- MUST SPECIFY IN MASTER CONTAINER WIDTH AND HEIGHT TO DISPLAY ITEM IN 3D -->
 </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" 
-      viewBox="-25 -25 250 250" class="rotate"> 
-      <defs>
-      <linearGradient id="lgrad" x1="0%" y1="50%" x2="100%" y2="50%" >
-        <stop offset="0%" style="stop-color:#00FF84;stop-opacity:1.00" />
-        <stop offset="100%" style="stop-color:#008EE6;stop-opacity:1.00" />
-      </linearGradient>
-      </defs>
-      <path d="M60.989556567778656 7.92293823529414 C36.35961299227803 10.2014907294708 4.119504159022463 62.00824088524423 0.9107664130377771 86.53434787511435 C-2.3539124103749933 111.48804258287996 16.566544706752286 168.9757704368374 39.40386472946762 179.54940848476085 C76.62924124659216 196.78469078138048 187.00697885897927 169.41580333280746 195.60935339988515 129.30616901704946 C205.11220757647519 84.99793712520038 106.1126987869767 3.74852963653018 60.989556567778656 7.92293823529414Z" stroke="none" fill="url(#lgrad)"  />
-    </svg>
+
+    <!-- <div class="boxes"> -->
+      <div class="box">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+    
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    <!-- </div> -->
+
+
+  <div class="master">
+    <div class="shape">
+      <div>
+        <div class="textC">
+          <p>This is a 3D text</p>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+
 
   </body>
 </html>

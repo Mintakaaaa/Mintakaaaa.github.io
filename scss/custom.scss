@@ -4,9 +4,10 @@
 @import '../bootstrap-5.3.3/scss/bootstrap';
 
 
-body {
+body, html {
     height: 2000px;
     overflow-x: hidden;
+    transition: overflow 1s;
 }
 
 .btn.btn-primary {
@@ -50,6 +51,7 @@ body {
     display: inline-block; // so that animation doesnt affect other elements
     animation: textBiggerSmallerAnim 1s ease-in-out;
 }
+
 
 
 .gradual-underline {
@@ -134,4 +136,40 @@ body {
 }
 .move-up {
     animation: moveUp 0.5s ease-out forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set height to 100% of viewport height for vertical centering */
+}
+
+body, html {
+    overflow: hidden;
+}
+
+// chrome, safari and edge
+::-webkit-scrollbar {
+    transform: translateX(30px); // gonna have to make my own scrollbar because regular one just snaps into place
+    width: 5px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #7e7cd6;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #ddd;
 }
