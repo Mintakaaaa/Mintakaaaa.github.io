@@ -143,7 +143,8 @@
       position: relative;
       left: 10px;
     }
-    /* @-webkit-keyframes box1 {
+
+    @-webkit-keyframes box1 {
       0%, 50% {
         transform: translate(100%, 0);
       }
@@ -152,7 +153,6 @@
         transform: translate(200%, 0);
       }
     }
-
     @keyframes box1 {
       0%, 50% {
         transform: translate(100%, 0);
@@ -176,7 +176,6 @@
         transform: translate(100%, 0);
       }
     }
-
     @keyframes box2 {
       0% {
         transform: translate(0, 100%);
@@ -200,7 +199,6 @@
         transform: translate(0, 100%);
       }
     }
-
     @keyframes box3 {
       0%, 50% {
         transform: translate(100%, 100%);
@@ -224,7 +222,6 @@
         transform: translate(100%, 100%);
       }
     }
-
     @keyframes box4 {
       0% {
         transform: translate(200%, 0);
@@ -237,7 +234,26 @@
       100% {
         transform: translate(100%, 100%);
       }
-    } */
+    }
+  
+    #page-one {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+      transform: rotateX(0deg) translate3d(0px, 0px, 0px);
+    }
+
+    .container {
+      display: flex;
+    }
+    .box {
+      width: 50%;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
   </style>
 
 
@@ -246,7 +262,7 @@
   <body>
 
     <!-- <div class="boxes"> -->
-      <div class="box">
+      <!-- <div class="box">
           <div></div>
           <div></div>
           <div></div>
@@ -272,11 +288,11 @@
         <div></div>
         <div></div>
         <div></div>
-      </div>
+      </div> -->
     <!-- </div> -->
 
 
-  <div class="master">
+  <!-- <div class="master">
     <div class="shape">
       <div>
         <div class="textC">
@@ -286,9 +302,26 @@
       <div></div>
       <div></div>
     </div>
+  </div> -->
+
+  <div id="page-one">
+    <div class="container" style="height: 100vh;">
+      <div class="box">
+          <h2>First Div</h2>
+          <p>This is the content of the first div.</p>
+          <div style="background-color: #145af2; width: 500px; height: 500px; position: relative; left: 0;"></div>
+          <div style="background-color: red; width: 500px; height: 180px; position: relative; left: 0;"></div>
+
+      </div>
+      <div class="box">
+          <h2>Second Div</h2>
+          <p>This is the content of the second div.</p>
+          <div style="background-color: green; width: 500px; height: 500px; position: relative; right: 0;"></div>
+
+      </div>
   </div>
 
 
-
+  <script src="js/animations.js" defer></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
 
 
 body, html {
-    height: 2000px;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     transition: overflow 1s;
 }
@@ -25,15 +25,15 @@ body, html {
 
 
 
+#anim-heading {
+    display: inline;
+}
 .center-heading {
     font-size: 100px;
-    margin-top: 300px;  
-    padding-bottom: 10px; 
 }
 .gradient-heading {
     font-size: 100px;
     color: #61dd96; background-image: -webkit-linear-gradient(135deg, #61dd96 40%, #7e7cd6); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;    
-    padding-bottom: 10px;
 }
 .animated-letter {
     display: inline-block;
@@ -88,6 +88,7 @@ body, html {
   
 
 
+
 .bg-svg {
     position: absolute;
     width: 0;
@@ -98,20 +99,19 @@ body, html {
     animation: expand 2s forwards, always-rotate 60s linear infinite;
 }
 #top-left-bg-svg {
-    top: 0px;
-    left: -800px;
+    top: -250px;
+    left: -400px;
 }
 #top-right-bg-svg {
-    position: absolute;
-    top: -300px;
-    right: -800px;
+    top: -250px;
+    right: -400px;
 }
 @keyframes always-rotate {
     from { transform: rotate(0); }
     to { transform: rotate(360deg); }  
 }
 @keyframes expand {
-    to { width: 100%; height: 100%; }
+    to { width: 800px; height: 800px; }
 }
 
 
@@ -122,13 +122,13 @@ body, html {
     left: 0;
     width: 100%;
     height: 6px;
-    background-color: #f0f0f0; /* Background color of the progress bar container */
+    background-color: #f0f0f0;
 }
 #progress-bar {
     height: 100%;
-    background-color: #007bff; /* Color of the progress bar */
-    width: 0; /* Initial width of the progress bar */
-    transition: width 0.7s ease; /* Smooth transition for the progress bar width */
+    background-color: #007bff;
+    width: 0;
+    transition: width 0.7s ease;
 }
 @keyframes moveUp {
     0% { transform: translateY(0); }
@@ -159,6 +159,10 @@ body, html {
     overflow: hidden;
 }
 
+
+
+
+
 // chrome, safari and edge
 ::-webkit-scrollbar {
     transform: translateX(30px); // gonna have to make my own scrollbar because regular one just snaps into place
@@ -172,4 +176,48 @@ body, html {
   
 ::-webkit-scrollbar-track {
     background-color: #ddd;
+}
+
+
+
+#page-one {
+    height: 100vh;
+    transition: transform 1s ease;
+    transform: rotateX(0deg) translate3d(0px, 0px, 0px);
+}
+
+.opacity-none {
+    opacity: 0;
+}
+.slide-in-from-left {
+    animation: slideInToRight 1s ease;
+}
+@keyframes slideInToRight {
+    from {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.heading-container {
+    display: inline-block;
+    position: relative;
+}
+.hello-container {
+    position: absolute;
+    top: 100%; // postion below heading
+    left: 0; // position at x=heading-start
 }

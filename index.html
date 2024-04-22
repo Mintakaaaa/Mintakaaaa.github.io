@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Minde's Projects</title>
-        <link rel="preload" href="/svg/blob.svg" as="image">
-        <link href="scss/custom.css" rel="stylesheet">
-    </head>
 
-    <body>
-        <div id="progress-container">
-            <div id="progress-bar"></div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minde's Projects</title>
+  <link rel="preload" href="/svg/blob.svg" as="image">
+  <link href="scss/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
 
 
-        <div div-bg-svg>
-            <img src="svg/blob.svg" alt="Top Left Background SVG" id="top-left-bg-svg" class="bg-svg">
-            <img src="svg/blob.svg" alt="Top Right Background SVG" id="top-right-bg-svg" class="bg-svg">
-        </div>
+  <div id="page-one">
+    <div class="svg-container">
+      <img src="svg/blob.svg" alt="Top Left Background SVG" id="top-left-bg-svg" class="bg-svg">
+      <img src="svg/blob.svg" alt="Top Right Background SVG" id="top-right-bg-svg" class="bg-svg">
+    </div>
 
+    <div class="container">
+      <div class="heading-container">
         <h1 id="anim-heading" class="center-heading text-center"></h1>
-        <!-- <h1 class="gradual-underline">Hello</h1> -->
-        <!-- <p>Hi! My name is Mindaugas and I'm an aspiring software engineer!</p> -->
-        <!-- <script src="bootstrap-5.3.3/dist/js/bootstrap.min.js"></script> -->
-        <script src="js/animations.js" defer></script>
-    </body> 
+
+
+        <div class="hello-container">
+          <h1 id="h1-hello" class="opacity-none">Hello!</h1>
+          <p id="p-name" class="opacity-none">My name is Mindaugas and I'm an aspiring software engineer.</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <script src="js/animations.js" defer></script>
+</body>
+
 </html>

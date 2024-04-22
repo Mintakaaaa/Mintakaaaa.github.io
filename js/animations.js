@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let pageOne = document.querySelector("#page-one");
+    pageOne.addEventListener("click", function(event) {
+        this.style.transform = "perspective(1000px) rotateX(68deg) translate3d(0px, -550px, 375px)";
+    });
+
+
     document.getElementById('progress-container').style.display = 'block'; // show progress bar
 
     setTimeout(function() { // update the progress bar width after a delay (simulating loading time)
@@ -14,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < bg_svgs.length; i++) { bg_svgs[i].classList.add('rotating-svg'); } // make them rotate
     
         const heading = document.getElementById('anim-heading');
-        const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"]
+        const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"];
     
         setTimeout(() => {
             addAnimationToLetters(heading, letters, function() {
@@ -82,6 +88,7 @@ function wrapPortfolioSpans(heading) {
     heading.appendChild(gradientHeadingContainer);
     gradientHeading.classList.add('animated-text');
     addTextHoverListener(gradientHeadingContainer);
+    showHelloText();
 
     // gradientHeading.classList.add('gradual-underline'); // adds underline class to gradient heading
     
@@ -131,4 +138,16 @@ function addTextHoverListener(gradientHeadingContainer) {
         gradientHeading.style.transition = "transform 0.5s";
         gradientHeading.style.transform = `perspective(1000px) rotateY(${0}deg) rotateX(${0}deg)`;
     });
+}
+
+function showHelloText() {
+    let hello = document.querySelector("#h1-hello");
+    hello.classList.add('slide-in-from-left');
+    hello.classList.remove("opacity-none");
+
+    setTimeout(() => {
+        let name = document.querySelector("#p-name");
+        name.classList.add('slide-in-from-left');
+        name.classList.remove("opacity-none");
+    }, 1000);
 }
