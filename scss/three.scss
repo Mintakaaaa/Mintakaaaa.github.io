@@ -1,0 +1,10 @@
+//overriding classes here...
+
+@import 'variables';
+@import '../bootstrap-5.3.3/scss/bootstrap';
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

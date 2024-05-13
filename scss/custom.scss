@@ -34,7 +34,7 @@ body, html {
 .gradient-heading {
     font-size: 100px;
     color: #61dd96; background-image: -webkit-linear-gradient(135deg, #61dd96 40%, #7e7cd6); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;    
-}
+}   
 .animated-letter {
     display: inline-block;
 }
@@ -73,16 +73,16 @@ body, html {
         width: 0;
     }
     40% {
-        width: 100%; /* Start with full width */
-        left: 0; /* Start from left */
+        width: 100%;
+        left: 0; 
     }
     60% {
-        width: 100%; /* Start with full width */
-        left: 0; /* Start from left */
+        width: 100%; 
+        left: 0; 
     }
     100% {
-        width: 0; /* Gradually retract to width 0 */
-        left: 100%; /* Move to right */
+        width: 0; 
+        left: 100%; 
     }
 }
   
