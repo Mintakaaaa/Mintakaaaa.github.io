@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < bg_svgs.length; i++) { bg_svgs[i].classList.add('rotating-svg'); } // make them rotate
     
         const heading = document.getElementById('anim-heading');
-        const letters = ["P", "r", "o", "j", "e", "c", "t", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"];
+        const letters = ["P", "e", "r", "s", "o", "n", "a", "l", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"];
     
         setTimeout(() => {
             addAnimationToLetters(heading, letters, function() {
@@ -67,7 +67,7 @@ function wrapPortfolioSpans(heading) {
     gradientHeading.classList.add('gradient-heading');
     gradientHeading.setAttribute('id', 'scroll-gradient');
 
-    for (let i = 7; i < portfolioSpans.length; i++) {
+    for (let i = 8; i < portfolioSpans.length; i++) {
         console.log(portfolioSpans[i].textContent);
         let span = document.createElement('span');
         span.textContent = portfolioSpans[i].textContent;
@@ -82,7 +82,15 @@ function wrapPortfolioSpans(heading) {
     heading.appendChild(gradientHeadingContainer);
     gradientHeading.classList.add('animated-text');
     addTextHoverListener(gradientHeadingContainer);
-    showHelloText();
+
+    setTimeout(() => {
+
+        moveHeadingToTop();
+
+        setTimeout(() => {
+            showHelloText();
+        }, 1000);
+    }, 1000);
 
     // gradientHeading.classList.add('gradual-underline'); // adds underline class to gradient heading
     
@@ -95,8 +103,8 @@ function wrapPortfolioSpans(heading) {
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
         const heading = document.getElementById('scroll-gradient');
-        const stop1 = 40 - (scrollPosition * 0.4); // Adjust the scroll speed here
-        // const stop2 = 90 - (scrollPosition * 0.05); // Adjust the scroll speed here
+        const stop1 = 40 - (scrollPosition * 0.4); // Adjust the scroll stop here
+        // const stop2 = 90 - (scrollPosition * 0.05);
         let gradient = `-webkit-linear-gradient(135deg, #61dd96 ${stop1}%, #7e7cd6)`;
         heading.style.backgroundImage = gradient;
     });
@@ -133,6 +141,18 @@ function addTextHoverListener(gradientHeadingContainer) {
         gradientHeading.style.transform = `perspective(1000px) rotateY(${0}deg) rotateX(${0}deg)`;
     });
 }
+
+
+function moveHeadingToTop() {
+    const headingMasterDiv = document.querySelector('.heading-master-div');
+    // headingMasterDiv.classList.add('move-to-top');
+    let headingContainer = headingMasterDiv.querySelector(".heading-container");
+    let helloContainer = headingMasterDiv.querySelector('.hello-container');
+    let height = headingContainer.scrollHeight + helloContainer.scrollHeight + "px";
+    console.log(height);
+    headingMasterDiv.style.height = height;
+}
+
 
 function showHelloText() {
     let hello = document.querySelector("#h1-hello");

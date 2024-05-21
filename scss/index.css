@@ -11969,6 +11969,7 @@ body, html {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   transition: overflow 1s;
+  overflow: hidden;
 }
 
 .btn.btn-primary {
@@ -12125,15 +12126,12 @@ body, html {
   animation: moveUp 0.5s ease-out forwards;
 }
 
-.center-div {
+.heading-master-div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set height to 100% of viewport height for vertical centering */
-}
-
-body, html {
-  overflow: hidden;
+  height: 100vh;
+  transition: height 1s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -12148,12 +12146,6 @@ body, html {
 
 ::-webkit-scrollbar-track {
   background-color: #ddd;
-}
-
-#page-one {
-  height: 100vh;
-  transition: transform 1s ease;
-  transform: rotateX(0deg) translate3d(0px, 0px, 0px);
 }
 
 .opacity-none {
@@ -12174,16 +12166,7 @@ body, html {
     opacity: 1;
   }
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .heading-container {
-  display: inline-block;
   position: relative;
 }
 
@@ -12191,4 +12174,4 @@ body, html {
   position: absolute;
   top: 100%;
   left: 0;
-}/*# sourceMappingURL=custom.css.map */
+}/*# sourceMappingURL=index.css.map */

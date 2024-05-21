@@ -3,12 +3,14 @@
 @import 'variables';
 @import '../bootstrap-5.3.3/scss/bootstrap';
 
-
 body, html {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     transition: overflow 1s;
+    overflow: hidden;
+
 }
+
 
 .btn.btn-primary {
     background-color: $btn-color;
@@ -22,7 +24,6 @@ body, html {
         background-color: darken($btn-color, 30%) !important; // without important, wont work unless specificity added to .btn.btn-primary (+ .centered-button)
     }
 }
-
 
 
 #anim-heading {
@@ -148,16 +149,15 @@ body, html {
 
 
 
-.center-div {
+.heading-master-div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set height to 100% of viewport height for vertical centering */
+    height: 100vh;
+    transition: height 1s ease-in-out;
 }
 
-body, html {
-    overflow: hidden;
-}
+
 
 
 
@@ -180,12 +180,6 @@ body, html {
 
 
 
-#page-one {
-    height: 100vh;
-    transition: transform 1s ease;
-    transform: rotateX(0deg) translate3d(0px, 0px, 0px);
-}
-
 .opacity-none {
     opacity: 0;
 }
@@ -205,15 +199,9 @@ body, html {
 
 
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+
 .heading-container {
-    display: inline-block;
+    // display: inline-block;
     position: relative;
 }
 .hello-container {

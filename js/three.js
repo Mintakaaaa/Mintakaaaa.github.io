@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
-
+import * as TWEEN from '@tweenjs/tween.js';
 //set up scene and camera
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xf9f9eb); // This sets the background color to white
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 500;
 
@@ -95,6 +97,7 @@ function animate() {
   // cssObject.rotation.y += 0.01;
 
   controls.update();
+  TWEEN.update();
 
   // Render with both renderers
   webglRenderer.render(scene, camera);
@@ -103,9 +106,10 @@ function animate() {
 
 animate();
 
-setTimeout(function() {
-  camera.position.z += 500;
-}, 5000);
+setTimeout(() => {
+  let tween = new TWEEN.Tween(camera.position).to({x: 0, y: 0, z: (camera.position.z + 100)}, 1000).start()
+  // tell the tween we want to animate the z property over 1000 milliseconds
+}, 2000);
 
 //window resize
 window.addEventListener('resize', onWindowResize, false);
