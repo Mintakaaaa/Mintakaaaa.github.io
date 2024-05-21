@@ -1,16 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let pageOne = document.querySelector("#page-one");
-    pageOne.addEventListener("click", function(event) {
-        this.style.transform = "perspective(1000px) rotateX(68deg) translate3d(0px, -550px, 375px)";
-    });
-    let pageTwo = document.querySelector("#page-two");
-    // pageTwo.style.transform = "perspective(1000px) rotateX(-68deg) translate3d(0px, -550px, 375px)";
-
-    pageOne.addEventListener("contextmenu", function(event) {
-        event.preventDefault();
-        pageTwo.style.transform = "perspective(1000px) rotateX(68deg) translate3d(0px, -550px, 375px)";
-    });
-
     document.getElementById('progress-container').style.display = 'block'; // show progress bar
 
     setTimeout(function() { // update the progress bar width after a delay (simulating loading time)

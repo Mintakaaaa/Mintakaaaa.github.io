@@ -11965,8 +11965,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  margin: 0;
+}
+
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+  display: block;
 }/*# sourceMappingURL=three.css.map */
