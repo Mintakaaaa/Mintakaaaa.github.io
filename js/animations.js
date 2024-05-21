@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < bg_svgs.length; i++) { bg_svgs[i].classList.add('rotating-svg'); } // make them rotate
     
         const heading = document.getElementById('anim-heading');
-        const letters = ["P", "e", "r", "s", "o", "n", "a", "l", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"];
+        const letters = ["M", "i", "n", "d", "e", "'", "s", " ", "P", "o", "r", "t", "f", "o", "l", "i", "o"];
     
         setTimeout(() => {
             addAnimationToLetters(heading, letters, function() {
@@ -67,7 +67,7 @@ function wrapPortfolioSpans(heading) {
     gradientHeading.classList.add('gradient-heading');
     gradientHeading.setAttribute('id', 'scroll-gradient');
 
-    for (let i = 8; i < portfolioSpans.length; i++) {
+    for (let i = 7; i < portfolioSpans.length; i++) {
         console.log(portfolioSpans[i].textContent);
         let span = document.createElement('span');
         span.textContent = portfolioSpans[i].textContent;
@@ -145,9 +145,8 @@ function addTextHoverListener(gradientHeadingContainer) {
 
 function moveHeadingToTop() {
     const headingMasterDiv = document.querySelector('.heading-master-div');
-    // headingMasterDiv.classList.add('move-to-top');
-    let headingContainer = headingMasterDiv.querySelector(".heading-container");
-    let helloContainer = headingMasterDiv.querySelector('.hello-container');
+    let headingContainer = headingMasterDiv.querySelector("#heading-container");
+    let helloContainer = document.querySelector('#hello-container');
     let height = headingContainer.scrollHeight + helloContainer.scrollHeight + "px";
     console.log(height);
     headingMasterDiv.style.height = height;

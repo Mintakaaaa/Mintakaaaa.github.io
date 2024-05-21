@@ -7,8 +7,10 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     transition: overflow 1s;
-    overflow: hidden;
-
+    // overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -28,9 +30,6 @@ body, html {
 
 #anim-heading {
     display: inline;
-}
-.center-heading {
-    font-size: 100px;
 }
 .gradient-heading {
     font-size: 100px;
@@ -146,15 +145,14 @@ body, html {
 
 
 
-
-
-
 .heading-master-div {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     transition: height 1s ease-in-out;
+    position: relative;
+
 }
 
 
@@ -200,12 +198,37 @@ body, html {
 
 
 
-.heading-container {
-    // display: inline-block;
-    position: relative;
+
+#hello-container {
+    // position: absolute;
+    // top: 100%; // postion below heading
+    // left: 0; // position at x=heading-start
 }
-.hello-container {
-    position: absolute;
-    top: 100%; // postion below heading
-    left: 0; // position at x=heading-start
+
+
+
+.image-button {
+    background: none;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
 }
+
+.image-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.shadow-card {
+    display: inline-block; /* wrap text */
+    // background-color: #00ff84;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+

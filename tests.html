@@ -5,22 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
 
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+
+      }
+      .heading-container {
+          position: relative;
+      }
+      .hello-container {
+          position: absolute;
+          top: 100%; 
+          left: 0; 
+      }
+
+      .shadow-card {
+        display: inline-block; /* Ensures the background wraps the text */
+        background-color: #00ff84; /* Background color */
+        padding: 10px; /* Padding around the text */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Drop shadow */      
+      }
+
+      .var-width-padd {
+        transition: width 1s ease-in-out, padding 1s ease-in-out;
+      }
+      /* .var-padd { */
+        /* transition: padding 1s ease-in-out; */
+      /* } */
+    </style>
   </head>
+
 
   <body>
 
-    <div class="container">
-      <p>This is the content of the first div.</p>
-      <button id="HelloBtn">Hello</button>
-    </div>
+    <div class="heading-container shadow-card var-width-padd" style="width: 0; overflow: hidden; padding: 0;">
+      <h1 id="anim-heading" class="center-heading" style="font-size: 100px;">Personal Portfolio</h1>
+
+
+      <div class="hello-container">
+        <h1 id="h1-hello" class="opacity-none">Hello!</h1>
+        <p id="p-name" class="opacity-none">My name is Mindaugas and I'm an aspiring software engineer.</p>
+      </div>
+    </div> 
 
 
     <script type="module">
-      let HelloBtn = document.getElementById("HelloBtn");
-      HelloBtn.addEventListener("click", () => {
-        console.log("Hello World");
-        HelloBtn.style.color = "green";
-      });
+      setTimeout(function () { 
+        let div = document.querySelector('.shadow-card');
+        div.style.width = div.scrollWidth + "px";
+        div.style.padding = "10px";
+      }, 1000);
     </script>
   </body>
 </html>

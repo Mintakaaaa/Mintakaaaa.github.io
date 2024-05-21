@@ -14,23 +14,99 @@
     <div id="progress-bar"></div>
   </div>
 
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#proficiency">Proficiency</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+      </div>  
+    </nav>
+  </header>
+
+
 
   <div class="svg-container">
     <img src="svg/blob.svg" alt="Top Left Background SVG" id="top-left-bg-svg" class="bg-svg">
     <img src="svg/blob.svg" alt="Top Right Background SVG" id="top-right-bg-svg" class="bg-svg">
   </div>
 
-  <div class="heading-master-div">
-    <div class="heading-container">
-      <h1 id="anim-heading" class="center-heading move-to-top"></h1>
 
-
-      <div class="hello-container">
-        <h1 id="h1-hello" class="opacity-none">Hello!</h1>
-        <p id="p-name" class="opacity-none">My name is Mindaugas and I'm an aspiring software engineer.</p>
+  <div id="main-grid" class="d-grid mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="heading-master-div">
+          <div id="heading-container" class="shadow-card">
+            <h1 id="anim-heading" style="font-size: 100px;"></h1>
+          </div>
+        </div> 
       </div>
-    </div> 
+    </div>
+    <div class="row mt-5 mb-5">
+      <div class="col">
+        <div id="hello-container" class="text-center">
+          <h1 id="h1-hello" class="opacity-none">Hello!</h1>
+          <p id="p-name" class="opacity-none">My name is Mindaugas and I'm an aspiring software engineer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="shadow-card" style="display: block;">
+          <h1 style="font-size: 75px;">Projects</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row w-75 mt-5 mx-auto">
+      <div class="col-6">
+        <div class="shadow-card w-100">
+          <h2>Minima</h2>
+          <p>Minima project here</p>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="shadow-card w-100">
+          <p>other project here</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <div class="shadow-card" style="display: block;">
+          <h1 style="font-size: 75px;">Proficiency</h1>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+  <!-- <button class="image-button" style="height: 60px; width: 60px;">
+    <img src="svg/arrow-down.svg" alt="Button" id="" class="" style="height: 60px; width: 60px;">
+  </button> -->
+
+  <!-- <div> -->
+    <!-- <img src="images/purp-grad.png" alt="Purple gradient background" id="" class=""> -->
+  <!-- </div> -->
+
   <script src="js/animations.js" defer></script>
 </body>
 
