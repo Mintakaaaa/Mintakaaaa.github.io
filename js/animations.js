@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function addAnimationToLetters(heading, letters, callback) {
-    const delay = 250;
+    const delay = 150;
     let index = 0;
     const totalAnimations = letters.length;
     let completedAnimations = 0;
@@ -57,7 +57,6 @@ function addAnimationToLetters(heading, letters, callback) {
 
 
 function wrapPortfolioSpans(heading) {
-    let spanned = false;
     console.log("yipee");
     // Find spans with "portfolio" text content
     const portfolioSpans = heading.querySelectorAll('span.animated-letter');
@@ -89,15 +88,26 @@ function wrapPortfolioSpans(heading) {
 
         setTimeout(() => {
             showHelloText();
-        }, 1000);
-    }, 1000);
+
+            setTimeout(() => {
+                
+                let menuItems = document.querySelectorAll(".menu-item-container");
+                menuItems.forEach( function (menuItem, index) { 
+                    let fromLeft;
+                    if (index % 2 == 0) { fromLeft = true; }
+                    else { fromLeft = false; }
+                    showMenuItem(menuItem, fromLeft);
+                });
+                }, 1000);
+        }, 750);
+    }, 750);
 
     // gradientHeading.classList.add('gradual-underline'); // adds underline class to gradient heading
     
     // to make pagescrollable and scrollbar appear
-    document.body.style.overflow = "visible";
-    document.body.style.overflowX = "hidden";
-    document.documentElement.style.overflow = "visible";
+    // document.body.style.overflow = "visible";
+    // document.body.style.overflowX = "hidden";
+    // document.documentElement.style.overflow = "visible";
     //
     
     window.addEventListener('scroll', function() {
@@ -162,5 +172,18 @@ function showHelloText() {
         let name = document.querySelector("#p-name");
         name.classList.add('slide-in-from-left');
         name.classList.remove("opacity-none");
-    }, 1000);
+    }, 500);
+}
+
+
+function showMenuItem(item, fromLeft) {
+    if (fromLeft) {
+        item.classList.add('slide-in-from-left');
+        item.classList.remove("opacity-none");
+    }
+    else {
+        item.classList.add('slide-in-from-right');
+        item.classList.remove("opacity-none");
+    }
+
 }
