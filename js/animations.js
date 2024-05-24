@@ -1,4 +1,41 @@
+function refreshElemHeight(elem, originalHeight, extraHeight, overflow) {
+    if (overflow) {
+      elem.style.height = originalHeight + extraHeight + "px";
+      elem.style.overflow = "visible";
+    }
+    else {
+      elem.style.height = originalHeight + extraHeight + "px";
+      elem.style.overflow = "hidden";
+    }
+}
+
+window.addEventListener('resize', handleResize);
+function handleResize() {
+    // Get the new size of the window
+    const windowWidth = window.innerWidth;
+    const navMenu = document.querySelector('.nav-menu-item-list');
+
+    if (windowWidth >= 767) {
+        refreshElemHeight(navMenu, 0, navMenu.scrollHeight, true);
+    }   
+    else {
+        refreshElemHeight(navMenu, 0, 0, false);
+    }
+}
+function handleSandwichClick() {
+    const navMenu = document.querySelector('.nav-menu-item-list');
+    if (navMenu.style.overflow === 'hidden') {
+        refreshElemHeight(navMenu, 0, navMenu.scrollHeight, true);
+    }
+    else {
+        refreshElemHeight(navMenu, 0, 0, false);
+    }
+}
 document.addEventListener("DOMContentLoaded", function() {
+    handleResize();
+    const navSandwich = document.querySelector('#nav-menu-sandwich');
+    navSandwich.addEventListener('click', handleSandwichClick);
+
     document.getElementById('progress-container').style.display = 'block'; // show progress bar
 
     setTimeout(function() { // update the progress bar width after a delay (simulating loading time)
@@ -6,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         setTimeout(function() { // hide the progress bar after a brief delay
         document.getElementById('progress-container').classList.add('move-up');
+        // showNavBar();
         }, 1000);
     }, 1000);
 
@@ -185,5 +223,14 @@ function showMenuItem(item, fromLeft) {
         item.classList.add('slide-in-from-right');
         item.classList.remove("opacity-none");
     }
-
 }
+
+function showNavBar() {
+    let navBar = document.querySelector("#navbar");
+    navBar.style.height = navBar.scrollHeight + "px";
+    // navBar.style.padding = "30px";
+}
+
+
+
+
