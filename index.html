@@ -15,26 +15,36 @@
   </div>
 
   <header>
-    <nav id="navbar" class="shadow-card" style="display: block; overflow: hidden;">
-      <a id="logo" href="#">MB</a>
-
+    <nav id="navbar" class="shadow-card" style="overflow: hidden;">
+      <div id="logo-container">
+        <a id="logo" href="index.html">MB</a>
+      </div>
       <button id="nav-menu-sandwich" class="image-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <img src="svg/list.svg" alt="Button" id="" class="" style="height: 60px; width: 60px;">
       </button>
-      <ul class="nav-menu-item-list" style="height: 0; overflow: hidden;">
-        <li>
-          <a  href="#projects">Projects</a>
-        </li>
-        <li>
-          <a  href="#proficiency">Proficiency</a>
-        </li>
-        <li>
-          <a  href="#about">About</a>
-        </li>
-        <li class="me-4">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <div id="menu-container">
+        <ul class="nav-menu-item-list" style="height: 0; overflow: hidden;">
+          <div class="bar" style="opacity: 0;"></div>
+          <li>
+            <a  href="#projects">Projects</a>
+          </li>
+          <div class="bar"></div>
+          <li>
+            <a  href="#proficiency">Proficiency</a>
+          </li>
+          <div class="bar"></div>
+          <li>
+            <a  href="#about">About</a>
+          </li>
+          <!-- some reason u need width 2px here to make them all even... wtf -->
+          <div class="bar" style="width: 2px;"></div> 
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <div class="bar" style="opacity: 0;"></div>
+        </ul>
+      </div>
+
     </nav>
   </header>
 
