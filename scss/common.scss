@@ -1,0 +1,39 @@
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  transition: overflow 1s;
+  // overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFBDE;
+}
+
+.shadow-card {
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+// chrome, safari and edge
+::-webkit-scrollbar {
+  transform: translateX(30px); // gonna have to make my own scrollbar because regular one just snaps into place
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7e7cd6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
