@@ -24,7 +24,9 @@ function handleResize() {
 }
 function handleSandwichClick() {
     const navMenu = document.querySelector('.nav-menu-item-list');
+    console.log("Click");
     if (navMenu.style.overflow === 'hidden') {
+        console.log(navMenu.scrollHeight + 'px');
         refreshElemHeight(navMenu, 0, navMenu.scrollHeight, true);
     }
     else {
@@ -42,8 +44,17 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('progress-bar').style.width = '100%';
         
         setTimeout(function() { // hide the progress bar after a brief delay
-        document.getElementById('progress-container').classList.add('move-up');
-        // showNavBar();
+            document.getElementById('progress-container').classList.add('move-up');
+            showNavBar();
+            setTimeout(function() {
+                showLogo();
+                setTimeout(function() {
+                    showNavText();
+                    setTimeout(function() {
+                        showBarsInNav();
+                    }, 500);
+                }, 1000);
+            }, 1000);
         }, 1000);
     }, 1000);
 
@@ -226,9 +237,36 @@ function showMenuItem(item, fromLeft) {
 function showNavBar() {
     let navBar = document.querySelector("#navbar");
     navBar.style.height = navBar.scrollHeight + "px";
-    // navBar.style.padding = "30px";
+    navBar.style.padding = "40px";
 }
 
+function showLogo() {
+    let logo = document.querySelector("#logo");
+    let m = document.querySelector("#M");
+    console.log(window.innerWidth);
+    let windowWidth = window.innerWidth;
+    if (windowWidth >= 767) {
+        logo.style.fontSize = "50px";
+    }
+    else {
+        logo.style.fontSize = "10px";
+    }
 
+}
+function showNavText() {
+    // let navMenu = document.querySelector(".nav-menu-item-list");
+    let navMenuLinks = document.querySelectorAll('.nav-menu-item-list a');
+    navMenuLinks.forEach(function(link) {
+        link.style.fontSize = "20px";
+    });
+    console.log(navMenuLinks);
+}
 
+function showBarsInNav() {
+    let bars = document.querySelectorAll(".nav-menu-item-list .bar");
+    console.log(bars);
+    bars.forEach(function(bar) {
+        bar.style.setProperty('--bar-height', '50px'); // custom CSS variable!! Wow!
+    });
+}
 
