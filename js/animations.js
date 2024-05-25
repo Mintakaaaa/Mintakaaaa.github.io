@@ -125,19 +125,16 @@ function wrapPortfolioSpans(heading) {
         moveHeadingToTop();
 
         setTimeout(() => {
-            showHelloText();
-
-            setTimeout(() => {
-                
-                let menuItems = document.querySelectorAll(".menu-item-container");
-                menuItems.forEach( function (menuItem, index) { 
-                    let fromLeft;
-                    if (index % 2 == 0) { fromLeft = true; }
-                    else { fromLeft = false; }
-                    showMenuItem(menuItem, fromLeft);
-                });
-                }, 1000);
-        }, 750);
+            
+            // makes the big projects, portfolio, about, contact buttons come in from different sides
+            let menuItems = document.querySelectorAll(".menu-item-container");
+            menuItems.forEach( function (menuItem, index) { 
+                let fromLeft;
+                if (index % 2 == 0) { fromLeft = true; }
+                else { fromLeft = false; }
+                showMenuItem(menuItem, fromLeft);
+            });
+            }, 1000);
     }, 750);
 
     // gradientHeading.classList.add('gradual-underline'); // adds underline class to gradient heading
@@ -194,9 +191,10 @@ function addTextHoverListener(gradientHeadingContainer) {
 function moveHeadingToTop() {
     const headingMasterDiv = document.querySelector('.heading-master-div');
     let headingContainer = headingMasterDiv.querySelector("#heading-container");
-    let helloContainer = document.querySelector('#hello-container');
-    let height = headingContainer.scrollHeight + helloContainer.scrollHeight + "px";
-    console.log(height);
+    // let helloContainer = document.querySelector('#hello-container');
+    // let height = headingContainer.scrollHeight + helloContainer.scrollHeight + "px";
+    // console.log(height);
+    let height = headingContainer.scrollHeight + "px";
     headingMasterDiv.style.height = height;
 }
 

@@ -6,55 +6,186 @@
     <title>Testing</title>
 
     <style>
-      body {
-        font-family: 'Montserrat', sans-serif;
-
+      /* body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+          margin: 0;
       }
-      .heading-container {
+
+      .container {
           position: relative;
       }
-      .hello-container {
+
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: #3498db;
+          position: relative;
+      }
+
+      .box:hover .line-top::before {
+        width: 100%;
+      }
+      .box:hover .line-right::before {
+        height: 100%;
+      }
+      .box:hover .line-bottom::before {
+        width: 100%;
+      }
+      .box:hover .line-left::before {
+        height: 100%;
+      }
+
+      .line-top::before {
+        content: '';
           position: absolute;
-          top: 100%; 
-          left: 0; 
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background: #e74c3c;
+          transition: width 0.5s linear;
       }
 
-      .shadow-card {
-        display: inline-block; /* Ensures the background wraps the text */
-        background-color: #00ff84; /* Background color */
-        padding: 10px; /* Padding around the text */
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Drop shadow */      
+      .line-right::before {
+        content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 4px;
+          height: 0;
+          background: #e74c3c;
+          transition: height 0.5s linear;
+          transition-delay: 0.5s;
       }
 
-      .var-width-padd {
-        transition: width 1s ease-in-out, padding 1s ease-in-out;
+      .line-bottom::before {
+        content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 4px;
+          background: #e74c3c;
+          transition: width 0.5s linear;
+          transition-delay: 1s;
       }
-      /* .var-padd { */
-        /* transition: padding 1s ease-in-out; */
-      /* } */
+
+      .line-left::before {
+        content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 4px;
+          height: 0;
+          background: #e74c3c;
+          transition: height 0.5s linear;
+          transition-delay: 1.5s;
+      }
+
+      .box::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 2px solid transparent;
+          box-sizing: border-box;
+      } */
+
+      /* styles.css */
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black;
+          margin: 0;
+      }
+
+      .container {
+          position: relative;
+      }
+
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: white;
+          position: relative;
+      }
+
+      .line-top::before,
+      .line-right::before,
+      .line-bottom::before,
+      .line-left::before {
+          content: '';
+          position: absolute;
+      }
+
+      .line-top::before {
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background: linear-gradient(to right, #61dd96 , #7e7cd6);
+          transition: width 0.1s linear;
+      }
+      .line-right::before {
+          top: 0;
+          right: 0;
+          width: 4px;
+          height: 0;
+          background: #7e7cd6;
+          transition: height 0.1s linear;
+      }
+      .line-bottom::before {
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 4px;
+          background: linear-gradient(to left, #7e7cd6, #61dd96);
+          transition: width 0.1s linear;
+      }
+      .line-left::before {
+          bottom: 0;
+          left: 0;
+          width: 4px;
+          height: 0;
+          background: #61dd96;
+          transition: height 0.1s linear;
+      }
+
+      .box:hover .line-top::before { width: 100%; }
+      .box:hover .line-right::before { height: 100%; }
+      .box:hover .line-bottom::before { width: 100%; }
+      .box:hover .line-left::before { height: 100%; }
+
+      .line-top::before { transition-delay: 0.3s; }
+      .line-right::before { transition-delay: 0.2s; }
+      .line-bottom::before { transition-delay: 0.1s; }
+      .line-left::before { transition-delay: 0s; }
+
+      .box:hover .line-top::before { transition-delay: 0s; }
+      .box:hover .line-right::before { transition-delay: 0.1s; }
+      .box:hover .line-bottom::before { transition-delay: 0.2s; }
+      .box:hover .line-left::before { transition-delay: 0.3s; }
+
     </style>
   </head>
 
 
   <body>
-
-    <div class="heading-container shadow-card var-width-padd" style="width: 0; overflow: hidden; padding: 0;">
-      <h1 id="anim-heading" class="center-heading" style="font-size: 100px;">Personal Portfolio</h1>
-
-
-      <div class="hello-container">
-        <h1 id="h1-hello" class="opacity-none">Hello!</h1>
-        <p id="p-name" class="opacity-none">My name is Mindaugas and I'm an aspiring software engineer.</p>
-      </div>
-    </div> 
-
-
-    <script type="module">
-      setTimeout(function () { 
-        let div = document.querySelector('.shadow-card');
-        div.style.width = div.scrollWidth + "px";
-        div.style.padding = "10px";
-      }, 1000);
-    </script>
+    <div class="container">
+        <div class="box">
+          <div class="line-top"></div>
+          <div class="line-right"></div>
+          <div class="line-bottom"></div>
+          <div class="line-left"></div>
+        </div>
+    </div>
   </body>
 </html>
