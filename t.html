@@ -9,6 +9,7 @@
 
     <style>
       body {
+          font-family: 'Montserrat', sans-serif;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -22,40 +23,28 @@
       }
 
       .box {
-          width: 200px;
+          width: 1000px;
           height: 200px;
           background-color: white;
           position: relative;
       }
 
-      .bar::after {
-        content: "";
-        height: 50px;
-        width: 3px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        
-        margin-top: auto;
-        margin-bottom: auto;
-        /* background-color: black; */
-        border-radius: 5px;
-        /* opacity: 0.3; */
+      #hga {
+        display: inline-block;
+        transform: translateX(-100%);
+        transition: transform 0.2s linear;
+      }
 
-        animation: always-color 2s linear infinite;
+      .menu-item-container:focus .menu-item #hga {
+        transform: translateX(0);
+        transition: transform 0.2s linear;
       }
-      
-      @keyframes always-color {
-        0% {
-          background: #61dd96;
-        }
-        50% {
-          background: #7e7cd6;
-        }
-        100% {
-          background: #61dd96;
-        }
+
+      .menu-item-container:focus .menu-item {
+        color: blue;
       }
+
+
     </style>
   </head>
 
@@ -63,8 +52,20 @@
   <body>
     <div class="container">
         <div class="box">
-          <div class="bar"></div>
+          <!-- <div class="menu-item-container opacity-none shadow-card" style="display: block;" onclick="location.href = '/projects.html';"> -->
+          <div tabindex="0" class="menu-item-container opacity-none shadow-card" style="display: block;">
+            <h1 class="menu-item" style="font-size: 75px;"><span id="hga"  style="color: red;">></span> Projects</h1>
+          </div>        
         </div>
     </div>
+
+    <script>
+
+      let menuItemContainer = document.querySelector(".menu-item-container");
+      let menuItem = document.querySelector(".menu-item");
+
+
+
+    </script>
   </body>
 </html>

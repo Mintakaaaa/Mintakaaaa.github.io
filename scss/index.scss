@@ -78,6 +78,23 @@
  
 
 
+.menu-item-container:hover .right-arrow, .menu-item-container:hover .left-arrow  {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.right-arrow {
+    font-size: 75px;
+    display: inline-block;
+    transform: translateX(-300%);
+    transition: transform 0.3s ease-in-out;
+}
+.left-arrow {
+    font-size: 75px;
+    display: inline-block;
+    transform: translateX(300%);
+    transition: transform 0.3s ease-in-out;
+}
+
 
 .menu-item-container:hover .menu-item::after {
     -webkit-transform: scaleX(1);
@@ -88,7 +105,6 @@
     display: inline-block;
     position: relative;
     text-decoration: none;
-    transition: all .35s ease;
 
     &::after { // hover effect gradient underline
         content: ""; 
@@ -97,14 +113,23 @@
         height: 5px;
         bottom: 0;
         left: 0;
-        background: linear-gradient(to right, #61dd96 , #7e7cd6);
+        background: linear-gradient(to right, #61dd96, #7e7cd6, #61dd96);
+        background-size: 200% 100%;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s; 
-        transition: all 0.3s ease-in-out 0s; 
+        -webkit-transition: transform 0.3s ease-in-out 0s; 
+        transition: transform 0.3s ease-in-out 0s;
+        animation: gradient-background 2s linear infinite;
     }   
 }
-
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 200% 100%;
+    }
+}
  
 
 
@@ -214,22 +239,6 @@
     }
 }
 
-
-
-
-
-.image-button {
-    background: none;
-    border: none; 
-    padding: 0; 
-    cursor: pointer;
-}
-
-.image-button img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
 
 
