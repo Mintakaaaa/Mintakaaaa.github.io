@@ -12125,10 +12125,10 @@ body {
   background-size: 200% 100%;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out 0s;
-  animation: gradient-background 2s linear infinite;
+  animation: gradient-underline-background 2s linear infinite;
 }
 
-@keyframes gradient-background {
+@keyframes gradient-underline-background {
   0% {
     background-position: 0% 100%;
   }

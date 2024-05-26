@@ -119,10 +119,10 @@
         transform: scaleX(0);
         -webkit-transition: transform 0.3s ease-in-out 0s; 
         transition: transform 0.3s ease-in-out 0s;
-        animation: gradient-background 2s linear infinite;
+        animation: gradient-underline-background 2s linear infinite;
     }   
 }
-@keyframes gradient-background {
+@keyframes gradient-underline-background {
     0% {
         background-position: 0% 100%;
     }

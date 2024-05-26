@@ -165,9 +165,6 @@ function addTextHoverListener(gradientHeadingContainer) {
 function moveHeadingToTop() {
     const headingMasterDiv = document.querySelector('.heading-master-div');
     let headingContainer = headingMasterDiv.querySelector("#heading-container");
-    // let helloContainer = document.querySelector('#hello-container');
-    // let height = headingContainer.scrollHeight + helloContainer.scrollHeight + "px";
-    // console.log(height);
     let height = headingContainer.scrollHeight + "px";
     headingMasterDiv.style.height = height;
 }
@@ -186,6 +183,7 @@ function showHelloText() {
 }
 
 
+// this function makes divs slide in from left and right and removes "hoverability" until their animations have finished...
 function showMenuItem(item, fromLeft) {
     if (fromLeft) {
         item.classList.add('slide-in-from-left');
@@ -195,5 +193,11 @@ function showMenuItem(item, fromLeft) {
         item.classList.add('slide-in-from-right');
         item.classList.remove("opacity-none");
     }
+    item.style.pointerEvents = "none";
+    setTimeout(() => {
+        item.classList.remove('slide-in-from-left');
+        item.classList.remove('slide-in-from-right');
+        item.style.pointerEvents = "auto";
+    }, 1000);
 }
 
