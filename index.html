@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindaugas Brazlauskas</title>
+  <link href="scss/common.css" rel="stylesheet">
+  <link href="scss/index.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+  <div class="nav-container">
+    <div id="logo-sandwich-container">
+      <p class="p-button" style="pointer-events: none; margin-right: auto;">MB</p>
+      <div id="nav-sandwich">
+        <div id="top-bar"></div>
+        <div id="middle-bar"></div>
+        <div id="bottom-bar"></div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="nav-links">
+        <p id="nav-education">Education</p>
+        <p id="nav-projects">Projects</p>
+        <p id="nav-work">Work</p>
+      </div>
+
+      <p id="nav-contact-button" class="p-button closed">Contact</p>
+    </div>
+
+  </div>
+
+  <div style="margin-bottom: 50px;"></div>
+
+  <div class="global-margin hero">
+    <div class="hero-left">
+      <h1><span class="bo-gradient">Who I am</span></h1>
+      <h1 id="im-mindaugas">I'm Mindaugas</h1>
+      <p id="slogan">Software engineering student<br>& passionate programmer.</p>
+      <div id="availability-container">
+        <div class="green-dot"></div><p>Available for work</p>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div id="cool-square"></div>
+      <div id="me-container">
+        <img src="media/me.jpg">
+      </div>
+      <p style="font-size: var(--s); color: #c4d2d4;"><i class="fa-solid fa-location-dot" style="margin-right: 8px; color: var(--orange);"></i>Sheffield, UK.</p>
+    </div>
+
+
+    <div class="decorator-square top left"></div>
+    <div id="special-decorator-3" class="decorator-square bottom left"></div>
+    <div id="special-decorator-1" class="decorator-square top right"></div>
+    <div id="special-decorator-2" class="decorator-square bottom right"></div>
+
+  </div>
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m);">
+
+    <div style="z-index: 1; margin-top: 100px;">
+      <h2 style="color: var(--title-blue); font-size: var(--xxl);">About me</h2>
+    </div>
+
+    <div class="swiper-container" id="swiper-container-about">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" style="pointer-events: auto;">
+            <div class="about-container">
+              <p>I am from the small Central European country of Lithuania <img id="ltu-shape" src="media/ltu-shape.svg" style="height: 20px; vertical-align: middle;"></p>
+              <div id="slide-0-circle" class="blue-circle"></div>
+              <div class="inner-circle"></div>
+
+              <div class="image-container">
+                <img id="trakai-img" src="media/trakai.jpg">
+                <div class="image-overlay" style="width: calc(100% - 8px); height: calc(100% - 8px); cursor: pointer;" onclick="window.open('https://maps.app.goo.gl/gbpNk5zuB27n85Xs7', '_blank');">
+                  54.6520° N<br>24.9333° E
+                </div>
+                <p class="red item-type-label">Trakų salos pilis / Trakai island castle</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            
+          
+            <div class="about-container">
+              <p>I love body-building and I've been doing so for 1.75 years!</p>
+              <div id="slide-1-circle" class="blue-circle"></div>
+              <div class="inner-circle"></div>
+
+              <div class="image-container without-overlay">
+                <img src="media/year 1.jpg" style="max-width:50%;">
+                <img src="media/year 2.jpg" style="max-width:50%;">
+                <p class="red item-type-label">I'm developing a gym app!</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+  
+            <div class="about-container">
+              <p>I like cool cars; my favourite of all time is the 2004 Subaru WRX STI.</p>
+              <div id="slide-2-circle" class="blue-circle"></div>
+              <div class="inner-circle"></div>
+
+              <div class="image-container without-overlay">
+                <img src="media/subaru.jpg">
+                <p class="red item-type-label">It's a rally car!</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-slide">
+            <div class="about-container">
+              <p>I enjoy soldering. I fixed my PC mouse by applying my self-taught skills & saved £50!</p>
+              <div id="slide-3-circle" class="blue-circle"></div>
+              <div class="inner-circle"></div>
+
+              <div class="image-container without-overlay">
+                <img src="media/solder.jpeg">
+                <p class="red item-type-label">Circuits I've soldered</p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="about-switch-container">
+        <div data-slide="0" id="about-swiper-0" class="selected switch-item"><i class="fa-solid fa-earth-europe"></i></div>
+        <div data-slide="1" id="about-swiper-1" class="switch-item"><i class="fa-solid fa-dumbbell"></i></div>
+        <div data-slide="2" id="about-swiper-2" class="switch-item"><i class="fa-solid fa-car"></i></div>
+        <div data-slide="3" id="about-swiper-3" class="switch-item"><i class="fa-solid fa-bolt"></i></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="margin-bottom: 300px;"></div>
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m); position: relative;">
+    <div class="decorator-square top right"></div>
+
+    <!-- <div class="magicpattern" style="width: 400px; height: 400px; left: 0; position: absolute;"></div> -->
+
+    <div class="section-titles" style="z-index: 1;">
+      <h1><span class="bo-gradient">What I do</span></h1>
+      <h2>I develop</h2>
+    </div>
+
+
+    <div class="make-master-container">
+      <div class="make-grid">
+
+        <div class="default selected make-item-container">
+          <div class="make-item grey-gradient" style="position: relative;" data-make="web-app">
+            <p>Web apps</p>
+            <i id="web-app-bg-icon" class="fa-solid fa-file-code"></i>  
+          </div>
+        </div>
+  
+        <div class="make-item-container">
+          <div class="make-item grey-gradient" style="position: relative;" data-make="desktop-app">
+            <p>Desktop apps</p>
+            <i id="desktop-bg-icon" class="fa-solid fa-laptop"></i>
+          </div>
+        </div>
+
+        <div class="make-item-container">
+          <div class="make-item grey-gradient" style="position: relative;" data-make="static-site">
+            <p>Static websites</p>
+            <i id="static-site-bg-icon" class="fa-regular fa-file-code"></i>
+          </div>
+        </div>
+
+        <div class="make-item-container">
+          <div class="make-item grey-gradient" style="position: relative;" data-make="android-app">
+            <p>Android apps</p>
+            <i id="android-bg-icon" class="fa-brands fa-android"></i>
+          </div>
+        </div>
+      </div>
+  
+
+      <div class="tech-stack-container">
+        <div class="moving grey-gradient tech-stack-box">
+
+          <div>
+            <i id="web-app-fg-icon" class="fa-solid fa-file-code" style="color: #ce9a41;"></i>  
+            <i id="desktop-fg-icon" class="fa-solid fa-laptop" style="color: #ce4141;"></i>  
+            <i id="static-site-fg-icon" class="fa-regular fa-file-code" style="color: #4162ce;"></i>  
+            <i id="android-fg-icon" class="fa-brands fa-android" style="color: #41ce41;"></i>  
+          </div>
+
+          <div class="heading-container">
+            <h2 class="heading">Technologies</h2>
+
+            <div class="info-container">
+              <i class="fa-solid fa-circle-info"></i>
+              <div class="info-revealed"><p><span id="hover" style="display:none;">Hover</span><span id="tap" style="display:none;">Tap</span> on tech logo to reveal my confidence level associated with it.</p></div>
+            </div>
+          </div>
+
+          <div class="tech-logos-container">
+            <div id="web-app-tech" class="d-none">
+              <div class="img-holder">
+                <img src="media/tech_logos/html.svg">
+                <p class="tech-name p-small-grey">HTML</p>
+                <div class="image-overlay">90<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/css.svg">
+                <p class="tech-name p-small-grey">CSS</p>
+                <div class="image-overlay">70<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/bootstrap.svg">
+                <p class="tech-name p-small-grey">Bootstrap</p>
+                <div class="image-overlay">70<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/javascript.svg">
+                <p class="tech-name p-small-grey">Javascript</p>
+                <div class="image-overlay">80<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/rails.svg">      
+                <p class="tech-name p-small-grey">Ruby on Rails</p>          
+                <div class="image-overlay">70<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/sqlite.svg">     
+                <p class="tech-name p-small-grey">SQLite</p>           
+                <div class="image-overlay">75<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/mysql.svg">  
+                <p class="tech-name p-small-grey">MySQL</p>              
+                <div class="image-overlay">80<span>%</span></div>
+              </div>
+            </div>
+
+            <div id="desktop-app-tech" class="d-none">
+              <div class="img-holder">
+                <img src="media/tech_logos/java.svg">   
+                <p class="tech-name p-small-grey">Java</p>             
+                <div class="image-overlay">85<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/python.svg">
+                <p class="tech-name p-small-grey">Python</p>
+                <div class="image-overlay">80<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/haskell.svg">
+                <p class="tech-name p-small-grey">Haskell</p>
+                <div class="image-overlay">40<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/sqlite.svg">
+                <p class="tech-name p-small-grey">SQLite</p>
+                <div class="image-overlay">75<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/mysql.svg">
+                <p class="tech-name p-small-grey">MySQL</p>
+                <div class="image-overlay">80<span>%</span></div>
+              </div>
+            </div>
+
+            <div id="static-site-tech" class="d-none">
+              <div class="img-holder">
+                <img src="media/tech_logos/html.svg">
+                <p class="tech-name p-small-grey">HTML</p>
+                <div class="image-overlay">90<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/css.svg">
+                <p class="tech-name p-small-grey">CSS</p>
+                <div class="image-overlay">70<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/bootstrap.svg">
+                <p class="tech-name p-small-grey">Bootstrap</p>
+                <div class="image-overlay">70<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/javascript.svg">
+                <p class="tech-name p-small-grey">Javascript</p>
+                <div class="image-overlay">80<span>%</span></div>
+              </div>
+            </div>
+
+            <div id="android-app-tech" class="d-none">
+              <div class="img-holder">
+                <img src="media/tech_logos/android studio.svg">
+                <p class="tech-name p-small-grey">Android Studio</p>
+                <div class="image-overlay">100<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/java.svg">
+                <p class="tech-name p-small-grey">Java</p>
+                <div class="image-overlay">85<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/kotlin.svg">
+                <p class="tech-name p-small-grey">Kotlin</p>
+                <div class="image-overlay">30<span>%</span></div>
+              </div>
+              <div class="img-holder">
+                <img src="media/tech_logos/sqlite.svg">
+                <p class="tech-name p-small-grey">SQLite</p>
+                <div class="image-overlay">75<span>%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-titles" style="z-index: 1; margin-top: 100px;">
+      <h2>I blog</h2>
+      <p>on Medium</p>
+    </div>
+
+    <div class="blog-container" style="position: relative;">
+      <div class="blog-post-container grey-gradient">
+        <div class="post-image-container">
+          <div class="red item-type-label">
+            Latest story
+          </div>
+          <img src="media/viewport-inspector-photo.png">
+        </div>
+        <div class="post-details-container">
+          <div style="display: flex; gap: var(--m);">
+            <div id="hidden-post-image-container"><img id="hidden-post-image" src="media/viewport-inspector-photo.png"></div>
+            <div>
+              <h2 style="color: var(--title-blue);">I created an in-website mobile responsiveness inspection tool</h2>
+              <p class="p-small-grey">2 min read | 29/07/2024</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="p-small-grey">Short snippet</p>
+            <blockquote>I am a big fan of mobile responsiveness and so while developing a static website project, I decided to implement a way for people viewing this project to conveniently analyse my project's mobile responsiveness without having to manually resize their web browser.</blockquote>
+          </div>
+  
+          <p class="p-button" onclick="window.open('https://medium.com/@mindaugas-brazlauskas/i-created-an-in-website-mobile-responsiveness-inspection-tool-c6771eb94f9d', '_blank');">Continue reading</p>
+        </div>
+      </div>  
+
+      <!-- <div class="magicpattern" style="width: 400px; height: 400px; top: -50%; left: 50%; z-index: -1; position: absolute;"></div> -->
+
+      <div class="blog-profile-container grey-gradient">
+        <div class="profile-image">
+          <h2>My Profile</h2>
+          <img src="media/me_square.jpg">
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <img id="hidden-pfp" src="media/me_square.jpg" style="border-radius: 50%; height: 40px;">
+          <div style="display: flex; flex-direction: column;">
+            <p style="font-size: var(--l);">Mindaugas Brazlauskas</p>
+            <p class="p-small-grey" style="margin-bottom: var(--m);">1 story posted</p>    
+          </div>
+        </div>
+
+        <p class="p-small-grey">About</p>
+        <p id="bio">I am a software engineering student and passionate programmer always looking out for ways to improve my work.</p>
+        <p id="visit-button" class="p-button"  onclick="window.open('https://medium.com/@mindaugas-brazlauskas', '_blank');">Visit</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div style="margin-bottom: 300px;"></div>
+
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m); position: relative;">
+    <div class="decorator-square top right"></div>
+
+    <div class="section-titles">
+      <h1><span id="edu-scroll-target" class="bo-gradient">My education</span></h1>
+      <h2>MEng Computer Science</h2>
+      <p>(Software engineering)</p>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;"></div>
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m);">
+
+    <div class="year-container">
+      <div style="display: flex; gap: 8px; flex: 1 1 auto;">
+        <p style="color: #999999; white-space: nowrap; font-size: var(--s); pointer-events: none;"><span id="current-year-average" style="font-size: var(--xl); font-weight: 500;">69</span>% Average</p>
+        <div style="background-color: var(--light-gray); height: 3px; margin-top: auto; margin-bottom: 4px; width: 100%;"></div>
+        <p style="color: #999999; white-space: nowrap; font-size: var(--s); pointer-events: none; margin-top: auto;">Year</p>
+      </div>
+
+      <div class="view-year-container">
+        <div id="current-view-year-box"></div>
+        <div class="view-year-item selected" data-year="1">
+          <p>One</p>
+        </div>
+        <div class="view-year-item" data-year="2">
+          <p>Two</p>
+        </div>
+        <div class="view-year-item" data-year="3">
+          <p>Three</p>
+        </div>
+        <div class="view-year-item" data-year="4">
+          <p>Four</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules" data-year="1">
+      <div class="module-container">
+        
+        <h2 class="module-percentage">76%</h2>
+        <div class="module">
+          <p>Introduction to Algorithms & Data Structures</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">74%</h2>
+        <div class="module">
+          <p>Java Programming</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">
+          73%
+          <i class="fa-solid fa-star"></i>
+          <div class="info-revealed">Favourite module of the year!<br>This module introduced me to HTML and CSS.</div>
+        </h2>
+        <div class="module">
+          <p>Web & Internet Technology</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">71%</h2>
+        <div class="module">
+          <p>Introduction to Software Engineering</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">64%</h2>
+        <div class="module">
+          <p>Devices & Networks</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">63%</h2>
+        <div class="module">
+          <p>Foundations of Computer Science</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">59%</h2>
+        <div class="module">
+          <p>Machines & Intelligence</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">Pass</h2>
+        <div class="module">
+          <p>Global Engineering Challenge Week</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules d-none" data-year="2">
+      <div class="module-container">
+        <h2 class="module-percentage">84%
+          <i class="fa-solid fa-star"></i>
+          <div class="info-revealed">Favourite module of the year!<br>This module gave me experience working with a real client.</div>
+        </h2>
+        <div class="module">
+          <p>Software Hut</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">81%</h2>
+        <div class="module">
+          <p>Functional Programming</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">78%</h2>
+        <div class="module">
+          <p>Data Driven Computing</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">76%</h2>
+        <div class="module">
+          <p>Robotics</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">74%</h2>
+        <div class="module">
+          <p>Systems Design & Security</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">74%</h2>
+        <div class="module">
+          <p>Logic in Computer Science</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">60%</h2>
+        <div class="module">
+          <p>Automata, Computation & Complexity</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">Distinction</h2>
+        <div class="module">
+          <p>Engineering - You're Hired</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules d-none" data-year="3">
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Cybersecurity in Action</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>The Internet of Things</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Software Testing & Analysis</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Undergraduate Ambassadors Scheme in Computer Science</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Dissertation Project</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Managing Engineering Projects & Teams</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>Accounting & Law for Engineers</p>
+        </div>
+      </div>
+
+      <div class="module-container">
+        <h2 class="module-percentage">NA%</h2>
+        <div class="module">
+          <p>German Post-Beginner 1</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modules d-none" data-year="4">
+      Unknown as I'm starting my 4th year in September 2025.
+    </div>
+  </div>  
+
+  <div style="margin-bottom: 300px;"></div>
+
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m); position: relative;">
+    <div class="decorator-square top right"></div>
+
+    <div class="section-titles">
+      <h1><span class="bo-gradient">What I have completed</span></h1>
+      <h2 id="projects-scroll-target">6 projects</h2>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;"></div>
+
+  <div class="project-items">
+
+    <div class="project-type-container">
+      <div style="display: flex; gap: 8px; flex: 1 1 auto;">
+        <div style="background-color: var(--light-gray); height: 3px; margin-top: auto; margin-bottom: 4px; width: 100%;"></div>
+        <p style="color: #999999; white-space: nowrap; font-size: var(--s); pointer-events: none;">Project type</p>
+      </div>
+      <div class="view-type-container">
+        <div id="current-view-type-box"></div>
+        <div class="view-type-item selected" data-types="all">
+          <p>All</p>
+        </div>
+        <div class="view-type-item" data-types="web">
+          <p>Web</p>
+        </div>
+        <div class="view-type-item" data-types="android">
+          <p>Android</p>
+        </div>
+        <div class="view-type-item" data-types="desktop">
+          <p>Desktop</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="minima" class="project-item-container" data-types="web,android">
+      <div class="project-switch-container">
+        <p id="swiper-one" class="selected switch-item">Site</p>
+        <p id="swiper-two" class="switch-item">App</p>
+      </div>
+
+      <div class="swiper-container" id="swiper-container-minima">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-item grey-gradient">
+              <div class="project-item-overlay grey-gradient">
+                <div class="overlay-column" style="border-top-left-radius: inherit; border-bottom-left-radius: inherit;">
+                  <i class="fa-solid fa-code"></i>
+                  <p>App<br>Code</p>
+                </div>
+                <div class="overlay-column" style="border-top-right-radius: inherit; border-bottom-right-radius: inherit;" onclick="window.location.href='projects/minima/demo.html';">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <p>Minima<br>Showcase</p>  
+                </div>
+              </div>
+      
+              <div class="main-image-container">
+                <div class="red item-type-label">
+                  <p>PERSONAL PROJECT</p>
+                </div>
+                <img src="media/minima/Minima Splash.png">
+                <div class="tech-stack">
+                  <img src="media/tech_logos/html.svg">
+                  <img src="media/tech_logos/css.svg">
+                  <img src="media/tech_logos/javascript.svg">
+                </div>
+              </div>
+              <div class="details-container">
+                <div class="secondary-image-container">
+                  <div class="img-bg">
+                    <img src="media/minima/Minima Home.png">
+                  </div>
+                  <div class="img-bg">
+                    <img src="media/minima/Minima Features.png">
+                  </div>                  
+                </div>
+                <div class="category-blob-container">
+                  <div class="red category-blob">Front-end</div>
+                  <div class="red category-blob">Mobile responsive</div>
+                  <div class="red category-blob">Solo</div>
+                </div>
+                <div>
+                  <p class="description">Static showcase website for the Android music-streaming app I've developed, Minima.</p>
+                </div>
+        
+                <div class="link-container">
+                  <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>06/2024 | 2 months development</p>
+                  <div id="decorative-line"></div>
+                </div>
+              </div>
+              <img src="media/tech_logos/html.svg" style="position: absolute; bottom: 0; right: 24px; width: 75px; opacity: 0.3;">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="project-item grey-gradient">
+              <div class="project-item-overlay grey-gradient">
+                <div class="overlay-column" style="border-top-left-radius: inherit; border-bottom-left-radius: inherit;">
+                  <i class="fa-solid fa-code"></i>
+                  <p>App<br>Code</p>
+                </div>
+                <div class="overlay-column" style="border-top-right-radius: inherit; border-bottom-right-radius: inherit;" onclick="window.location.href='projects/minima/demo.html';">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <p>Minima<br>Showcase</p>  
+                </div>
+              </div>
+      
+              <div class="main-image-container">
+                <div class="red item-type-label">
+                  <p>PERSONAL PROJECT</p>
+                </div>
+                <img src="media/minima/Minima Splash.png">
+                <div class="tech-stack">
+                  <img src="media/tech_logos/java.svg">
+                  <img src="media/tech_logos/sqlite.svg">
+                </div>
+              </div>
+              <div class="details-container">
+                <div class="secondary-image-container">
+                  <div class="img-bg">
+                    <img src="media/minima/Minima Home.png">
+                  </div>
+                  <div class="img-bg">
+                    <img src="media/minima/Minima Features.png">
+                  </div>                  
+                </div>
+                <div class="category-blob-container">
+                  <div class="red category-blob">Full stack</div>
+                  <div class="red category-blob">Solo</div>
+                </div>
+                <div>
+                  <p class="description">Music-streaming app I've developed, Minima. Minima's objective is to minimise mobile data usage while streaming music by extracting only necessary file data.</p>
+                </div>
+        
+                <div class="link-container">
+                  <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>01/2024 | 4 months development</p>
+                  <div id="decorative-line"></div>
+                </div>
+              </div>
+              <i class="fa-brands fa-android" style="position: absolute; bottom: -24px; right: 24px; font-size: 100px; color: #37ca372b;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hayt" class="project-item-container" data-types="web">
+      <div class="project-item grey-gradient">
+        <div class="project-item-overlay grey-gradient">
+          <div class="overlay-column" style="border-radius: inherit">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>HAYT</p>  
+          </div>
+        </div>
+
+        <div class="main-image-container">
+          <div class="blue item-type-label">
+            <p>UNIVERSITY PROJECT</p>
+          </div>
+          <img src="media/hayt/hayt splash 2.png">
+          <div class="tech-stack">
+            <img src="media/tech_logos/html.svg">
+            <img src="media/tech_logos/css.svg">
+            <img src="media/tech_logos/javascript.svg">
+            <img src="media/tech_logos/rails.svg">
+            <img src="media/tech_logos/mysql.svg">
+            <img src="media/tech_logos/bootstrap.svg">
+          </div>
+        </div>
+        <div class="details-container">
+          <div class="secondary-image-container">
+            <div class="img-bg">
+              <img src="media/hayt/hayt Home.png">
+            </div>
+            <div class="img-bg">
+              <img src="media/hayt/hayt services.png">        
+            </div>
+          </div>
+          <div class="category-blob-container">
+            <div class="blue category-blob">Full stack</div>
+            <div class="blue category-blob">Real client</div>
+            <div class="blue category-blob">Mobile responsive</div>
+            <div class="blue category-blob">Team</div>
+          </div>
+          <div>
+            <p class="description">Mental health and wellbeing improvement web app for a fantastic client, Christian Sait.</p>
+          </div>
+  
+          <div class="link-container">
+            <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>02/2024 | 4 months development</p>
+            <div id="decorative-line"></div>
+          </div>
+        </div>
+        <img src="media/ruby on rails logo.png" style="position: absolute; bottom: 0; right: 24px; width: 200px; opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="project-item-container" data-types="desktop">
+      <div class="project-item grey-gradient">
+        <div class="project-item-overlay grey-gradient">
+          <div class="overlay-column" style="border-radius: inherit;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>Trains of Sheffield</p>  
+          </div>
+        </div>
+
+        <div class="main-image-container">
+          <div class="blue item-type-label">
+            <p>UNIVERSITY PROJECT</p>
+          </div>
+          <img src="media/ToS/ToS splash.png">
+          <div class="tech-stack">
+            <img src="media/tech_logos/java.svg">
+            <img src="media/tech_logos/mysql.svg">
+          </div>
+        </div>
+        <div class="details-container">
+          <div class="secondary-image-container">
+            <div class="img-bg">
+              <img src="media/ToS/tos train set browse.png">
+            </div>
+            <div class="img-bg">
+              <img src="media/ToS/tos add track pack.png">        
+            </div>
+          </div>
+          <div class="category-blob-container">
+            <div class="blue category-blob">Full stack</div>
+            <div class="blue category-blob">Team</div>
+          </div>
+          <div>
+            <p class="description">Digital kiosk system for model train product seller with authentication and varied user permissions.</p>
+          </div>
+  
+          <div class="link-container">
+            <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>11/2023 | 1 month development</p>
+            <div id="decorative-line"></div>
+          </div>
+
+        </div>
+        <img src="media/java logo.png" style="position: absolute; bottom: 0; right: 24px; width: 75px; opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="project-item-container" data-types="web">
+      <div class="project-item grey-gradient">
+        <div class="project-item-overlay grey-gradient">
+          <div class="overlay-column" style="border-radius: inherit">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>EdFlix</p>  
+          </div>
+        </div>
+
+        <div class="main-image-container">
+          <div class="blue item-type-label">
+            <p>UNIVERSITY PROJECT</p>
+          </div>
+          <img src="media/edflix/Edflix splash 3.png">
+          <div class="tech-stack">
+            <img src="media/tech_logos/html black.svg">
+            <img src="media/tech_logos/css black.svg">
+            <img src="media/tech_logos/javascript.svg">
+            <img src="media/tech_logos/rails.svg">
+            <img src="media/tech_logos/sqlite.svg">
+            <img src="media/tech_logos/bootstrap.svg">
+          </div>
+        </div>
+        <div class="details-container">
+          <div class="secondary-image-container">
+            <div class="img-bg">
+              <img src="media/edflix/edflix landing.png">
+            </div>
+            <div class="img-bg">
+              <img src="media/edflix/edflix courses.png">        
+            </div>
+          </div>
+          <div class="category-blob-container">
+            <div class="blue category-blob">Full stack</div>
+            <div class="blue category-blob">Mock client</div>
+            <div class="blue category-blob">Team</div>
+          </div>
+          <div>
+            <p class="description">Online course-browsing web app with varied user permissions (Learner, Manager, Admin).</p>
+          </div>
+  
+          <div class="link-container">
+            <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>02/2023 | 4 months development</p>
+            <div id="decorative-line"></div>
+          </div>
+
+        </div>
+        <img src="media/ruby on rails logo.png" style="position: absolute; bottom: 0; right: 24px; width: 200px; opacity: 0.3;">
+      </div>
+    </div>
+
+    <div class="project-item-container" data-types="desktop">
+      <div class="project-item grey-gradient">
+        <div class="project-item-overlay grey-gradient">
+          <div class="overlay-column" style="border-top-left-radius: inherit; border-bottom-left-radius: inherit;" onclick="window.location.href = 'https://github.com/Mintakaaaa/ComboPoker';">
+            <i class="fa-solid fa-code"></i>
+            <p>Game<br>Code</p>
+          </div>
+          <div class="overlay-column" style="border-top-right-radius: inherit; border-bottom-right-radius: inherit;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <p>Combo Poker</p>  
+          </div>
+        </div>
+
+        <div class="main-image-container">
+          <div class="purple item-type-label">
+            <p>HIGH SCHOOL PROJECT</p>
+          </div>
+          <img src="media/combo_poker/combo splash.png">
+          <div class="tech-stack">
+            <img src="media/tech_logos/python.svg">
+            <img src="media/tech_logos/sqlite.svg">
+          </div>
+        </div>
+        <div class="details-container">
+          <div class="secondary-image-container">
+            <div class="img-bg">
+              <img src="media/combo_poker/combo combo.png">
+            </div>
+            <div class="img-bg">
+              <img src="media/combo_poker/combo result.png">        
+            </div>
+          </div>
+          <div class="category-blob-container">
+            <div class="purple category-blob">Full stack</div>
+            <div class="purple category-blob">Solo</div>
+          </div>
+          <div>
+            <p class="description">Texas Hold'em Poker with a twist; combine cards to enhance your hand and win against 3 bots!</p>
+          </div>
+  
+          <div class="link-container">
+            <p class="inter-300 p-small-grey"><i class="fa-solid fa-clock"></i>12/2021 | 5 months development</p>
+            <div id="decorative-line"></div>
+          </div>
+
+        </div>
+        <img src="media/python logo.png" style="position: absolute; bottom: 0; right: 24px; width: 200px; opacity: 0.3;">
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div style="margin-bottom: 150px;"></div>
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--m); position: relative;">
+    <div class="section-titles">
+      <h1><span id="work-scroll-target" class="bo-gradient">Work</span></h1>
+      <h2>1 month</h2>
+    </div>
+
+    <div class="experience-item-container grey-gradient">
+      <div>
+        <h2 id="role-title" style="color: var(--title-blue);">Front-end Developer</h2>
+        <p id="company-title" style="color: var(--subtitle-blue); margin-top: 4px;">Lifeprint.fit</p>
+      </div>
+
+      <p id="role-description" style="color: var(--text-gray);">Developing dynamic UI, and improving existing design and aesthetics, UX and B2C transactions with new ideas and creativity.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto;">
+        <div style="display: flex;">
+          <div class="icon-container">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <div class="detail-container">
+            <p class="inter-300 p-small-grey">HTML, CSS, JS</p>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <div class="icon-container">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="detail-container">
+            <p class="inter-300 p-small-grey">Remote</p>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <div class="icon-container">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div class="detail-container">
+            <p class="inter-300 p-small-grey">06/2024 | 1 month internship</p>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="decorator-square top right"></div>
+    <div class="decorator-square bottom right"></div>
+
+  </div>
+
+  <div style="margin-bottom: 150px;"></div>
+
+  <div class="contact-container">
+    <h2 style="white-space: nowrap;">Contact <i class="fa-solid fa-paper-plane"></i></h2>
+    <div id="decorative-line" style="height: 2px;"></div>
+    <div class="methods-container">
+      <div>
+        <p>Email</p>
+        <div class="email-method">
+          <div id="copied-text">Copied!</div>   
+          <p style="white-space: nowrap;">
+            <a style="text-decoration: none; color: black;" href="mailto:mindaugasb04@gmail.com" target="_blank">mindaugasb04@gmail.com</a>
+            <i id="copy-email" class="fa-solid fa-copy" style="font-size: var(--l); margin-left: 8px;"></i>   
+          </p>
+        </div>
+
+      </div>
+
+      <div style="display: flex; gap: var(--m); margin-top: auto;">
+        <i class="fa-brands fa-linkedin i-method" onclick="window.open('https://www.linkedin.com/in/mindaugas-brazlauskas-9b9437279', '_blank');"></i>
+        <i class="fa-brands fa-github i-method" onclick="window.open('https://github.com/Mintakaaaa', '_blank');"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- GSAP animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+
+</html>
+
+  <!-- blog about @property for gradients! -->
+
+  <!-- .project-item-overlay {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    /* background: #ffa500; */
+    background: linear-gradient(40deg, rgba(16, 16, 16, 1) 25%, rgb(31 31 31) 40%, rgba(23, 23, 23, 1) 70%, rgba(16, 16, 16, 1) 82%);
+    border: 3px solid #2f2f2f;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 4px black;
+    z-index: 1;
+    transition: top 0.5s ease-in-out;
+
+    & > .overlay-column {
+        display: flex; 
+        flex-direction: column; 
+        gap: 5px; 
+        align-items: center;
+        cursor: pointer;
+
+        & > p {
+            font-size: var(--s);
+            color: var(--blue); background-image: -webkit-linear-gradient(0deg, var(--myColor1) var(--one), var(--myColor2) var(--two)); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+            transition: --one 0.5s, --two 0.5s;
+        }
+
+        & > i {
+            color: orange; 
+            font-size: var(--l);
+            margin-bottom: 4px;
+        }
+
+        &:hover > p, &:hover > i {
+            // --myColor1: #f00;
+            // --myColor2: yellow;
+            --one: 100%;
+            --two: 100%;
+            // animation: gradient-transition 2s forwards;
+            // color: var(--blue); background-image: -webkit-linear-gradient(120deg, var(--blue) 25%, var(--orange) 82%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #292c97;
+    inherits: false;
+  }
+  
+  @property --myColor2 {
+    syntax: '<color>';
+    initial-value: orange;
+    inherits: false;
+  }
+
+  @property --one {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+  }
+  
+  @property --two {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+  } -->

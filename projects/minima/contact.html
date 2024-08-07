@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="scss/common.css" rel="stylesheet">
+    <link href="scss/contact.css" rel="stylesheet">
+
+    <!-- Poiret One font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <!-- Raleway font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Review stars and circle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  </head>
+
+
+  <body>
+    <div class="nav-container padding-global">
+      <div id="logo-sandwich-container">
+        <img src="media/logo.png" onclick="window.location.href = 'home.html';">
+        <i id="nav-sandwich" class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="nav">
+        <a href="home.html" style="text-decoration: none; color: white;">Home</a>
+        <button id="get-started-btn" class="main-btn" onclick="window.location.href = 'https://play.google.com/';">Get started</button>
+      </div>
+    </div>
+
+    <div style="margin-top: 100px;"></div> 
+
+    <div class="padding-global">
+      <div id="features-scroll-target" class="mini-heading-container">
+        <span class="mini-heading yp-gradient">CONTACT</span>
+      </div>
+      <h2 class="heading">
+        Want to chat? Get in touch!
+      </h2>
+    </div>
+
+    <div style="margin-top: 100px;"></div> 
+
+    <div class="padding-global">
+      <div class="contact-container">
+        <div class="all-contact-methods">
+          <div class="contact-method-container">
+            <div class="card-icon-square">
+              <div class="circular-gradient-wrapper-square">
+                <i class="fas fa-envelope yp-gradient"></i>
+              </div>
+            </div>
+
+            <a>info@mintakasolutions.com</a>
+          </div>
+          <div class="contact-method-container">
+            <div class="card-icon-square">
+              <div class="circular-gradient-wrapper-square">
+                <i class="fa-solid fa-location-dot yp-gradient"></i>
+              </div>
+            </div>
+            <a>Mintaka Solutions Office<br>64 Mintaka St, Sheffield City Centre<br> Sheffield, S1 2XI, UK</a>
+          </div>
+          <div class="contact-method-container">
+            <div class="card-icon-square">
+              <div class="circular-gradient-wrapper-square">
+                <i class="fas fa-phone yp-gradient"></i>
+              </div>
+            </div>
+            <a>+44 12345 67890</a>
+          </div>
+        </div>
+        
+        <div>
+          <p class="label">Name</p>
+          <textarea class="textarea" rows="1" placeholder="Name" maxlength="50"></textarea>   
+        </div>
+
+        <div>
+          <p class="label">Email</p>
+          <textarea class="textarea" rows="1" placeholder="Email" maxlength="50" style="overflow: hidden;"></textarea>
+        </div>
+
+        <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+
+        <div style="position: relative;">
+          <p class="label">Message</p>
+          <textarea id="messageTextarea" class="textarea" rows="20" placeholder="Message"></textarea>
+          <p id="charactersUsedText" style="position: absolute; bottom: 10px; right: 10px; color: #6f6f6f; font-weight: bold; font-size: 0.9rem;">0/1000</p>
+        </div>
+        <button class="main-btn" style="width: 100%; margin: 0 auto;">Send message</button>
+      </div>
+
+
+    </div>
+
+    <div style="margin-top: 100px;"></div> 
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-company-container">
+          <div class="footer-logo">
+            <img src="media/Mintaka Solutions Logo.jpg" alt="Mintaka Solutions" style="height: 50px; margin-top: 20px;">
+          </div>
+          <div class="footer-company-details">
+            <h3>Mintaka Solutions</h3>
+            <p style="color: #dadada;">A small software development<br>company based out of Sheffield, UK.</p>
+          </div>  
+        </div>
+        
+        <div class="footer-links">
+          <h3>Links</h3>
+          <div class="footer-link-columns">
+            <div class="link-column">
+              <a href="home.html"><span>Home</span></a>
+              <a id="link-about" href="about.html"><span>About Us</span></a>
+            </div>
+            <div class="link-column">
+              <a id="link-contact" href="contact.html"><span>Contact</span></a>
+              <a href="privacy_policy.html"><span>Privacy Policy</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-social-media">
+          <h3>Follow us</h3>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Mintaka Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

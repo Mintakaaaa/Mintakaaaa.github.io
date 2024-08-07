@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+
+    <style>
+      /* body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+          margin: 0;
+      }
+
+      .container {
+          position: relative;
+      }
+
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: #3498db;
+          position: relative;
+      }
+
+      .box:hover .line-top::before {
+        width: 100%;
+      }
+      .box:hover .line-right::before {
+        height: 100%;
+      }
+      .box:hover .line-bottom::before {
+        width: 100%;
+      }
+      .box:hover .line-left::before {
+        height: 100%;
+      }
+
+      .line-top::before {
+        content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background: #e74c3c;
+          transition: width 0.5s linear;
+      }
+
+      .line-right::before {
+        content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 4px;
+          height: 0;
+          background: #e74c3c;
+          transition: height 0.5s linear;
+          transition-delay: 0.5s;
+      }
+
+      .line-bottom::before {
+        content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 4px;
+          background: #e74c3c;
+          transition: width 0.5s linear;
+          transition-delay: 1s;
+      }
+
+      .line-left::before {
+        content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 4px;
+          height: 0;
+          background: #e74c3c;
+          transition: height 0.5s linear;
+          transition-delay: 1.5s;
+      }
+
+      .box::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 2px solid transparent;
+          box-sizing: border-box;
+      } */
+
+      /* styles.css */
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: black;
+          margin: 0;
+      }
+
+      .container {
+          position: relative;
+      }
+
+      .box {
+          width: 200px;
+          height: 200px;
+          background-color: white;
+          position: relative;
+      }
+
+      .line-top::before,
+      .line-right::before,
+      .line-bottom::before,
+      .line-left::before {
+          content: '';
+          position: absolute;
+      }
+
+      .line-top::before {
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 4px;
+          background: linear-gradient(to right, #61dd96 , #7e7cd6);
+          transition: width 0.1s linear;
+      }
+      .line-right::before {
+          top: 0;
+          right: 0;
+          width: 4px;
+          height: 0;
+          background: #7e7cd6;
+          transition: height 0.1s linear;
+      }
+      .line-bottom::before {
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 4px;
+          background: linear-gradient(to left, #7e7cd6, #61dd96);
+          transition: width 0.1s linear;
+      }
+      .line-left::before {
+          bottom: 0;
+          left: 0;
+          width: 4px;
+          height: 0;
+          background: #61dd96;
+          transition: height 0.1s linear;
+      }
+
+      .box:hover .line-top::before { width: 100%; }
+      .box:hover .line-right::before { height: 100%; }
+      .box:hover .line-bottom::before { width: 100%; }
+      .box:hover .line-left::before { height: 100%; }
+
+      .line-top::before { transition-delay: 0.3s; }
+      .line-right::before { transition-delay: 0.2s; }
+      .line-bottom::before { transition-delay: 0.1s; }
+      .line-left::before { transition-delay: 0s; }
+
+      .box:hover .line-top::before { transition-delay: 0s; }
+      .box:hover .line-right::before { transition-delay: 0.1s; }
+      .box:hover .line-bottom::before { transition-delay: 0.2s; }
+      .box:hover .line-left::before { transition-delay: 0.3s; }
+
+    </style>
+  </head>
+
+
+  <body>
+    <div class="container">
+        <div class="box">
+          <div class="line-top"></div>
+          <div class="line-right"></div>
+          <div class="line-bottom"></div>
+          <div class="line-left"></div>
+        </div>
+    </div>
+  </body>
+</html>

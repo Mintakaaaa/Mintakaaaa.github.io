@@ -1,0 +1,116 @@
+.pages-main-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: fixed;
+  left: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 0.2s ease-out;
+  z-index: 100;
+}
+.pages-main-container i {
+  color: var(--yellow);
+  cursor: pointer;
+  transition: color 0.2s ease-out, transform 0.2s ease-out;
+}
+.pages-main-container i:hover {
+  color: var(--purple);
+}
+
+.pages-opener-container {
+  background-color: rgb(27, 27, 27);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgb(71, 71, 71);
+}
+.pages-opener-container > i {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.pages-opener-container:hover > i {
+  color: var(--purple);
+}
+.pages-opener-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background-color: rgb(27, 27, 27);
+}
+
+.pages-button-container {
+  background-color: rgb(27, 27, 27);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.pages-button-container .key-p {
+  font-size: smaller;
+  color: rgb(105, 105, 105);
+  margin: 0;
+  padding-left: 5px;
+}
+.pages-button-container .item, .pages-button-container .sub-item {
+  font-size: small;
+  color: rgb(105, 105, 105);
+  margin: 0;
+}
+.pages-button-container .item.visited, .pages-button-container .sub-item.visited {
+  color: var(--yellow);
+}
+.pages-button-container .sub-item {
+  padding-left: 12px;
+}
+
+a > span {
+  position: relative;
+  cursor: pointer;
+  color: var(--yellow);
+}
+a > span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--yellow);
+  transition: width 0.4s ease;
+  animation: retract-underline 0.4s ease forwards;
+}
+a > span:hover::before {
+  width: 100%;
+  animation: extend-underline 0.4s ease forwards;
+}
+
+@keyframes extend-underline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes retract-underline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}/*# sourceMappingURL=pages.css.map */

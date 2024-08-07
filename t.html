@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Background Example</title>
+  <style>
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      gap: 10px; /* Example gap between sibling divs */
+    }
+
+    .sibling {
+      flex: 1;
+      background-color: #f0f0f0; /* Example background color for siblings */
+      position: relative;
+    }
+
+    .gradient-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allow mouse events to pass through */
+      background-clip: border-box; /* Ensure gradient does not extend outside the border */
+      z-index: -1; /* Ensure it stays behind the siblings */
+      background: radial-gradient(circle, rgba(255,255,255,0.3), rgba(0,0,0,0.5)); /* Default gradient */
+    }
+
+    /* Apply a mask to prevent gradient from showing in gaps */
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      clip-path: inset(0 0 0 0); /* Inherits the gradient background from .gradient-background */
+      z-index: 0; /* Make sure it appears behind .gradient-background */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-background"></div>
+    <div class="sibling"></div>
+    <div class="sibling"></div>
+    <div class="sibling"></div>
+  </div>
+  <script>
+    const container = document.querySelector('.container');
+    const gradientBackground = document.querySelector('.gradient-background');
+
+    container.addEventListener('mousemove', (e) => {
+      const { left, top } = container.getBoundingClientRect();
+      const x = e.clientX - left;
+      const y = e.clientY - top;
+
+      const gradientString = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.3), rgba(0,0,0,0.5))`;
+
+      gradientBackground.style.background = gradientString;
+    });
+  </script>
+</body>
+</html>

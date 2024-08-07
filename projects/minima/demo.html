@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minima Demo</title>
+  <link href="../scss/toolbar.css" rel="stylesheet">
+  <link href="../scss/pages.css" rel="stylesheet">
+  <link href="../scss/notif.css" rel="stylesheet">
+
+  <!-- Fontawesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+
+  <style>
+    body {
+      margin: 0;
+      background-color:#2b2b2b;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+      background: #BE93C5;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .iframe-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      border: none;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      transition: width 1s ease-in-out;
+      box-shadow: 0px 0px 100px 2px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="toolbar-main-container">
+    <div class="toolbar-opener-container">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="toolbar-button-container">
+      <p style="font-weight: 500; color: rgb(105 105 105); margin: 0; pointer-events: none;">VIEWPORT<br>CONTROLS</p>
+      <div style="width: 100%;">
+        <p style="text-align: center; margin: 0 0 5px 0; font-size: small; color: rgb(105 105 105);">WIDTH</p>
+        <div id="toolbar-scroll-container">
+          <div id="toolbar-scroll"></div>
+        </div>
+        <p id="width-pixels-text" style="text-align: center; margin: 5px 0 0 0; font-size: small; color: rgb(105 105 105);">px</p>
+      </div>
+      <i class="fa-solid fa-desktop disabled"></i>
+      <i class="fa-solid fa-tablet-button enabled"></i>
+      <i class="fa-solid fa-mobile-button enabled"></i>
+
+      <a href="../../index.html" style="text-decoration: none;"><span>TO PORTFOLIO</span></a>
+    </div>
+  </div>
+
+  <div class="pages-main-container">
+    <div class="pages-opener-container">
+      <i class="fa-solid fa-folder"></i>
+    </div>
+    <div class="pages-button-container">
+      <p style="font-weight: 500; color: rgb(105 105 105); margin: 0; pointer-events: none; text-align: center;">PAGES</p>
+
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="display: flex; align-items: center;">
+          <div style="border-radius: 50%; width: 10px; height: 10px; background-color: var(--yellow);"></div><p class="key-p">VISITED</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <div style="border-radius: 50%; width: 10px; height: 10px; background-color: rgb(105 105 105);"></div><p class="key-p">UNVISITED</p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px; padding: 6px; border-radius: 8px; background-color: rgb(37 37 37); z-index: 1;">
+        <p class="item visited">Home</p>
+        <p id="pages-features" class="sub-item">Features</p>
+        <p id="pages-support" class="sub-item">Support</p>
+        <p id="pages-reviews" class="sub-item">Reviews</p>
+      </div>
+
+      <p id="pages-about" style="padding: 6px; border-radius: 8px; background-color: rgb(37 37 37);" class="item">About us</p>
+      <p id="pages-contact" style="padding: 6px; border-radius: 8px; background-color: rgb(37 37 37);" class="item">Contact</p>
+
+      <a href="../../index.html" style="text-decoration: none;"><span>TO PORTFOLIO</span></a>
+    </div>
+  </div>
+
+  <div id="notif" class="notif-container">
+    <div id="notif-x" class="notif-x"><i class="fa-solid fa-xmark" style="font-size: small;"></i></div>
+    <p style="text-align: center;"><span class="minima yp-gradient">Minima</span></p>
+    
+    <p>Click <i class="fa-solid fa-gear" style="color: var(--yellow);"></i> to access viewport controls and assess mobile responsiveness.</p>
+
+    <hr style="border: 1px solid rgb(105 105 105); margin: 10px 0;">
+
+    <p style="margin-bottom: 0;">Click <i class="fa-solid fa-folder" style="color: var(--yellow);"></i> to view accessible pages and sections.</p>
+  </div>
+
+  <div class="iframe-container">
+    <iframe id="minimaIframe" src="home.html"></iframe>
+  </div>
+
+  <script src="../js/toolbar.js"></script>
+  <script src="../js/pages.js"></script>
+  <script src="../js/notif.js"></script>
+</body>
+
+</html>

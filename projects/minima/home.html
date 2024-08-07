@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minima</title>
+  <link href="scss/common.css" rel="stylesheet">
+  <link href="scss/home.css" rel="stylesheet">
+
+  <!-- Poiret One font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+  <!-- Raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Review stars and circle -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+  <body>
+    <div class="nav-container padding-global">
+      <div id="logo-sandwich-container">
+        <img src="media/logo.png">
+        <i id="nav-sandwich" class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="nav">
+        <p class="nav-features">Features</p>
+        <p class="nav-support">Support</p>
+        <p class="nav-reviews">Reviews</p>
+
+        <button id="get-started-btn" class="main-btn">Get started</button>
+      </div>
+    </div>
+
+    <div id="arrow-up-container">
+      <i class="arrow-up fa-solid fa-arrow-up"></i>
+      <p class="to-top-text">TO TOP</p>
+    </div>
+
+    <div class="padding-global top-wrapper">
+      <div class="title-image-wrapper">
+        <div class="title-wrapper">
+          <h1 style="font-weight: 600;">Introducing</h1>
+          <span id="minima-text" class="poiret yp-gradient">minima.</span>
+
+          <div class="radial-gradient bg-box-300" style="top: 50%; left: -10%; transform: translate(0, -50%);"></div>
+
+          <p id="subheading" class="mb-1r poiret">Start saving data today</p>  
+
+          <div style="display: flex; align-items: center;">
+            <img id="play-btn" src="media/google play.png">
+
+            <p id="learn-more">
+              <span>Learn more</span>
+              <i id="learn-more-arrow" class="fa-solid fa-arrow-right" style="vertical-align: middle; margin-left: 10px; font-size: 1rem;"></i>
+            </p>
+          </div>
+        </div>
+  
+        <div class="image-wrapper">
+          <img class="inf-rotate-10deg" src="media/two-notes.svg" style="height: 300px; position: absolute; z-index: -1; top: 0; left: 0; transform: rotate(10deg);">
+          <img src="media/minima-cropped.png">
+          <img id="minima-logo" src="media/logo.png">
+          <img class="inf-rotate-10deg" src="media/one-note.svg" style="height: 300px; position: absolute; z-index: 1; bottom: 0; right: 0; transform: rotate(-5deg);">
+          <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="learn-more-scroll-target" class="padding-global">
+      <h2 class="heading">
+        Minimal Data, Maximum Music
+      </h2>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="padding-global">
+      <div class="card-wrapper padding-global">
+        <div class="card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/database-down.svg" height="40px;">
+            </div>
+          </div>
+          <div class="card-header">
+            Stream more for less
+          </div>
+          <div class="card-body">
+            Minima lets you enjoy more of your favorite tracks without worrying about data usage. Stream all day with minimal data consumption.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/ui.svg" height="40px;">
+            </div>
+          </div>
+          <div class="card-header">
+            Intuitive and user-friendly
+          </div>
+          <div class="card-body">
+            Navigating Minima is a breeze. Our sleek, user-friendly interface ensures you find and play your music effortlessly.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/cash.svg" height="40px;">
+            </div>
+          </div>
+          <div class="card-header">
+            Completely free
+          </div>
+          <div class="card-body">
+            No hidden fees, no subscriptions. Minima offers you unlimited music streaming without any cost.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/efficiency.svg" height="40px;">
+            </div>
+          </div>
+          <div class="card-header">
+            Designed for efficiency
+          </div>
+          <div class="card-body">
+            Minima is engineered to maximize your music experience while minimizing data usage, ensuring seamless and efficient streaming.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="padding-global">
+      <div id="features-scroll-target" class="mini-heading-container">
+        <span class="mini-heading yp-gradient">FEATURES</span>
+      </div>
+      <h2 class="heading">
+        What Minima can do for you
+      </h2>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div id="features-container" class="padding-global">
+      <div class="feature-step-container">
+        <div class="feature-img-container">
+          <div class="feature-img-content-container">
+            <img src="media/home.jpg" >
+            <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+          </div>
+
+        </div>
+        <div class="feature-step-text-container feature card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/search.svg" height="40px;">
+            </div>
+          </div>
+          <h3>1. Search and discover new music</h3>
+          <p>Discover the music you love with ease using our search feature! Whether you're looking for the latest hits or timeless classics, our search function lets you find your favorite songs and artists in an instant. Simply type in your query and tap the search button for immediate results!</p>
+        </div>
+      </div>
+
+
+      <div class="feature-step-container">
+        <div class="feature-step-text-container feature card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/playlist.svg" height="40px;">
+            </div>
+          </div>
+          <h3>2. Manage your playlists</h3>
+          <p>Create your perfect soundtrack with our customisable playlist feature! Whether you're planning a party, working out, or just relaxing, adding and deleting tracks from a playlist is as simple as two quick taps! Want to rename your playlist? Simply tap and hold your playlist and tap "Rename"!</p>
+        </div>
+      
+        <div class="feature-img-container">
+          <div class="feature-img-content-container">
+            <img src="media/playlists.jpg" >
+            <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-step-container">
+        <div class="feature-img-container">
+          <div class="feature-img-content-container">
+            <img src="media/playlist.jpg" >
+            <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+          </div>
+        </div>
+        <div class="feature-step-text-container feature card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/shuffle.svg" height="40px;">
+            </div>
+          </div>
+          <h3>3. Shuffle your music</h3>
+          <p>Keep your listening experience fresh and exciting with our shuffle feature! Perfect for those who love surprises, the shuffle function randomly mixes up the tracks in your playlist or library, ensuring you never know what song is coming next. Just hit the shuffle button and let our app create a dynamic and unpredictable music journey for you.</p>
+        </div>
+      </div>
+
+
+      <div class="feature-step-container">
+        <div class="feature-step-text-container feature card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/play.svg" height="40px; margin-top: 2px;">
+            </div>
+          </div>
+          <h3>4. Control your music playback</h3>
+          <p>Experience ultimate control over your listening with our sleek and intuitive music player! Equipped with all the essential features, our player allows you to play, pause, fast-forward/rewind, and skip tracks effortlessly. The player also displays album art, song titles, and artist names, ensuring you always know what's playing.</p>
+        </div>
+      
+        <div class="feature-img-container">
+          <div class="feature-img-content-container">
+            <img src="media/player.jpg" >
+            <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-step-container">
+        <div class="feature-img-container">
+          <div class="feature-img-content-container">
+            <img src="media/queue.jpg" >
+            <div class="radial-gradient bg-box-600" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+          </div>
+
+        </div>
+        <div class="feature-step-text-container feature card">
+          <div class="card-icon">
+            <div class="circular-gradient-wrapper">
+              <img src="media/queue.svg" height="40px;">
+            </div>
+          </div>
+          <h3>5. View and organise your queue</h3>
+          <p>Take control of your listening experience with our dynamic queue feature! Easily add, remove, and rearrange songs in your queue to customize your upcoming play order on the fly. The queue provides a clear view of what's next, allowing you to anticipate and adjust your playlist without interrupting the music.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="padding-global">
+      <div id="support-scroll-target" class="mini-heading-container">
+        <span class="mini-heading yp-gradient">SUPPORT</span>
+      </div>
+      <h2 class="heading">
+        Need help? Look no further
+      </h2>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="padding-global">
+      <div class="padding-global">
+        <h3 class="mt-2r">General Information</h3>
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>How do I sign up for the app?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>Download the app and click on "Sign Up." Follow the prompts to create your account.</p>
+          </div>
+        </div>
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>What platforms is the app available on?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>The app is available on exclusively on Android. Download it via Google Play using the Get Started button or the Google Play badge at the top of the page.</p>
+          </div>
+        </div>
+
+
+        <h3 class="mt-2r">Technical Issues</h3>
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>Why won't the app play music?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>Ensure you have a stable internet connection and that your app is up-to-date. If the problem persists, try restarting the app.</p>
+          </div>
+        </div>
+
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>How do I download songs for offline listening?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>Downloading songs is not yet currently supported by our app. Rest assured, this is a feature our software development team is working on!</p>
+          </div>
+        </div>
+
+        <h3 class="mt-2r">Features and Functionality</h3>
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>How do I create a playlist?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>Tap the "Playlists" button <img src="media/playlists in-line.png"> on the navigation bar. Then, tap the "Plus" button <img src="media/plus in-line.png"> to create a new playlist.</p>
+          </div>
+        </div>
+
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>Does this app have "auto-play"?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>No, this is one of the key data-saving features of this app. You must specify the songs you'd like to listen to as this avoids unnecessary loading of audio which might not be listened to.</p>
+          </div>
+        </div>
+
+        <h3 class="mt-2r">Privacy and Security</h3>
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>Is my personal information secure?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>Yes, we use industry-standard encryption to protect your data. Check our <a href="privacy_policy.html" style="text-decoration: none;"><span>Privacy Policy</span></a> for more details.</p>
+          </div>
+        </div>
+
+        <div class="expandable-card">
+          <div class="question-chevron">
+            <p>How can I view the data you've collected about me?</p>
+            <i class="fa-solid fa-chevron-down chevron"></i>
+          </div>
+          <div class="expandable-content">
+            <p>You can't! We do not collect any data in regards to our users. The only data stored is your playlists, which we have no access to as this data is stored locally on your device.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="padding-global">
+      <div id="reviews-scroll-target" class="mini-heading-container">
+        <span class="mini-heading yp-gradient">REVIEWS</span>
+      </div>
+      <h2 class="heading">
+        What our users think about Minima
+      </h2>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-1.png">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Felix Carles
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/fr-flag.png" style="width: 25px;">
+    
+                  <p><i class="fas fa-circle review-circle"></i>A year ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-2.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Alice Windsor
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/uk-flag.png" style="width: 25px;">
+    
+                  <p><i class="fas fa-circle review-circle"></i>9 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>          
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-3.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Mohammed Yussef
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/sa-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>11 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-4.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Francesca DeRosa
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/it-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>7 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-5.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  James Pontiac
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/uk-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>A year ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-6.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Elisa Abbews
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/us-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>5 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-7.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Noah Phillips
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/uk-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>2 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-8.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Joanne Rowwe
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/us-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>3 months ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="stars-container">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+    
+            <div class="profile-container">
+              <div class="profile-picture">
+                <img src="media/does-not-exist-9.jpg">
+                <div class="tooltip">Picture generated with: thispersondoesnotexist.com</div>
+              </div>
+    
+              <div class="review-details">
+                <div class="profile-name">
+                  Ben Waktons
+                </div>
+                <div class="when-reviewed">
+                  <img src="media/uk-flag.png" style="width: 25px;">
+                  
+                  <p><i class="fas fa-circle review-circle"></i>1 month ago</p>
+                </div>
+              </div>
+    
+            </div>
+    
+            <div class="review">
+              This is a very cool interesting review
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next yp-gradient"></div>
+      <div class="swiper-button-prev yp-gradient-reverse"></div>
+    </div>
+
+    <div style="margin-top: 100px;"></div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-company-container">
+          <div class="footer-logo">
+            <img src="media/Mintaka Solutions Logo.jpg" alt="Mintaka Solutions" style="height: 50px; margin-top: 20px;">
+          </div>
+          <div class="footer-company-details">
+            <h3>Mintaka Solutions</h3>
+            <p style="color: #dadada;">A small software development<br>company based out of Sheffield, UK.</p>
+          </div>  
+        </div>
+        
+        <div class="footer-links">
+          <h3>Links</h3>
+          <div class="footer-link-columns">
+            <div class="link-column">
+              <a href="home.html"><span>Home</span></a>
+              <a id="link-about" href="about.html"><span>About Us</span></a>
+            </div>
+            <div class="link-column">
+              <a id="link-contact" href="contact.html"><span>Contact</span></a>
+              <a href="privacy_policy.html"><span>Privacy Policy</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-social-media">
+          <h3>Follow us</h3>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Mintaka Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+    
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+
+  
+</html>

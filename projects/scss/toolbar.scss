@@ -1,0 +1,160 @@
+:root {
+  --yellow: rgb(235,196,52); 
+  --purple: rgb(194 46 255);
+  --darkerYellow: rgb(88, 71, 9);
+}
+
+.toolbar-main-container {
+  display: flex; 
+  align-items: center; 
+  position: fixed;
+  right: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 0.2s ease-out;
+  z-index: 100;
+
+  & i {
+    color: var(--yellow);
+    cursor: pointer;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+
+    &:hover {
+      color: var(--purple);
+    }
+  }
+}
+
+.toolbar-opener-container {
+  background-color: rgb(27 27 27);
+  border-top-left-radius: 50%; 
+  border-bottom-left-radius: 50%; 
+  width: fit-content; 
+  height: fit-content;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgb(71 71 71);
+
+  & > i {
+    display: inline-block; 
+    font-size: 1.5rem;
+  }
+
+  &:hover > i {
+    color: var(--purple);
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40px;
+    width: 40px;
+    height: 100%;
+    background-color: rgb(27 27 27);
+  }
+}
+
+.toolbar-button-container {
+  background-color: rgb(27 27 27);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease-in-out;
+
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px;
+
+  & i {
+    font-size: 2rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  & i.enabled {
+    color: var(--yellow);
+    cursor: pointer;
+    font-size: 2rem;
+    
+
+    &:hover {
+      color: var(--purple);
+      animation: wiggle 1s infinite linear;
+    }
+  }
+
+  & i.disabled {
+    color: var(--darkerYellow);
+    pointer-events: none;
+    font-size: 1.75rem;    
+  }
+
+  & #toolbar-scroll-container {
+    position: relative; 
+    width: 100%; 
+    height: 2px; 
+    background-color: rgb(127, 105, 27); 
+    cursor: pointer;
+
+    & > #toolbar-scroll {
+      position: absolute; 
+      top: -150%; 
+      border-radius: 50%; 
+      width: 9px; 
+      height: 9px; 
+      background-color: var(--yellow); 
+      cursor: grab;
+      transition: background-color 0.2s ease-in-out;
+
+      &:active, &:hover {
+        background-color: var(--purple);
+      }
+    }
+  }
+}
+
+
+// links
+a > span {
+  position: relative;
+  cursor: pointer;
+  color: var(--yellow);
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--yellow);
+    transition: width 0.4s ease;
+    animation: retract-underline 0.4s ease forwards;
+  }
+
+  &:hover::before {
+    width: 100%;
+    animation: extend-underline 0.4s ease forwards; 
+  }
+}
+
+//anims
+
+@keyframes extend-underline {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+@keyframes retract-underline {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}

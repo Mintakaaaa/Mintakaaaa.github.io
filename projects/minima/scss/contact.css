@@ -1,0 +1,105 @@
+.circular-gradient-wrapper-square {
+  background-color: rgb(16, 16, 24);
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  aspect-ratio: 1/1;
+  justify-content: center;
+  align-items: center;
+}
+.circular-gradient-wrapper-square > i {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.card-icon-square {
+  background: linear-gradient(90deg, var(--purple) 25%, var(--yellow) 82%);
+  padding: 2px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.textarea {
+  resize: none;
+  padding: 15px;
+  /* background-color: rgb(44, 37, 59);  */
+  /* background-color: red; */
+  background-color: rgb(39, 33, 53);
+  color: #dadada;
+  border: none;
+  width: calc(100% - 30px);
+  font-family: "Raleway", sans-serif;
+  border-bottom: 2px solid var(--purple);
+  transition: border-bottom 0.25s linear;
+}
+.textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--yellow);
+}
+.textarea::-moz-placeholder {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgba(123, 122, 124, 0.809);
+}
+.textarea::placeholder {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgba(123, 122, 124, 0.809);
+}
+
+.label {
+  margin-bottom: 10px;
+  color: #cacaca;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+  gap: 20px;
+  position: relative;
+}
+
+.all-contact-methods {
+  display: flex;
+  background-color: transparent;
+  margin-bottom: 50px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-method-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30%;
+  gap: 20px;
+}
+.contact-method-container > a {
+  color: #cacaca;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/*-------------------
+| Responsive Design |
+-------------------*/
+@media (max-width: 1000px) {
+  .contact-container {
+    max-width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  .all-contact-methods {
+    flex-direction: column;
+  }
+  .contact-container {
+    margin: 0;
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=contact.css.map */

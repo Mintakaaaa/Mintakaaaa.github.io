@@ -1,0 +1,87 @@
+:root {
+  --xxs: 0.25rem;
+  --xs: 0.5rem;
+  --s: 0.75rem;
+  --m: 1rem;
+  --l: 1.25rem;
+  --xl: 1.75rem;
+  --xxl: 2.5rem;
+  --3xl: 5rem;
+  --orange: #ffa500;
+  --blue: #292c97;
+  --red: #792020;
+  --purple: #632997;
+  --light-gray: #212121;
+  --light-gray-trans: #21212180;
+  --medium-gray: #1b1b1b;
+  --dark-gray: #101010;
+  --title-blue: #d6ebec;
+  --subtitle-blue: #91c0c2;
+  --text-gray: #afafaf;
+  --globalMargin: 200px;
+}
+
+body, html {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: clip;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+  position: relative;
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--xxl);
+}
+
+h2 {
+  font-size: var(--xl);
+}
+
+.inter-300 {
+  font-weight: 300;
+}
+
+.inter-500 {
+  font-weight: 500;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.bo-gradient {
+  color: var(--blue);
+  background-image: -webkit-linear-gradient(120deg, var(--blue) 25%, var(--orange) 82%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=common.css.map */

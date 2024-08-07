@@ -1,0 +1,58 @@
+.about-us-container {
+  display: flex; 
+  gap: 30px;
+
+  & > .about-us-image {
+    flex: 1 1 40%;
+
+    & > img {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+
+  & > .about-us-details {
+    flex: 1 1 60%;
+    padding: 0 4rem;
+    position: relative;
+
+    & > p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+/*-------------------
+| Responsive Design |
+-------------------*/
+
+@media (max-width: 1000px) {
+
+  .about-us-container {
+    flex-direction: column;
+
+    & > .about-us-image {
+      display: flex;
+      justify-content: center;
+
+      & > img {
+        width: 50%;
+      }
+    }
+
+    & > .about-us-details {
+      padding: 0 2rem;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .about-us-container > .about-us-image > img {
+    width: 80%;
+  }
+  .about-us-containe > .about-us-details {
+    padding: 0;
+  }
+}
