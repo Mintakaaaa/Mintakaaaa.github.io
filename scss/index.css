@@ -87,6 +87,150 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.p-small-grey {
+  color: var(--text-gray);
+  white-space: nowrap;
+  font-size: var(--s);
+}
+
+.global-margin {
+  margin: 0 var(--globalMargin);
+}
+
+.tech-name {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  translate: -50% 0;
+  padding: var(--xxs) var(--xs);
+  background-color: var(--medium-gray);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.decorator-square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--orange);
+  position: absolute;
+  z-index: -1;
+}
+.decorator-square.top {
+  top: 0;
+}
+.decorator-square.left {
+  left: 0;
+}
+.decorator-square.right {
+  right: 0;
+}
+.decorator-square.bottom {
+  bottom: 0;
+}
+
+#decorative-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-gray);
+  transition: background-color 0.3s ease-in-out;
+}
+#decorative-line.grey {
+  background-color: #898989;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--orange);
+  padding: var(--l) 200px;
+  color: black;
+  gap: var(--m);
+}
+
+.methods-container {
+  display: flex;
+  align-items: center;
+  gap: var(--m);
+  font-weight: 500;
+}
+
+.email-method {
+  padding: var(--s) var(--m);
+  background-color: #e09100;
+  font-size: var(--l);
+  position: relative;
+}
+.email-method i, .email-method a {
+  cursor: pointer;
+}
+
+#copied-text {
+  position: absolute;
+  top: -100%;
+  left: 100%;
+  translate: -100% 0;
+  padding: var(--xs) var(--s);
+  margin: var(--m);
+  font-size: var(--s);
+  background-color: var(--medium-gray);
+  color: var(--text-gray);
+  opacity: 0;
+}
+
+.i-method {
+  font-size: var(--xxl);
+  margin-top: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1220px) {
+  :root {
+    --globalMargin: 100px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact-container {
+    padding: var(--l) 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --globalMargin: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact-container h2 {
+    font-size: var(--l);
+  }
+  .methods-container p {
+    font-size: var(--m);
+  }
+  .methods-container i {
+    font-size: var(--xl);
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container #decorative-line {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  :root {
+    --globalMargin: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .methods-container {
+    flex-direction: column;
+  }
+  .methods-container i {
+    font-size: var(--xxl);
+  }
+}
 .nav-container {
   display: flex;
   align-items: center;
@@ -456,21 +600,6 @@ h2 {
   background-color: var(--dark-gray);
   transition: background-position 0.3s ease-in-out;
 }
-.tech-stack-container > .tech-stack-box .img-holder {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.tech-stack-container > .tech-stack-box .tech-name {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  translate: -50% 0;
-  padding: var(--xxs) var(--xs);
-  background-color: var(--medium-gray);
-  border-radius: 10px;
-  pointer-events: none;
-}
 .tech-stack-container > .tech-stack-box .img-holder:hover .image-overlay {
   opacity: 0.75;
 }
@@ -838,12 +967,6 @@ h2 {
   transition: opacity 0.2s ease-in-out;
 }
 
-.p-small-grey {
-  color: var(--text-gray);
-  white-space: nowrap;
-  font-size: var(--s);
-}
-
 .about-switch-container {
   display: flex;
   gap: 10px;
@@ -1067,56 +1190,6 @@ blockquote:before {
   flex: 1 1 90%;
 }
 
-.contact-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--orange);
-  padding: var(--l) 200px;
-  color: black;
-  gap: var(--m);
-}
-
-.methods-container {
-  display: flex;
-  align-items: center;
-  gap: var(--m);
-  font-weight: 500;
-}
-
-.email-method {
-  padding: var(--s) var(--m);
-  background-color: #e09100;
-  font-size: var(--l);
-  position: relative;
-}
-.email-method i, .email-method a {
-  cursor: pointer;
-}
-
-#copied-text {
-  position: absolute;
-  top: -100%;
-  left: 100%;
-  translate: -100% 0;
-  padding: var(--xs) var(--s);
-  margin: var(--m);
-  font-size: var(--s);
-  background-color: var(--medium-gray);
-  color: var(--text-gray);
-  opacity: 0;
-}
-
-.i-method {
-  font-size: var(--xxl);
-  margin-top: auto;
-  cursor: pointer;
-}
-
-.global-margin {
-  margin: 0 var(--globalMargin);
-}
-
 .section-titles h2 {
   color: var(--title-blue);
   font-size: var(--xxl);
@@ -1178,11 +1251,6 @@ blockquote:before {
     width: auto;
   }
 }
-@media screen and (max-width: 1220px) {
-  :root {
-    --globalMargin: 100px;
-  }
-}
 @media screen and (max-width: 1030px) {
   .project-item {
     flex-direction: column;
@@ -1201,9 +1269,6 @@ blockquote:before {
   }
 }
 @media screen and (max-width: 1000px) {
-  .contact-container {
-    padding: var(--l) 50px;
-  }
   .post-image-container {
     display: none;
   }
@@ -1215,11 +1280,6 @@ blockquote:before {
        object-fit: contain;
     width: 100%;
     border-radius: 4px;
-  }
-}
-@media screen and (max-width: 900px) {
-  :root {
-    --globalMargin: 40px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1300,15 +1360,6 @@ blockquote:before {
   }
 }
 @media screen and (max-width: 700px) {
-  .contact-container h2 {
-    font-size: var(--l);
-  }
-  .methods-container p {
-    font-size: var(--m);
-  }
-  .methods-container i {
-    font-size: var(--xl);
-  }
   blockquote {
     padding: 0 0 0 var(--xl);
   }
@@ -1341,12 +1392,6 @@ blockquote:before {
   }
   .view-year-container .view-year-item {
     flex: 1 1 auto;
-  }
-  .contact-container {
-    flex-direction: column;
-  }
-  .contact-container #decorative-line {
-    display: none;
   }
   .post-details-container h2 {
     font-size: var(--l);
@@ -1413,9 +1458,6 @@ blockquote:before {
   }
 }
 @media screen and (max-width: 420px) {
-  :root {
-    --globalMargin: 20px;
-  }
   #me-container {
     padding: var(--s);
   }
@@ -1472,12 +1514,6 @@ blockquote:before {
   }
   .section-titles p {
     font-size: var(--m);
-  }
-  .methods-container {
-    flex-direction: column;
-  }
-  .methods-container i {
-    font-size: var(--xxl);
   }
   .view-type-container, .view-year-container {
     flex-wrap: wrap;

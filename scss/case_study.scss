@@ -1,0 +1,38 @@
+@import '/home/mintaka/mintakaaaa-site/scss/common.scss';
+
+.swiper-container {
+  overflow-x: clip;
+}
+
+.swiper-slide {
+  background-color: var(--light-gray);
+  // min-height: 300px;
+  overflow-y: hidden;
+  position: relative;
+  // height: auto;
+}
+
+.tech-logo-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  aspect-ratio: 1/1; 
+  max-height: 60px; 
+  padding: var(--m); 
+  border: 1px solid transparent;
+  background-color: var(--dark-gray); 
+}
+
+.yp-gradient {
+  color: var(--yellow); background-image: -webkit-linear-gradient(175deg, rgb(235,196,52) 25%, rgb(194 46 255) 82%);background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+}
+
+.background-div {
+  background-image: url('/media/hayt/hayt\ splash\ 2.png');
+  background-size: cover;  /* Ensures the image covers the div without stretching */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  height: 250px;  /* Set a fixed height for the div */
+  width: 100%;  /* Adjust width as needed */
+}

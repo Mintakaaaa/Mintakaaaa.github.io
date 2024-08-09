@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minima</title>
+  <link href="/scss/common.css" rel="stylesheet">
+  <link href="/scss/case_study.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+  <div style="position: absolute; z-index: 1; left: 50%; top: 200px; translate: -50% 0; background-color: var(--light-gray); color: red; padding: 50px;">WORK IN PROGRESS FAR FROM COMPLETION</div>
+
+  <div style="position: relative;"><img src="/media/minima/Minima Splash.png" style="width: 100%; height: 100vh; object-fit: cover;"><div style="position: absolute; width: 100%; top: 0; left: 0;height: 100%; background-image: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.75) 100%);"></div></div>
+  
+  <div class="global-margin" style="display: flex; justify-content: space-between;">
+    <div>
+      <p class="p-small-grey">Project type</p>
+      <h2>Static website</h2> 
+    </div>
+    <div>
+      <p class="p-small-grey">Date</p>
+      <h2>06/2024</h2> 
+    </div>
+    <div>
+      <p class="p-small-grey">Development time</p>
+      <h2>2 months</h2> 
+    </div>
+  </div>
+
+  <div style="margin: 20px;"></div>
+
+  <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--l);">
+    <div style="display: flex; flex-direction: column; gap: var(--xs);">
+      <p class="p-small-grey">Tech</p>
+
+      <div id="all-tech-logos" style="display: flex; flex: 1; gap: var(--s); align-items: center; position: relative;">
+        <div class="tech-logo-container">
+          <img src="/media/tech_logos/html.svg" style="max-height: 100%;">
+          <p class="tech-name p-small-grey">HTML</p>
+        </div>
+        <div class="tech-logo-container">
+          <img src="/media/tech_logos/css.svg" style="max-height: 100%;">
+          <p class="tech-name p-small-grey">CSS</p>
+        </div>
+        <div class="tech-logo-container">
+          <img src="/media/tech_logos/javascript.svg" style="max-height: 100%;">
+          <p class="tech-name p-small-grey">Javascript</p>
+        </div>
+
+        <div id="decorative-line" style="background-color: var(--orange);"></div>
+        <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
+      </div>
+    </div>
+
+
+    <div style="display: flex; gap: var(--m);">
+      <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
+        <p class="p-small-grey" style="color: var(--orange);">
+          <i class="fa-solid fa-comment-medical"></i>
+          Context
+        </p>
+        <p style="padding-top: 8px; color:#dadada;">After creating an Android app, I wanted to create a static website to show the features of this app and practice my HTML, CSS and JS.</p>
+      </div>
+
+      <div style="width: 1px; height: 100%; background-color: #404040;"></div>
+      
+      <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
+        <p class="p-small-grey" style="color: var(--orange);">
+          <i class="fa-solid fa-list-check"></i>
+          Objectives
+        </p>
+        <p style="padding-top: 8px; color:#dadada;">1. Create a showcase website of my Android app.<br>
+          2. Make the website fully mobile responsive.<br>
+          3. Add tool to analyse mobile responsiveness.<br>
+          4. Make at least 3 different pages.
+        </p>
+      </div>
+
+      <div style="width: 1px; height: 100%; background-color: #404040;"></div>
+
+      <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
+        <p class="p-small-grey" style="color: var(--orange);">
+          <i class="fa-solid fa-book-open-reader"></i>
+          Learning
+        </p>
+        <p style="padding-top: 8px; color: #dadada;">I learnt a lot about styling as more than half of the code in this project is CSS. New knowledge includes interesting <span class="yp-gradient">gradients</span>, page layout techniques like a hero section, colour combinations, and more.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="margin: 20px;"></div>
+
+
+  <!-- will-change: backdrop-filter; stops overlay from moving when removing blur, use sparingly -->
+  <div id="gallery-img-overlay" class="d-none" style="position: fixed; width: 100vw; height: 100vh; z-index: 2;opacity: 0; will-change: backdrop-filter;">
+    <div style="display:flex; align-items: center; width: 90%; height: 90%; position: fixed; top: 50%; left: 50%; translate: -50% -50%;"> 
+      <img src="/media/minima/Minima Home.png" style="width: 100%;">
+      <div style="position: absolute; top: 20px; left: 50%; translate: -50% 0; font-size: 40px; color: var(--orange); cursor: pointer;"><i class="fa-solid fa-times"></i></div>
+    </div>
+  </div>
+  
+  <div class="global-margin">
+    <p class="p-small-grey" style="margin-bottom: 8px;">Gallery</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--m); padding: var(--m); background-color: var(--medium-gray);">
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Home.png" style="width: 100%; min-width: 200px;">
+      </div>
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Features.png" style="width: 100%; min-width: 200px;">
+      </div>
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Home.png" style="width: 100%; min-width: 200px;">
+      </div>
+
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Home.png" style="width: 100%; min-width: 200px;">
+      </div>
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Home.png" style="width: 100%; min-width: 200px;">
+      </div>
+      <div class="gallery-img img-holder" style="flex: 1 1 30%;">
+        <img src="/media/minima/Minima Home.png" style="width: 100%; min-width: 200px;">
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 20px;"></div>
+
+  <div class="global-margin swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="background-div" style="position: relative; filter: blur(6px);"></div>
+        <div style="position: absolute; width: 60%; top: 0; left: 50%; translate: -50% -10%;">
+          <img src="/media/hayt/hayt splash 2.png" style="width: 100%">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="background-div" style="position: relative; filter: blur(6px);"></div>
+        <div style="position: absolute; width: 60%; top: 0; left: 50%; translate: -50% -10%;">
+          <img src="/media/hayt/hayt splash 2.png" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="margin-bottom: 150px;"></div>
+
+  <div class="contact-container">
+    <h2 style="white-space: nowrap;">Contact <i class="fa-solid fa-paper-plane"></i></h2>
+    <div id="decorative-line" style="height: 2px;"></div>
+    <div class="methods-container">
+      <div>
+        <p>Email</p>
+        <div class="email-method">
+          <div id="copied-text">Copied!</div>   
+          <p style="white-space: nowrap;">
+            <a style="text-decoration: none; color: black;" href="mailto:mindaugasb04@gmail.com" target="_blank">mindaugasb04@gmail.com</a>
+            <i id="copy-email" class="fa-solid fa-copy" style="font-size: var(--l); margin-left: 8px;"></i>   
+          </p>
+        </div>
+
+      </div>
+
+      <div style="display: flex; gap: var(--m); margin-top: auto;">
+        <i class="fa-brands fa-linkedin i-method" onclick="window.open('https://www.linkedin.com/in/mindaugas-brazlauskas-9b9437279', '_blank');"></i>
+        <i class="fa-brands fa-github i-method" onclick="window.open('https://github.com/Mintakaaaa', '_blank');"></i>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- GSAP animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="js/minima.js"></script>
+</body>
+
+</html>

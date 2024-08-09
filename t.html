@@ -5,67 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gradient Background Example</title>
   <style>
-    .container {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      gap: 10px; /* Example gap between sibling divs */
-    }
+/* Master container that aligns items horizontally and sets maximum height */
+.master-container {
+  display: flex;
+  align-items: center; /* Vertically center children */
+  border: 1px solid #ccc; /* Optional: for visualization */
+}
 
-    .sibling {
-      flex: 1;
-      background-color: #f0f0f0; /* Example background color for siblings */
-      position: relative;
-    }
+/* Style the text container */
+.text-container {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  padding: var(--xl); /* Add padding as needed */
+  text-align: center;
+  border: 1px solid var(--orange); /* Optional: for visualization */
+  min-width: 100px; /* Minimum width */
+  /* Set an explicit height for consistency */
+  height: auto; /* Allow the container height to adjust based on content */
+}
 
-    .gradient-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none; /* Allow mouse events to pass through */
-      background-clip: border-box; /* Ensure gradient does not extend outside the border */
-      z-index: -1; /* Ensure it stays behind the siblings */
-      background: radial-gradient(circle, rgba(255,255,255,0.3), rgba(0,0,0,0.5)); /* Default gradient */
-    }
+/* Style the image container */
+.image-container {
+  display: flex;
+  flex: 1; /* Allow the container to grow and fill available space */
+  align-items: center; /* Center images vertically */
+  width: 100%;
+  /* Constrain height to the text-container height */
+  height: auto; /* Allow container to grow based on content */
+  max-height: 100%; /* Constrain to the height of the tallest sibling */
+}
 
-    /* Apply a mask to prevent gradient from showing in gaps */
-    .container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: inherit;
-      clip-path: inset(0 0 0 0); /* Inherits the gradient background from .gradient-background */
-      z-index: 0; /* Make sure it appears behind .gradient-background */
-    }
+/* Style the images */
+.tech-image {
+  max-height: 100%; /* Ensure images fit within the height of the container */
+  width: auto; /* Maintain aspect ratio */
+}
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="gradient-background"></div>
-    <div class="sibling"></div>
-    <div class="sibling"></div>
-    <div class="sibling"></div>
+  <div class="master-container">
+    <div class="text-container">
+      <p class="text-item">Tech</p>
+    </div>
+  
+    <div class="image-container">
+      <img src="/media/tech_logos/html.svg" class="tech-image" alt="HTML Logo">
+      <img src="/media/tech_logos/css.svg" class="tech-image" alt="CSS Logo">
+      <!-- <img src="/media/tech_logos/javascript.svg" class="tech-image" alt="JavaScript Logo"> -->
+    </div>
   </div>
-  <script>
-    const container = document.querySelector('.container');
-    const gradientBackground = document.querySelector('.gradient-background');
-
-    container.addEventListener('mousemove', (e) => {
-      const { left, top } = container.getBoundingClientRect();
-      const x = e.clientX - left;
-      const y = e.clientY - top;
-
-      const gradientString = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.3), rgba(0,0,0,0.5))`;
-
-      gradientBackground.style.background = gradientString;
-    });
-  </script>
 </body>
 </html>
