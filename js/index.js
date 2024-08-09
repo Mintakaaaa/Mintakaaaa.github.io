@@ -398,6 +398,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }, 1000);
   }
 
+  const hash = window.location.hash; // i.e. index.html#projects-scroll-target (click on projects in case study html to scroll to projects in index...)
+  if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        scrollToElementWithOffset(targetElement, -200); // Adjust offset if needed
+        // note: offset isnt properly applying when going from case study to projects
+      }
+  }
+
   // ----- nav end
 
   function wiggleIcon(fgIcon) {

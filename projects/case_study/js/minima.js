@@ -7,7 +7,87 @@ let galleryImgOverlay;
 document.addEventListener("DOMContentLoaded", function(e) {
   window.isProgrammaticScroll = false;
 
+  //---------- nav 
+
+  window.navbarOpen = false;
+
+  let navbar = document.querySelector(".nav-container");
+  let sandwich = document.querySelector("#nav-sandwich");
+
+  sandwich.addEventListener("click", function() {
+    toggleDropdown(sandwich);
+  });
+
+  window.addEventListener("scroll", function() {
+    stickyNavbar(navbar);
+  });
+
+  const contactNavButton = document.querySelector("#nav-contact-button");
+
+  contactNavButton.addEventListener('click', () => {
+    if (document.body.style.width <= 520)
+      toggleDropdown(sandwich); // this is to not toggle dropdown if u cant see it on big screen...
+
+    window.scroll({ top: document.body.scrollHeight, behavior: 'smooth' });
+    window.isProgrammaticScroll = true;
+    setTimeout(() => {
+      window.isProgrammaticScroll = false;
+    }, 1000);
+
+    contactNavButton.blur();
+  });
+
+  function toggleDropdown(sandwich) {
+    sandwich.classList.toggle("menu-open");
+
+    const dropdown = document.querySelector('.nav');
+    if (dropdown.style.maxHeight) {
+        dropdown.style.maxHeight = null;
+        window.navbarOpen = false;
+    } else {
+        const dropdownHeight = dropdown.scrollHeight;
+        dropdown.style.maxHeight = dropdownHeight + 'px';
+        window.navbarOpen = true;
+    }
+  }
+
+  function stickyNavbar(navbar) {
+    let scrollY = window.scrollY;
+
+    if (scrollY > navbar.scrollHeight) {
+      if (!navbar.classList.contains("sticky")) {
+        navbar.classList.add("sticky");
+
+        let heightDifference = document.createElement("div");
+        if (!document.body.contains(heightDifference)) {
+          document.body.insertBefore(heightDifference, document.body.firstChild);
+          heightDifference.id = "height-difference";
+          heightDifference.style.minHeight = navbar.scrollHeight + "px";
+          if (!window.isProgrammaticScroll) { // to avoid navbar stopping page scrolling after i clicked nav button (which scrolls down...)
+            window.scrollTo(0, scrollY);
+          }
+        }
+      } 
+    }
+    else {
+      if (navbar.classList.contains("sticky")){
+        navbar.classList.remove("sticky");
+        document.getElementById("height-difference").remove();
+      }
+    } 
+  }
+
+  // ----- nav end
+
+
   const projectsSwiper = new Swiper('.swiper-container', {
+    spaceBetween: 10,
+    speed: 750,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
   });
 
 

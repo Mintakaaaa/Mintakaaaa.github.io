@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minima</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">  
+
   <link href="/scss/common.css" rel="stylesheet">
   <link href="/scss/case_study.css" rel="stylesheet">
 
@@ -25,14 +29,37 @@
   <!-- Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 
 <body>
-  <div style="position: absolute; z-index: 1; left: 50%; top: 200px; translate: -50% 0; background-color: var(--light-gray); color: red; padding: 50px;">WORK IN PROGRESS FAR FROM COMPLETION</div>
+  <div style="position: absolute; z-index: 1; left: 50%; top: 200px; translate: -50% 0; background-color: var(--light-gray); color: red; padding: 50px;">WORK IN PROGRESS NOT COMPLETE</div>
 
-  <div style="position: relative;"><img src="/media/minima/Minima Splash.png" style="width: 100%; height: 100vh; object-fit: cover;"><div style="position: absolute; width: 100%; top: 0; left: 0;height: 100%; background-image: linear-gradient(rgba(0, 0, 0, 0.75) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.75) 100%);"></div></div>
+  <div class="nav-container">
+    <div id="logo-sandwich-container">
+      <p class="p-button" style="pointer-events: none; margin-right: auto;">MB</p>
+      <div id="nav-sandwich">
+        <div id="top-bar"></div>
+        <div id="middle-bar"></div>
+        <div id="bottom-bar"></div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="nav-links">
+        <a id="nav-education" href="/index.html#edu-scroll-target">Education</a>
+        <a id="nav-projects" href="/index.html#projects-scroll-target">Projects</a>
+        <a id="nav-work" href="/index.html#work-scroll-target">Work</a>
+      </div>
+
+      <p id="nav-contact-button" class="p-button closed">Contact</p>
+    </div>
+
+  </div>
+
+  <div style="margin-bottom: 50px;"></div>
+
+  <div style="position: relative;"><img src="/media/minima/Minima Splash.png" style="width: 100%; height: 100vh; object-fit: cover;"><div style="position: absolute; width: 100%; top: 0; left: 0;height: 100%; background-image: linear-gradient(black 0%, transparent 20%, transparent 80%, black 100%);"></div></div>
   
   <div class="global-margin" style="display: flex; justify-content: space-between;">
     <div>
@@ -116,9 +143,9 @@
 
   <!-- will-change: backdrop-filter; stops overlay from moving when removing blur, use sparingly -->
   <div id="gallery-img-overlay" class="d-none" style="position: fixed; width: 100vw; height: 100vh; z-index: 2;opacity: 0; will-change: backdrop-filter;">
-    <div style="display:flex; align-items: center; width: 90%; height: 90%; position: fixed; top: 50%; left: 50%; translate: -50% -50%;"> 
+    <div style="display:flex; align-items: center; width: 80%; height: 80%; position: fixed; top: 50%; left: 50%; translate: -50% -50%;"> 
       <img src="/media/minima/Minima Home.png" style="width: 100%;">
-      <div style="position: absolute; top: 20px; left: 50%; translate: -50% 0; font-size: 40px; color: var(--orange); cursor: pointer;"><i class="fa-solid fa-times"></i></div>
+      <div style="position: fixed; top: 0; left: 50%; translate: -50% -50%; font-size: 40px; color: var(--orange); cursor: pointer; background-color: var(--dark-gray); padding: var(--s); width: 40px; text-align: center; aspect-ratio: 1/1; border-radius: 50%; box-shadow: 0px 0px 5px 1px rgb(76, 76, 76);"><i class="fa-solid fa-times"></i></div>
     </div>
   </div>
   
@@ -150,18 +177,24 @@
 
   <div style="margin: 20px;"></div>
 
-  <div class="global-margin swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="background-div" style="position: relative; filter: blur(6px);"></div>
-        <div style="position: absolute; width: 60%; top: 0; left: 50%; translate: -50% -10%;">
-          <img src="/media/hayt/hayt splash 2.png" style="width: 100%">
+
+  
+  <div class="global-margin">
+    <p class="p-small-grey" style="margin-bottom: 8px;">Other projects</p>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="background-div" style="position: absolute; filter: blur(6px); background-image: url('/media/hayt/hayt\ splash\ 2.png');"></div>
+          <div style="width: 35%; z-index: 1;">
+            <img src="/media/hayt/hayt splash 2.png" style="width: 100%">
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="background-div" style="position: relative; filter: blur(6px);"></div>
-        <div style="position: absolute; width: 60%; top: 0; left: 50%; translate: -50% -10%;">
-          <img src="/media/hayt/hayt splash 2.png" style="width: 100%">
+        <div class="swiper-slide">
+          <div class="background-div" style="position: absolute; filter: blur(6px); background-image: url('/media/edflix/Edflix\ splash\ 3.png');"></div>
+          <div style="width: 35%; z-index: 1;">
+            <img src="/media/edflix/Edflix splash 3.png" style="width: 100%">
+          </div>
         </div>
       </div>
     </div>
