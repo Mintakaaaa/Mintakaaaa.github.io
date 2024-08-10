@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   });
 
   window.addEventListener("scroll", function() {
-    stickyNavbar(navbar);
+    navbarBackgroundChange(navbar);
   });
 
   const contactNavButton = document.querySelector("#nav-contact-button");
@@ -51,37 +51,49 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }
   }
 
-  function stickyNavbar(navbar) {
+  function navbarBackgroundChange(navbar) {
     let scrollY = window.scrollY;
 
     if (scrollY > navbar.scrollHeight) {
-      if (!navbar.classList.contains("sticky")) {
-        navbar.classList.add("sticky");
-
-        let heightDifference = document.createElement("div");
-        if (!document.body.contains(heightDifference)) {
-          document.body.insertBefore(heightDifference, document.body.firstChild);
-          heightDifference.id = "height-difference";
-          heightDifference.style.minHeight = navbar.scrollHeight + "px";
-          if (!window.isProgrammaticScroll) { // to avoid navbar stopping page scrolling after i clicked nav button (which scrolls down...)
-            window.scrollTo(0, scrollY);
-          }
-        }
-      } 
+      navbar.style.backgroundColor = "var(--medium-gray)";
+      navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.25)";
     }
     else {
-      if (navbar.classList.contains("sticky")){
-        navbar.classList.remove("sticky");
-        document.getElementById("height-difference").remove();
-      }
-    } 
+      navbar.style.backgroundColor = "transparent";
+      navbar.style.boxShadow = "none";
+    }
   }
 
   // ----- nav end
 
+  const siteAppSwiper = new Swiper("#site-app-swiper", {
+    spaceBetween: 20,
+    speed: 750,
+    on: {
+      slideChange: function () {
+        handleButtonChange(this.activeIndex);
+      },
+    },
+  });
 
-  const projectsSwiper = new Swiper('.swiper-container', {
-    spaceBetween: 10,
+  let lastSelectedSiteAppItem = document.querySelector('#site-app-swiper-0');
+
+  function handleButtonChange(activeIndex) {
+    lastSelectedSiteAppItem.classList.toggle("selected");
+    let newButton = document.querySelector(`#site-app-swiper-${activeIndex}`);
+    newButton.classList.toggle("selected");
+    lastSelectedSiteAppItem = newButton;
+  }
+
+  document.querySelectorAll('.switch-item').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+      siteAppSwiper.slideTo(slideIndex); // Slide to the specific index
+    });
+  });
+
+  const projectsSwiper = new Swiper('#projects-swiper', {
+    spaceBetween: 20,
     speed: 750,
     loop: true,
     autoplay: {
@@ -91,11 +103,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
   });
 
 
+
+
   // ----------------------------------------------------------------
   masterLogoContainer = document.querySelector('#all-tech-logos');
   let masterRect = masterLogoContainer.getBoundingClientRect();
 
-  techLogos = document.querySelectorAll('.tech-logo-container');
+  techLogos = document.querySelectorAll('.tech-logos-container img');
   techLogoWidth = techLogos[0].getBoundingClientRect().width;
   // let techLogoHeight = techLogos[0].getBoundingClientRect().height;
 

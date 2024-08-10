@@ -611,29 +611,6 @@
     z-index: 3;
 }
 
-.switch-item {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;  
-    width: 60px; 
-    height: 60px; 
-    border: 1px solid var(--light-gray); 
-    background-color: var(--light-gray); 
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-
-    &.selected {
-        border: 1px solid var(--orange); 
-        color: var(--orange);
-
-        & > i { transform: scale(1.5); }
-    }
-
-    &:hover:not(.selected) {
-        background-color: #282828;
-        cursor: pointer;
-    }
-}
 //------------------------------------------------------------------------------------------------
 
 .project-item-overlay {
