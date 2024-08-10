@@ -221,6 +221,28 @@ h2 {
     margin: var(--m) auto 0 auto;
   }
 }
+.switch-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--light-gray);
+  background-color: var(--light-gray);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.switch-item.selected {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+.switch-item.selected > i {
+  transform: scale(1.5);
+}
+.switch-item:hover:not(.selected) {
+  background-color: #282828;
+  cursor: pointer;
+}
+
 .p-button {
   margin-top: auto;
   width: -moz-fit-content;

@@ -1,5 +1,9 @@
-let masterLogoContainer;
-let techLogos;
+let masterLogoContainerOne;
+let masterRectOne;
+let masterLogoContainerTwo;
+let masterRectTwo;
+let techLogosOne;
+let techLogosTwo;
 let techLogoWidth;
 
 let galleryImgOverlay;
@@ -106,11 +110,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
   // ----------------------------------------------------------------
-  masterLogoContainer = document.querySelector('#all-tech-logos');
-  let masterRect = masterLogoContainer.getBoundingClientRect();
+  masterLogoContainerOne = document.querySelector('#tech-logos-one');
+  masterRectOne = masterLogoContainerOne.getBoundingClientRect();
 
-  techLogos = document.querySelectorAll('.tech-logos-container img');
-  techLogoWidth = techLogos[0].getBoundingClientRect().width;
+  masterLogoContainerTwo = document.querySelector('#tech-logos-two');
+  masterRectTwo = masterLogoContainerTwo.getBoundingClientRect();
+
+  techLogosOne = document.querySelectorAll('#tech-logos-one img');
+  techLogosTwo = document.querySelectorAll('#tech-logos-two img');
+  techLogoWidth = techLogosOne[0].getBoundingClientRect().width;
   // let techLogoHeight = techLogos[0].getBoundingClientRect().height;
 
   // ----------------------------------------------------------------
@@ -165,17 +173,36 @@ function showGalleryImage() {
   });
 }
 
-function updateTechLogosBorder(xZero, yZero) {
-  techLogos.forEach(function(tech, index) {
+function updateTechLogosBorder(xZero, yZero, xZeroTwo, yZeroTwo) {
+  techLogosOne.forEach(function(tech, index) {
     tech.style.borderImage = `radial-gradient(75px at ${xZero - ((index) * techLogoWidth)}px ${yZero}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
+  });
+  techLogosTwo.forEach(function(tech, index) {
+    tech.style.borderImage = `radial-gradient(75px at ${xZeroTwo - ((index) * techLogoWidth)}px ${yZeroTwo}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
   });
 }
 
 function handleMouseMove(event) {
-  masterRect = masterLogoContainer.getBoundingClientRect();
-  let xZero = event.clientX - masterRect.left;
-  let yZero = event.clientY - masterRect.top;
-  
+  masterRectOne = masterLogoContainerOne.getBoundingClientRect();
+  let xZero = event.clientX - masterRectOne.left;
+  let yZero = event.clientY - masterRectOne.top;
 
-  updateTechLogosBorder(xZero, yZero);
+  console.log("-----");
+
+  console.log(masterRectOne.left, masterRectOne.top, xZero, yZero);
+
+  masterRectTwo = masterLogoContainerTwo.getBoundingClientRect();
+  let xZeroTwo = event.clientX - masterRectTwo.left;
+  let yZeroTwo = event.clientY - masterRectTwo.top;
+  console.log(masterRectTwo.left, masterRectTwo.top, xZeroTwo, yZeroTwo);
+
+  console.log("-----");
+  // let siteAppSwiper = document.querySelector('#site-app-swiper');
+  // if (siteAppSwiper) {
+// 
+  // }
+
+  // need to make it more abstract and smaller code, maybe if swiper then calculate rest...
+
+  updateTechLogosBorder(xZero, yZero, xZeroTwo, yZeroTwo);
 }
