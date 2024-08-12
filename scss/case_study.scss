@@ -98,8 +98,8 @@
 .mini-details-container {
   display: flex; 
   justify-content: space-between; 
-  width: 100%;
 }
+.swiper-slide .mini-details-container { width: 100%; }
 
 .tech-logos-master {
   display: flex; 
