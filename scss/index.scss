@@ -457,21 +457,6 @@
             }
         }
 
-        & > .category-blob-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--xs);
-
-            & > .category-blob {
-                color: #f8f8f8;                
-                border-radius: 40px; 
-                padding: 8px 12px; 
-                display: inline-block; 
-                font-size: var(--s); 
-                font-weight: 500;
-            }
-        }
-
         & .description {
             color: white; 
             margin-bottom: var(--xs);
@@ -568,18 +553,6 @@
     & #hidden-pfp { display: none; }
 }
 
-
-//------------------------------------------------------------------------------------------------
-.item-type-label {
-    padding: var(--s) var(--m); 
-    position: absolute; 
-    top: 12px; 
-    left: 12px;
-    font-size: var(--s);
-    letter-spacing: 1px;
-    color: #f8f8f8;
-    transition: opacity 0.2s ease-in-out;
-}
 //------------------------------------------------------------------------------------------------
 
 .about-switch-container {
@@ -683,15 +656,6 @@
     100% { background-position: left; }
 }
 
-#decorative-line {
-    width: 100%;
-    height: 1px; 
-    background-color: var(--dark-gray); 
-    transition: background-color 0.3s ease-in-out;
-
-    &.grey { background-color: #898989; }
-}
-
 blockquote {
     font-family: Georgia, serif;
     position: relative;
@@ -792,19 +756,6 @@ blockquote:before {
 }
 .section-titles p {
     color: var(--subtitle-blue); 
-}
-
-.decorator-square {
-    width: 20px; 
-    height: 20px; 
-    border: 1px solid var(--orange); 
-    position: absolute; 
-    z-index: -1;
-
-    &.top { top: 0; }
-    &.left { left: 0; }
-    &.right { right: 0; }
-    &.bottom { bottom: 0; }
 }
 
 @media screen and (max-width: 1500px) {
@@ -939,7 +890,7 @@ blockquote:before {
     }
     .module-percentage{ font-size: var(--l); }
     .module { font-size: var(--m); }
-    .decorator-square, #special-decorator-1, #special-decorator-2 { display: none; }
+    #special-decorator-1, #special-decorator-2 { display: none; }
 
     .project-item-container { padding: var(--xs); }
 

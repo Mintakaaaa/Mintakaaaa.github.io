@@ -31,7 +31,6 @@
   </head>
 
   <body>
-    <div style="position: absolute; z-index: 1; left: 50%; top: 200px; translate: -50% 0; background-color: var(--light-gray); color: red; padding: 50px;">WORK IN PROGRESS NOT COMPLETE</div>
 
     <div class="fixed-nav-master">
       <div class="nav-container">
@@ -61,13 +60,12 @@
       <div class="hero-gradient"></div>
     </div>
 
-    <div class="global-margin"  style="display: flex; align-items: flex-end; margin-bottom: var(--m);">
-      <div style="display: flex; gap: var(--s); flex: 1 1 auto; margin-right: var(--s);">
-        <div style="background-color: var(--light-gray); height: 3px; margin-top: auto; margin-bottom: 4px; width: 100%;"></div>
-        <p style="color: #999999; white-space: nowrap; font-size: var(--s); pointer-events: none;">Project type</p>
+    <div class="global-margin selection-container">
+      <div class="line-text-container">
+        <div class="line"></div>
+        <p class="text">Project type</p>
       </div>
       <div style="display: flex; gap: var(--s);">
-        <!-- NOTE when going from projects to this website, need to use hash to auto select correct button... -->
         <div data-slide="0" id="site-app-swiper-0" class="switch-item selected">Site</div>
         <div data-slide="1" id="site-app-swiper-1" class="switch-item">App</div>
       </div>
@@ -77,191 +75,185 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
 
-          <div style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between;">
-              <div>
-                <p class="p-small-grey">Project type</p>
-                <h2>Static website</h2> 
-              </div>
-              <div>
-                <p class="p-small-grey">Date</p>
-                <h2>06/2024</h2> 
-              </div>
-              <div>
-                <p class="p-small-grey">Development time</p>
-                <h2>2 months</h2> 
-              </div>
+          <div class="mini-details-container">
+            <div>
+              <p class="p-small gray">Project type</p>
+              <h2>Static website</h2> 
             </div>
-        
-            <div style="margin: 20px;"></div>
-        
-            <div style="display: flex; flex-direction: column; gap: var(--l);">
-              <div style="display: flex; flex-direction: column; gap: var(--xs);">
-                <p class="p-small-grey">Tech</p>
-        
-                <div style="display: flex; flex: 1; gap: var(--s); align-items: center; position: relative;">
-                  <div id="tech-logos-one" class="tech-logos-container">
-                    <div class="img-holder">
-                      <img src="/media/tech_logos/html.svg" style="max-height: 100%;">
-                      <p class="tech-name p-small-grey">HTML</p>
-                    </div>
-                    <div class="img-holder">
-                      <img src="/media/tech_logos/css.svg" style="max-height: 100%;">
-                      <p class="tech-name p-small-grey">CSS</p>
-                    </div>
-                    <div class="img-holder">
-                      <img src="/media/tech_logos/javascript.svg" style="max-height: 100%;">
-                      <p class="tech-name p-small-grey">Javascript</p>
-                    </div>
-                  </div>
-            
-                  <div id="decorative-line" style="background-color: var(--orange);"></div>
-                  <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
-                </div>
-              </div>
-        
-        
-              <div style="display: flex; gap: var(--m);">
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-comment-medical"></i>
-                    Context
-                  </p>
-                  <p style="padding-top: 8px; color:#dadada;">After creating an Android app, I wanted to create a static website to show the features of this app and practice my HTML, CSS and JS.</p>
-                </div>
-        
-                <div style="width: 1px; background-color: #404040;"></div>
-                
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-list-check"></i>
-                    Objectives
-                  </p>
-                  <p style="padding-top: 8px; color:#dadada;">1. Create a showcase website of my Android app.<br>
-                    2. Make the website fully mobile responsive.<br>
-                    3. Add tool to analyse mobile responsiveness.<br>
-                    4. Make at least 3 different pages.
-                  </p>
-                </div>
-        
-                <div style="width: 1px; background-color: #404040;"></div>
-        
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-book-open-reader"></i>
-                    Learning
-                  </p>
-                  <p style="padding-top: 8px; color: #dadada;">I learnt a lot about styling as more than half of the code in this project is CSS. New knowledge includes interesting <span class="yp-gradient">gradients</span>, page layout techniques like a hero section, colour combinations, and more.</p>
-                </div>
-        
-              </div>
+            <div>
+              <p class="p-small gray">Date</p>
+              <h2>06/2024</h2> 
             </div>
-  
+            <div>
+              <p class="p-small gray">Development time</p>
+              <h2>2 months</h2> 
+            </div>
           </div>
+      
+          <div style="margin: 20px;"></div>
+      
+          <div style="display: flex; flex-direction: column; gap: var(--l);">
+            <div style="display: flex; flex-direction: column; gap: var(--xs);">
+              <p class="p-small gray" style="text-align: center;">Tech</p>
 
+
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--s);">
+                <div id="decorative-line" style="background-color: var(--orange);"></div>
+                <div class="decorator-square left" style="z-index: 1; background-color: black;"></div>
           
-        </div>
-        <div class="swiper-slide">
-
-          <div style="display: flex; flex-direction: column;">
-            <div style="display: flex; justify-content: space-between;">
-              <div>
-                <p class="p-small-grey">Project type</p>
-                <h2>Android app</h2> 
-              </div>
-              <div>
-                <p class="p-small-grey">Date</p>
-                <h2>01/2024</h2> 
-              </div>
-              <div>
-                <p class="p-small-grey">Development time</p>
-                <h2>4 months</h2> 
-              </div>
-            </div>
-        
-            <div style="margin: 20px;"></div>
-        
-            <div style="display: flex; flex-direction: column; gap: var(--l);">
-              <div style="display: flex; flex-direction: column; gap: var(--xs);">
-                <p class="p-small-grey">Tech</p>
-        
-                <div style="display: flex; flex: 1; gap: var(--s); align-items: center; position: relative;">
-                  <div id="tech-logos-two" class="tech-logos-container">
-                    <div class="img-holder">
-                      <img src="/media/tech_logos/java.svg" style="max-height: 100%;">
-                      <p class="tech-name p-small-grey">Java</p>
-                    </div>
-                    <div class="img-holder">
-                      <img src="/media/tech_logos/sqlite.svg" style="max-height: 100%;">
-                      <p class="tech-name p-small-grey">SQLite</p>
-                    </div>
+                <div class="tech-logos-container">
+                  <div class="img-holder">
+                    <img src="/media/tech_logos/html.svg">
+                    <p class="tech-name p-small gray">HTML</p>
                   </div>
-                  <div id="decorative-line" style="background-color: var(--orange);"></div>
-                  <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
+                  <div class="img-holder">
+                    <img src="/media/tech_logos/css.svg">
+                    <p class="tech-name p-small gray">CSS</p>
+                  </div>
+                  <div class="img-holder">
+                    <img src="/media/tech_logos/javascript.svg">
+                    <p class="tech-name p-small gray">Javascript</p>
+                  </div>
                 </div>
-              </div>
-        
-        
-        
-        
-              <div style="display: flex; gap: var(--m);">
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-comment-medical"></i>
-                    Context
-                  </p>
-                  <p style="padding-top: 8px; color:#dadada;">I wanted to create an Android app to stream music without using as much mobile data as I currently use when listening to music on third-party apps.</p>
-                </div>
-        
-                <div style="width: 1px; background-color: #404040;"></div>
-                
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-list-check"></i>
-                    Objectives
-                  </p>
-                  <p style="padding-top: 8px; color:#dadada;">1. Create an Android app.<br>
-                    2. Make it easy to use.<br>
-                    3. Implement most important features for me, i.e. playlists, queue, player notification.<br>
-                    4. Make it bug-free.
-                  </p>
-                </div>
-        
-                <div style="width: 1px; background-color: #404040;"></div>
-        
-                <div style="display: flex; flex-direction: column; position: relative; min-width: 250px; flex: 1 1 25%;">
-                  <p class="p-small-grey" style="color: var(--orange);">
-                    <i class="fa-solid fa-book-open-reader"></i>
-                    Learning
-                  </p>
-                  <p style="padding-top: 8px; color: #dadada;">I learnt the foundations of android app development using Java and (all new to me) XML for UI, including activities, app navigation, foreground/background services, many android libraries, and more.</p>
-                </div>
-        
+          
+                <div id="decorative-line" style="background-color: var(--orange);"></div>
+                <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
               </div>
             </div>
-  
+      
+      
+            <div class="case-study-details">
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-comment-medical"></i>
+                  Context
+                </p>
+                <p class="detail-text">After creating an Android app, I wanted to create a static website to show the features of this app and practice my HTML, CSS and JS.</p>
+              </div>
+      
+              <div style="width: 1px; background-color: #404040;"></div>
+              
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-list-check"></i>
+                  Objectives
+                </p>
+                <p class="detail-text">1. Create a showcase website of my Android app.<br>
+                  2. Make the website fully mobile responsive.<br>
+                  3. Add tool to analyse mobile responsiveness.<br>
+                  4. Make at least 3 different pages.
+                </p>
+              </div>
+      
+              <div style="width: 1px; background-color: #404040;"></div>
+      
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  Learning
+                </p>
+                <p class="detail-text">I learnt a lot about styling as more than half of the code in this project is CSS. New knowledge includes interesting <span class="yp-gradient">gradients</span>, page layout techniques like a hero section, colour combinations, and more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="mini-details-container">
+            <div>
+              <p class="p-small gray">Project type</p>
+              <h2>Android app</h2> 
+            </div>
+            <div>
+              <p class="p-small gray">Date</p>
+              <h2>01/2024</h2> 
+            </div>
+            <div>
+              <p class="p-small gray">Development time</p>
+              <h2>4 months</h2> 
+            </div>
+          </div>
+      
+          <div style="margin: 20px;"></div>
+      
+          <div style="display: flex; flex-direction: column; gap: var(--l);">
+            <div style="display: flex; flex-direction: column; gap: var(--xs);">
+              <p class="p-small gray" style="text-align: center;">Tech</p>
+
+
+              <div style="display: flex; align-items: center; justify-content: center; gap: var(--s);">
+                <div id="decorative-line" style="background-color: var(--orange);"></div>
+                <div class="decorator-square left" style="z-index: 1; background-color: black;"></div>
+          
+                <div class="tech-logos-container">
+                  <div class="img-holder">
+                    <img src="/media/tech_logos/java.svg">
+                    <p class="tech-name p-small gray">Java</p>
+                  </div>
+                  <div class="img-holder">
+                    <img src="/media/tech_logos/sqlite.svg">
+                    <p class="tech-name p-small gray">SQLite</p>
+                  </div>
+                </div>
+          
+                <div id="decorative-line" style="background-color: var(--orange);"></div>
+                <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
+              </div>
+            </div>
+      
+            <div class="case-study-details">
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-comment-medical"></i>
+                  Context
+                </p>
+                <p class="detail-text">I wanted to create an Android app to stream music without using as much mobile data as I currently use when listening to music on third-party apps.</p>
+              </div>
+      
+              <div style="width: 1px; background-color: #404040;"></div>
+              
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-list-check"></i>
+                  Objectives
+                </p>
+                <p class="detail-text">1. Create an Android app.<br>
+                  2. Make it easy to use.<br>
+                  3. Implement most important features for me, i.e. playlists, queue, player notification.<br>
+                  4. Make it bug-free.
+                </p>
+              </div>
+      
+              <div style="width: 1px; background-color: #404040;"></div>
+      
+              <div class="case-study-detail">
+                <p class="p-small orange">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  Learning
+                </p>
+                <p class="detail-text">I learnt the foundations of android app development using Java and (all new to me) XML for UI, including activities, app navigation, foreground/background services, many android libraries, and more.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
-
 
     <div style="margin: 20px;"></div>
 
-
-    <!-- will-change: backdrop-filter; stops overlay from moving when removing blur, use sparingly -->
-    <div id="gallery-img-overlay" class="d-none" style="position: fixed; width: 100vw; height: 100vh; z-index: 2;opacity: 0; will-change: backdrop-filter;">
-      <div style="display:flex; align-items: center; width: 80%; height: 80%; position: fixed; top: 50%; left: 50%; translate: -50% -50%;"> 
+    <div id="gallery-img-overlay" class="d-none">
+      <div id="selected-img-container"> 
         <img src="/media/minima/Minima Home.png" style="width: 100%;">
-        <div style="position: fixed; top: 0; left: 50%; translate: -50% -50%; font-size: 40px; color: var(--orange); cursor: pointer; background-color: var(--dark-gray); padding: var(--s); width: 40px; text-align: center; aspect-ratio: 1/1; border-radius: 50%; box-shadow: 0px 0px 5px 1px rgb(76, 76, 76);"><i class="fa-solid fa-times"></i></div>
+        <!-- Need to make probably 2 divs in cross shape... -->
+        <!-- below sucks... -->
+        <!-- <div style="position: fixed; top: 0; left: 50%; translate: -50% -50%; font-size: 40px; color: var(--orange); cursor: pointer; background-color: var(--dark-gray); padding: var(--s); width: 40px; text-align: center; aspect-ratio: 1/1; border-radius: 50%; box-shadow: 0px 0px 5px 1px rgb(76, 76, 76);"><i class="fa-solid fa-times"></i></div> -->
       </div>
     </div>
     
     <div class="global-margin">
-      <p class="p-small-grey" style="margin-bottom: 8px;">Gallery</p>
+      <p class="p-small gray" style="margin-bottom: 8px;">Gallery</p>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--m); padding: var(--m); background-color: var(--medium-gray);">
+      <div class="gallery-grid">
         <div class="gallery-img img-holder">
           <img src="/media/minima/Minima Home.png">
         </div>
@@ -269,17 +261,17 @@
           <img src="/media/minima/Minima Features.png">
         </div>
         <div class="gallery-img img-holder">
-          <img src="/media/minima/Minima Home.png">
+          <img src="/media/minima/Minima Support.png">
         </div>
 
         <div class="gallery-img img-holder">
-          <img src="/media/minima/Minima Home.png">
+          <img src="/media/minima/Minima Reviews.png">
         </div>
         <div class="gallery-img img-holder">
-          <img src="/media/minima/Minima Home.png">
+          <img src="/media/minima/Minima Contact.png">
         </div>
         <div class="gallery-img img-holder">
-          <img src="/media/minima/Minima Home.png">
+          <img src="/media/minima/Minima About.png">
         </div>
       </div>
     </div>
@@ -287,7 +279,7 @@
     <div style="margin: 20px;"></div>
     
     <div class="global-margin">
-      <p class="p-small-grey" style="margin-bottom: 8px;">Other projects</p>
+      <p class="p-small gray" style="margin-bottom: 8px;">Other projects</p>
 
       <div id="projects-swiper" class="swiper-container">
         <div class="swiper-wrapper">
@@ -296,11 +288,28 @@
             <div class="inner-background">
               <img src="/media/hayt/hayt splash 2.png">
             </div>
+            <div class="blue item-type-label">
+              <p>UNIVERITY PROJECT</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="blue category-blob">Full stack</div>
+              <div class="blue category-blob">Real client</div>
+              <div class="blue category-blob">Mobile responsive</div>
+              <div class="blue category-blob">Team</div>
+            </div>
           </div>
           <div class="swiper-slide" onclick="window.open('edflix.html', '_blank');">
             <div class="background-div" style="background-image: url('/media/edflix/Edflix\ splash\ 3.png');"></div>
             <div class="inner-background">
               <img src="/media/edflix/Edflix splash 3.png">
+            </div>
+            <div class="blue item-type-label">
+              <p>UNIVERSITY PROJECT</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="blue category-blob">Full stack</div>
+              <div class="blue category-blob">Mock client</div>
+              <div class="blue category-blob">Team</div>
             </div>
           </div>
         </div>

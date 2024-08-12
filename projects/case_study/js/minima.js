@@ -1,11 +1,3 @@
-let masterLogoContainerOne;
-let masterRectOne;
-let masterLogoContainerTwo;
-let masterRectTwo;
-let techLogosOne;
-let techLogosTwo;
-let techLogoWidth;
-
 let galleryImgOverlay;
 
 document.addEventListener("DOMContentLoaded", function(e) {
@@ -20,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   sandwich.addEventListener("click", function() {
     toggleDropdown(sandwich);
+    navbarBackgroundChange(navbar);
   });
 
   window.addEventListener("scroll", function() {
@@ -58,13 +51,19 @@ document.addEventListener("DOMContentLoaded", function(e) {
   function navbarBackgroundChange(navbar) {
     let scrollY = window.scrollY;
 
-    if (scrollY > navbar.scrollHeight) {
+    if (navbarOpen) { // If the navbar is open, apply the open navbar style
       navbar.style.backgroundColor = "var(--medium-gray)";
       navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.25)";
     }
-    else {
-      navbar.style.backgroundColor = "transparent";
-      navbar.style.boxShadow = "none";
+    else { // If the navbar is closed, check the scroll position
+      if (scrollY > navbar.scrollHeight) { // If the user has scrolled past the navbar's height, apply the open navbar style
+        navbar.style.backgroundColor = "var(--medium-gray)";
+        navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.25)";
+      }
+      else { // If the user has not scrolled past the navbar's height, apply default navbar style
+        navbar.style.backgroundColor = "transparent";
+        navbar.style.boxShadow = "none";
+      }
     }
   }
 
@@ -106,21 +105,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     },
   });
 
-
-
-
-  // ----------------------------------------------------------------
-  masterLogoContainerOne = document.querySelector('#tech-logos-one');
-  masterRectOne = masterLogoContainerOne.getBoundingClientRect();
-
-  masterLogoContainerTwo = document.querySelector('#tech-logos-two');
-  masterRectTwo = masterLogoContainerTwo.getBoundingClientRect();
-
-  techLogosOne = document.querySelectorAll('#tech-logos-one img');
-  techLogosTwo = document.querySelectorAll('#tech-logos-two img');
-  techLogoWidth = techLogosOne[0].getBoundingClientRect().width;
-  // let techLogoHeight = techLogos[0].getBoundingClientRect().height;
-
+  const swiperContainer = document.querySelector('#projects-swiper'); // Get the DOM element of the Swiper container
+  swiperContainer.addEventListener('mouseenter', () => projectsSwiper.autoplay.stop());
+  swiperContainer.addEventListener('mouseleave', () => projectsSwiper.autoplay.start());
   // ----------------------------------------------------------------
 
   //gallery
@@ -144,7 +131,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
   });
   //----
 
-  document.addEventListener('mousemove', handleMouseMove);
+  // for when clicking on case study from projects, to slide to specific project type.. like case study on App clicked, go to app case study. duh.
+  let hash = window.location.hash; // i.e. minima.html#app  
+  if (hash) {
+    if (hash === "#site") siteAppSwiper.slideTo(0);
+    else if (hash === "#app") siteAppSwiper.slideTo(1);
+  }
 });
 
 function hideGalleryImage() {
@@ -173,36 +165,36 @@ function showGalleryImage() {
   });
 }
 
-function updateTechLogosBorder(xZero, yZero, xZeroTwo, yZeroTwo) {
-  techLogosOne.forEach(function(tech, index) {
-    tech.style.borderImage = `radial-gradient(75px at ${xZero - ((index) * techLogoWidth)}px ${yZero}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
-  });
-  techLogosTwo.forEach(function(tech, index) {
-    tech.style.borderImage = `radial-gradient(75px at ${xZeroTwo - ((index) * techLogoWidth)}px ${yZeroTwo}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
-  });
-}
 
-function handleMouseMove(event) {
-  masterRectOne = masterLogoContainerOne.getBoundingClientRect();
-  let xZero = event.clientX - masterRectOne.left;
-  let yZero = event.clientY - masterRectOne.top;
 
-  console.log("-----");
 
-  console.log(masterRectOne.left, masterRectOne.top, xZero, yZero);
 
-  masterRectTwo = masterLogoContainerTwo.getBoundingClientRect();
-  let xZeroTwo = event.clientX - masterRectTwo.left;
-  let yZeroTwo = event.clientY - masterRectTwo.top;
-  console.log(masterRectTwo.left, masterRectTwo.top, xZeroTwo, yZeroTwo);
+// maybe put below on site/app buttons...
 
-  console.log("-----");
-  // let siteAppSwiper = document.querySelector('#site-app-swiper');
-  // if (siteAppSwiper) {
-// 
-  // }
+// let masterLogoContainerOne;
+// let masterRectOne;
+// let techLogosOne;
+// let techLogoWidth;
 
-  // need to make it more abstract and smaller code, maybe if swiper then calculate rest...
+// masterLogoContainerOne = document.querySelector('#tech-logos-one');
+// masterRectOne = masterLogoContainerOne.getBoundingClientRect();
 
-  updateTechLogosBorder(xZero, yZero, xZeroTwo, yZeroTwo);
-}
+// techLogosOne = document.querySelectorAll('#tech-logos-one img');
+// techLogoWidth = techLogosOne[0].getBoundingClientRect().width;
+
+
+// function updateTechLogosBorder(xZero, yZero) {
+//   techLogosOne.forEach(function(tech, index) {
+//     tech.style.borderImage = `radial-gradient(75px at ${xZero - ((index) * techLogoWidth)}px ${yZero}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
+//   });
+// }
+
+// function handleMouseMove(event) {
+//   masterRectOne = masterLogoContainerOne.getBoundingClientRect();
+//   let xZero = event.clientX - masterRectOne.left;
+//   let yZero = event.clientY - masterRectOne.top;
+
+//   updateTechLogosBorder(xZero, yZero);
+// }
+
+// document.addEventListener('mousemove', handleMouseMove);
