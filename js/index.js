@@ -354,26 +354,22 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   function stickyNavbar(navbar) {
     let scrollY = window.scrollY;
+    let hero = document.querySelector(".hero");
 
     if (scrollY > navbar.scrollHeight) {
       if (!navbar.classList.contains("sticky")) {
         navbar.classList.add("sticky");
 
-        let heightDifference = document.createElement("div");
-        if (!document.body.contains(heightDifference)) {
-          document.body.insertBefore(heightDifference, document.body.firstChild);
-          heightDifference.id = "height-difference";
-          heightDifference.style.minHeight = navbar.scrollHeight + "px";
-          if (!window.isProgrammaticScroll) { // to avoid navbar stopping page scrolling after i clicked nav button (which scrolls down...)
-            window.scrollTo(0, scrollY);
-          }
+        hero.style.paddingTop = navbar.scrollHeight + "px";
+        if (!window.isProgrammaticScroll) { // to avoid navbar stopping page scrolling after i clicked nav button (which scrolls down...)
+          window.scrollTo(0, scrollY);
         }
       } 
     }
     else {
       if (navbar.classList.contains("sticky")){
         navbar.classList.remove("sticky");
-        document.getElementById("height-difference").remove();
+        hero.style.paddingTop = "0px";
       }
     } 
   }

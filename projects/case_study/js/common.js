@@ -19,23 +19,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     navbarBackgroundChange(navbar);
   });
 
-  window.addEventListener("resize", function() {
-    if (window.innerWidth > 520 && window.navbarOpen) { // when resizing window, close navbar after going past 520 px width...
-      sandwich.classList.remove("menu-open");
-      const dropdown = document.querySelector('.nav');
-
-      if (dropdown.style.maxHeight) {
-        dropdown.style.maxHeight = null;
-        window.navbarOpen = false;
-      } else {
-        const dropdownHeight = dropdown.scrollHeight;
-        dropdown.style.maxHeight = dropdownHeight + 'px';
-        window.navbarOpen = true;
-      }
-      navbarBackgroundChange(navbar);
-    }
-  });
-
   const contactNavButton = document.querySelector("#nav-contact-button");
 
   contactNavButton.addEventListener('click', () => {
@@ -135,6 +118,10 @@ function showGalleryImage() {
     opacity: 1,
   });
 }
+
+
+
+
 
 
 // maybe put below on site/app buttons...
