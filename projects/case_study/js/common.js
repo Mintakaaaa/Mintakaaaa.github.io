@@ -90,6 +90,21 @@ document.addEventListener("DOMContentLoaded", function(e) {
   });
   //----
 
+
+  const projectsSwiper = new Swiper('#projects-swiper', {
+    spaceBetween: 20,
+    speed: 750,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+  const swiperContainer = document.querySelector('#projects-swiper'); // Get the DOM element of the Swiper container
+  swiperContainer.addEventListener('mouseenter', () => projectsSwiper.autoplay.stop());
+  swiperContainer.addEventListener('mouseleave', () => projectsSwiper.autoplay.start());
+
 });
 
 

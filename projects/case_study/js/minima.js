@@ -27,21 +27,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
   });
 
-  const projectsSwiper = new Swiper('#projects-swiper', {
-    spaceBetween: 20,
-    speed: 750,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-
-  const swiperContainer = document.querySelector('#projects-swiper'); // Get the DOM element of the Swiper container
-  swiperContainer.addEventListener('mouseenter', () => projectsSwiper.autoplay.stop());
-  swiperContainer.addEventListener('mouseleave', () => projectsSwiper.autoplay.start());
-
-
   // for when clicking on case study from projects, to slide to specific project type.. like case study on App clicked, go to app case study. duh.
   let hash = window.location.hash; // i.e. minima.html#app  
   if (hash) {

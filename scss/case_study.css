@@ -647,6 +647,18 @@ h2 {
   width: 100%;
 }
 
+.secondary.item-type-label {
+  padding: var(--s) 0;
+  top: calc(3 * var(--m));
+  font-size: 0.6rem;
+  z-index: 3;
+}
+.secondary.item-type-label i {
+  font-size: var(--l);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 .absolute.category-blob-container {
   position: absolute;
   bottom: var(--s);

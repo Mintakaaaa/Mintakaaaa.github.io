@@ -213,6 +213,15 @@
   }
 }
 
+.secondary.item-type-label {
+  padding: var(--s) 0;
+  top: calc(3*var(--m));
+  font-size: 0.6rem;
+  z-index: 3;
+
+  & i { font-size: var(--l); vertical-align: middle; margin-right: 8px; }
+}
+
 .absolute.category-blob-container {
   position: absolute; bottom: var(--s); left: var(--s); z-index: 1;
   pointer-events: none;
