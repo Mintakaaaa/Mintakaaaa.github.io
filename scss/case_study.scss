@@ -224,6 +224,7 @@
 
 .absolute.category-blob-container {
   position: absolute; bottom: var(--s); left: var(--s); z-index: 1;
+  flex-wrap: wrap-reverse;
   pointer-events: none;
 }
 
