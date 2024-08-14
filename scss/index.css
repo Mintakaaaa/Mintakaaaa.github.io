@@ -258,6 +258,7 @@ h2 {
   font-size: var(--s);
   letter-spacing: 1px;
   color: #f8f8f8;
+  pointer-events: none;
   transition: opacity 0.2s ease-in-out;
 }
 
