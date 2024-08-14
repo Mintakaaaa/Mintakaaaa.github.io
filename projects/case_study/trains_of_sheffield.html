@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains of Sheffield</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">  
+
+    <link href="/scss/common.css" rel="stylesheet">
+    <link href="/scss/case_study.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  </head>
+
+  <body>
+
+    <div class="fixed-nav-master">
+      <div class="nav-container">
+        <div id="logo-sandwich-container">
+          <p class="p-button" style="pointer-events: none; margin-right: auto;">MB</p>
+          <div id="nav-sandwich">
+            <div id="top-bar"></div>
+            <div id="middle-bar"></div>
+            <div id="bottom-bar"></div>
+          </div>
+        </div>
+  
+        <div class="nav">
+          <div class="nav-links">
+            <a id="nav-education" href="/index.html#edu-scroll-target">Education</a>
+            <a id="nav-projects" href="/index.html#projects-scroll-target">Projects</a>
+            <a id="nav-work" href="/index.html#work-scroll-target">Work</a>
+          </div>
+  
+          <p id="nav-contact-button" class="p-button closed">Contact</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img class="hero-image" src="/media/ToS/ToS splash.png">
+      <div class="hero-gradient"></div>
+    </div>
+
+    <div class="global-margin mini-details-container">
+      <div>
+        <p class="p-small gray">Project type</p>
+        <h2>Desktop app</h2> 
+      </div>
+      <div>
+        <p class="p-small gray">Date</p>
+        <h2>11/2023</h2> 
+      </div>
+      <div>
+        <p class="p-small gray">Development time</p>
+        <h2>1 month</h2> 
+      </div>
+    </div>
+
+    <div style="margin: 20px;"></div>
+
+    <div class="global-margin" style="display: flex; flex-direction: column; gap: var(--l); position: relative;">
+      <div style="display: flex; flex-direction: column; gap: var(--xs);">
+        <p class="p-small gray" style="text-align: center;">Tech</p>
+
+
+        <div style="display: flex; align-items: center; justify-content: center; gap: var(--s);">
+          <div id="decorative-line" style="background-color: var(--orange);"></div>
+          <div class="decorator-square left" style="z-index: 1; background-color: black;"></div>
+    
+          <div class="tech-logos-container">
+            <div class="img-holder">
+              <img src="/media/tech_logos/java.svg">
+              <p class="tech-name p-small gray">Java</p>
+            </div>
+            <div class="img-holder">
+              <img src="/media/tech_logos/mysql.svg">
+              <p class="tech-name p-small gray">MySQL</p>
+            </div>
+          </div>
+    
+          <div id="decorative-line" style="background-color: var(--orange);"></div>
+          <div class="decorator-square right" style="z-index: 1; background-color: black;"></div>
+        </div>
+      </div>
+
+
+      <div class="case-study-details">
+        <div class="case-study-detail">
+          <p class="p-small orange">
+            <i class="fa-solid fa-comment-medical"></i>
+            Context
+          </p>
+          <p class="detail-text">Digital kiosk desktop app for a mock reseller of model trains in Sheffield.</p>
+        </div>
+
+        <div style="width: 1px; background-color: #404040;"></div>
+        
+        <div class="case-study-detail">
+          <p class="p-small orange">
+            <i class="fa-solid fa-list-check"></i>
+            Objectives
+          </p>
+          <p class="detail-text">1. Implement secure registration system.<br>
+            2. Implement varied user permissions/roles (Customer, Staff, Manager).<br>
+            3. Implement complex models as per requirements.
+          </p>
+        </div>
+
+        <div style="width: 1px; background-color: #404040;"></div>
+
+        <div class="case-study-detail">
+          <p class="p-small orange">
+            <i class="fa-solid fa-book-open-reader"></i>
+            Learning
+          </p>
+          <p class="detail-text">Basic user authentication with username and encrypted password. Java design principles & patterns, Java MVC architecture. MySQL Workbench for persistent data storage. Developing as per mock-clients' requirements. Collaborating efficiently with a client and in a team.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 20px;"></div>
+
+    <div id="gallery-img-overlay" class="d-none">
+      <div id="selected-img-container"> 
+        <img src="/media/hayt/hayt splash 2.png" style="width: 100%;">
+      </div>
+    </div>
+    
+    <div class="global-margin">
+      <p class="p-small gray" style="margin-bottom: 8px;">Gallery</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-img img-holder">
+          <img src="/media/ToS/tos edit profile.png">
+        </div>
+        <div class="gallery-img img-holder">
+          <img src="/media/ToS/tos train set browse.png">
+        </div>
+        <div class="gallery-img img-holder">
+          <img src="/media/ToS/tos add product.png">
+        </div>
+        <div class="gallery-img img-holder">
+          <img src="/media/ToS/tos add track pack.png">
+        </div>
+        <div class="gallery-img img-holder">
+          <img src="/media/ToS/tos user manager.png">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 20px;"></div>
+    
+    <div class="global-margin">
+      <p class="p-small gray" style="margin-bottom: 8px;">Other projects</p>
+
+      <div id="projects-swiper" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" onclick="window.open('minima.html', '_blank');">
+            <div class="background-div" style="background-image: url('/media/minima/Minima\ Splash.png');"></div>
+            <div class="inner-background">
+              <img src="/media/minima/Minima Splash.png">
+            </div>
+            <div class="red item-type-label">
+              <p>PERSONAL PROJECT</p>
+            </div>
+            <div class="secondary item-type-label">
+              <p><i id="static-site-bg-icon" class="fa-regular fa-file-code" style="color: #4162ce;"></i>STATIC WEBSITE</p>
+            </div>
+
+            <div class="absolute category-blob-container">
+              <div class="red category-blob">Front-end</div>
+              <div class="red category-blob">Mobile responsive</div>
+              <div class="red category-blob">Solo</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" onclick="window.open('minima.html#app', '_blank');">
+            <div class="background-div" style="background-image: url('/media/minima/Minima\ Splash.png');"></div>
+            <div class="inner-background">
+              <img src="/media/minima/Minima Splash.png">
+            </div>
+            <div class="red item-type-label">
+              <p>PERSONAL PROJECT</p>
+            </div>
+            <div class="secondary item-type-label">
+              <p><i class="fa-brands fa-android" style="color: #37ca37;"></i>ANDROID APP</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="red category-blob">Full stack</div>
+              <div class="red category-blob">Solo</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" onclick="window.open('hayt.html', '_blank');">
+            <div class="background-div" style="background-image: url('/media/hayt/hayt\ splash\ 2.png');"></div>
+            <div class="inner-background">
+              <img src="/media/hayt/hayt splash 2.png">
+            </div>
+            <div class="blue item-type-label">
+              <p>UNIVERITY PROJECT</p>
+            </div>
+            <div class="secondary item-type-label">
+              <p style="color: black; font-weight: 600;"><i id="web-app-fg-icon" class="fa-solid fa-file-code" style="color: #ce9a41;"></i>WEB APP</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="blue category-blob">Full stack</div>
+              <div class="blue category-blob">Real client</div>
+              <div class="blue category-blob">Mobile responsive</div>
+              <div class="blue category-blob">Team</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" onclick="window.open('edflix.html', '_blank');">
+            <div class="background-div" style="background-image: url('/media/edflix/Edflix\ splash\ 3.png');"></div>
+            <div class="inner-background">
+              <img src="/media/edflix/Edflix splash 3.png">
+            </div>
+            <div class="blue item-type-label">
+              <p>UNIVERSITY PROJECT</p>
+            </div>
+            <div class="secondary item-type-label">
+              <p style="color: black; font-weight: 600;"><i id="web-app-fg-icon" class="fa-solid fa-file-code" style="color: #ce9a41;"></i>WEB APP</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="blue category-blob">Full stack</div>
+              <div class="blue category-blob">Mock client</div>
+              <div class="blue category-blob">Team</div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" onclick="window.open('combo_poker.html', '_blank');">
+            <div class="background-div" style="background-image: url('/media/combo_poker/combo\ splash.png');"></div>
+            <div class="inner-background">
+              <img src="/media/combo_poker/combo splash.png">
+            </div>
+            <div class="purple item-type-label">
+              <p>HIGH SCHOOL PROJECT</p>
+            </div>
+            <div class="secondary item-type-label">
+              <p style="color: black; font-weight: 600;"><i class="fa-solid fa-file-code" style="color: #ce4141;"></i>DESKTOP APP</p>
+            </div>
+            <div class="absolute category-blob-container">
+              <div class="purple category-blob">Full stack</div>
+              <div class="purple category-blob">Solo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 150px;"></div>
+
+    <div class="contact-container">
+      <h2 style="white-space: nowrap;">Contact <i class="fa-solid fa-paper-plane"></i></h2>
+      <div id="decorative-line" style="height: 2px;"></div>
+      <div class="methods-container">
+        <div>
+          <p>Email</p>
+          <div class="email-method">
+            <div id="copied-text">Copied!</div>   
+            <p style="white-space: nowrap;">
+              <a style="text-decoration: none; color: black;" href="mailto:mindaugasb04@gmail.com" target="_blank">mindaugasb04@gmail.com</a>
+              <i id="copy-email" class="fa-solid fa-copy" style="font-size: var(--l); margin-left: 8px;"></i>   
+            </p>
+          </div>
+
+        </div>
+
+        <div style="display: flex; gap: var(--m); margin-top: auto;">
+          <i class="fa-brands fa-linkedin i-method" onclick="window.open('https://www.linkedin.com/in/mindaugas-brazlauskas-9b9437279', '_blank');"></i>
+          <i class="fa-brands fa-github i-method" onclick="window.open('https://github.com/Mintakaaaa', '_blank');"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- GSAP animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <!-- base common, case study common, and case-study specific js imports -->
+    <script src="/js/common.js"></script> 
+    <script src="js/common.js"></script>
+  </body>
+
+</html>
