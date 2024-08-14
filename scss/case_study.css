@@ -523,6 +523,9 @@ h2 {
   justify-content: center;
   position: relative;
   gap: var(--m);
+  flex-wrap: wrap;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .tech-logos-container .img-holder {
   border: 1px solid transparent;
@@ -666,6 +669,11 @@ h2 {
   z-index: 1;
   flex-wrap: wrap-reverse;
   pointer-events: none;
+}
+
+.tech#decorative-line {
+  width: auto;
+  flex: 1 1 1%;
 }
 
 @media screen and (max-width: 1015px) {

@@ -74,6 +74,9 @@
   justify-content: center; 
   position: relative; 
   gap: var(--m);
+  flex-wrap: wrap;
+  max-width: fit-content;
+  
 
   & .img-holder {
     border: 1px solid transparent;
@@ -228,6 +231,11 @@
   pointer-events: none;
 }
 
+
+.tech#decorative-line {
+  width: auto;
+  flex: 1 1 1%;
+}
 
 @media screen and (max-width: 1015px) {
   .case-study-details { flex-direction: column; }
