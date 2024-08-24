@@ -34,38 +34,3 @@ document.addEventListener("DOMContentLoaded", function(e) {
     else if (hash === "#app") siteAppSwiper.slideTo(1);
   }
 });
-
-
-
-
-
-
-// maybe put below on site/app buttons...
-
-// let masterLogoContainerOne;
-// let masterRectOne;
-// let techLogosOne;
-// let techLogoWidth;
-
-// masterLogoContainerOne = document.querySelector('#tech-logos-one');
-// masterRectOne = masterLogoContainerOne.getBoundingClientRect();
-
-// techLogosOne = document.querySelectorAll('#tech-logos-one img');
-// techLogoWidth = techLogosOne[0].getBoundingClientRect().width;
-
-
-// function updateTechLogosBorder(xZero, yZero) {
-//   techLogosOne.forEach(function(tech, index) {
-//     tech.style.borderImage = `radial-gradient(75px at ${xZero - ((index) * techLogoWidth)}px ${yZero}px, #ffa500, transparent) 1 / 1px / 0 stretch`;
-//   });
-// }
-
-// function handleMouseMove(event) {
-//   masterRectOne = masterLogoContainerOne.getBoundingClientRect();
-//   let xZero = event.clientX - masterRectOne.left;
-//   let yZero = event.clientY - masterRectOne.top;
-
-//   updateTechLogosBorder(xZero, yZero);
-// }
-
-// document.addEventListener('mousemove', handleMouseMove);
