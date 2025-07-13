@@ -528,7 +528,7 @@ function toggleProjects(projectTypes, projectItemContainers) {
 function updateYearAverage(year, currentYearAverage) {
   if (year === "1") { currentYearAverage.textContent = "69"; }
   else if (year === "2") { currentYearAverage.textContent = "75"; }
-  else if (year === "3") { currentYearAverage.textContent = "NA"; }
+  else if (year === "3") { currentYearAverage.textContent = "79"; }
   else if (year === "4") { currentYearAverage.textContent = "NA"; }
 }
 
