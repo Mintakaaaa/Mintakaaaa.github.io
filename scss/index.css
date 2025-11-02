@@ -1177,6 +1177,11 @@ blockquote:before {
   transition: left 0.2s ease-in-out, top 0.2s ease-in-out;
 }
 
+
+.experience-items {
+  display: flex; 
+  gap: var(--m);
+}
 .experience-item-container {
   display: flex;
   flex-direction: column;
@@ -1358,6 +1363,15 @@ blockquote:before {
   }
   blockquote::before {
     font-size: 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .experience-items {
+    flex-direction: column; 
+  }
+  .experience-item-container {
+    width: auto;
+    min-height: auto;
   }
 }
 @media screen and (max-width: 600px) {
