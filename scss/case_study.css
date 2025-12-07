@@ -592,17 +592,28 @@ h2 {
   background-color: var(--medium-gray);
 }
 
-.gallery-img {
+.gallery-img, .gallery-video {
   padding: 4px;
   background-color: var(--light-gray);
   border: 1px solid var(--light-gray);
   cursor: pointer;
   transition: border 0.3s ease-in-out;
 }
-.gallery-img:hover {
+.gallery-video { position: relative; }
+.gallery-video video { object-fit: fill; }
+.gallery-video i { 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 5rem;
+  color: var(--orange);
+}
+
+.gallery-img:hover, .gallery-video:hover  {
   border: 1px solid var(--orange);
 }
-.gallery-img img {
+.gallery-img img, .gallery-video video {
   width: 100%;
   min-width: 200px;
   border-radius: 4px;

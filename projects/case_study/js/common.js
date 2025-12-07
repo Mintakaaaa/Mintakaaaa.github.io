@@ -1,4 +1,4 @@
-let galleryImgOverlay;
+let galleryItemOverlay;
 
 document.addEventListener("DOMContentLoaded", function(e) {
   window.isProgrammaticScroll = false;
@@ -71,21 +71,34 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   //gallery
 
-  galleryImgOverlay = document.querySelector("#gallery-img-overlay");
-  let galleryImg = galleryImgOverlay.querySelector("img");
+  galleryItemOverlay = document.querySelector("#gallery-img-overlay");
+  let galleryImg = galleryItemOverlay.querySelector("img");
+  let galleryVid = galleryItemOverlay.querySelector("video");
 
-  galleryImgOverlay.addEventListener("click", function(e) {
-    if (e.target !== galleryImg) { /// if not clicking on overlaying img then close it...
-      hideGalleryImage();
+  galleryItemOverlay.addEventListener("click", function(e) {
+    if (e.target !== galleryImg && e.target !== galleryVid) { /// if not clicking on overlaying img or video then close it...
+      hideGalleryItem(galleryVid);
     }
   });
   
-  let allImages = document.querySelectorAll(".gallery-img");
+  let allGalleryItems = document.querySelectorAll(".gallery-img, .gallery-video");
+  allGalleryItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      const img = item.querySelector("img");
+      const vid = item.querySelector("video");
 
-  allImages.forEach(function(image) {
-    image.addEventListener("click", function() {
-      galleryImg.src = this.firstElementChild.getAttribute("src");
-      showGalleryImage(); 
+      if (img) {
+        galleryImg.src = img.src;
+        galleryImg.classList.remove("d-none");
+        galleryVid.classList.add("d-none");
+        galleryVid.pause();
+      } else if (vid) {
+        galleryVid.src = vid.src;
+        galleryVid.classList.remove("d-none");
+        galleryImg.classList.add("d-none");
+      }
+
+      showGalleryItem();
     });
   });
   //----
@@ -108,25 +121,27 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 
-function hideGalleryImage() {
-  gsap.killTweensOf(galleryImgOverlay); // stops animation glitching when repeatedly clicking super fast
+function hideGalleryItem(galleryVid) {
+  galleryVid.pause();
 
-  gsap.to(galleryImgOverlay, {
+  gsap.killTweensOf(galleryItemOverlay); // stops animation glitching when repeatedly clicking super fast
+
+  gsap.to(galleryItemOverlay, {
       duration: 0.3, 
       backdropFilter: "none",  // removes blur effect when hiding image
       opacity: 0,
       onComplete: function() {
-        galleryImgOverlay.classList.add("d-none");
+        galleryItemOverlay.classList.add("d-none");
       }
   });
 }
-function showGalleryImage() {
-  gsap.killTweensOf(galleryImgOverlay); // stops animation glitching when repeatedly clicking super fast
+function showGalleryItem() {
+  gsap.killTweensOf(galleryItemOverlay); // stops animation glitching when repeatedly clicking super fast
 
   let tl = gsap.timeline();
-  tl.to(galleryImgOverlay, {
+  tl.to(galleryItemOverlay, {
     onStart: function() {
-      galleryImgOverlay.classList.remove("d-none");
+      galleryItemOverlay.classList.remove("d-none");
     },
     duration: 0.3,
     backdropFilter: "blur(3px)",
